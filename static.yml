@@ -1,0 +1,1362 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ProEcommerce UAE | Discover. Compare. Shop.</title>
+  <meta name="description" content="ProEcommerce UAE - Discover trending gadgets, fashion, home & living and gaming products.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f8fa;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    /* HEADER */
+
+    header {
+      background: #111827;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: #f59e0b;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 14px;
+      color: #e5e7eb;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #f59e0b;
+    }
+
+    .menu-btn {
+      display: none;
+      border: none;
+      background: none;
+      color: white;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      background:
+        linear-gradient(rgba(17,24,39,0.78), rgba(17,24,39,0.78)),
+        url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      width: 100%;
+      margin: auto;
+      padding: 70px 20px;
+      color: white;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: #f59e0b;
+      color: #111827;
+      padding: 7px 14px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 7vw, 70px);
+      max-width: 750px;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #f59e0b;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #e5e7eb;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+      padding: 13px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #f59e0b;
+      color: #111827;
+    }
+
+    .btn-primary:hover {
+      background: #fbbf24;
+      transform: translateY(-2px);
+    }
+
+    .btn-dark {
+      background: #111827;
+      color: white;
+    }
+
+    .btn-dark:hover {
+      background: #374151;
+    }
+
+    /* GENERAL */
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #6b7280;
+    }
+
+    /* SEARCH */
+
+    .search-area {
+      background: white;
+      padding: 25px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    .search-box {
+      max-width: 750px;
+      margin: auto;
+      display: flex;
+      background: #f3f4f6;
+      border-radius: 50px;
+      padding: 5px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .search-box input {
+      flex: 1;
+      border: none;
+      outline: none;
+      background: transparent;
+      padding: 13px 18px;
+      font-size: 15px;
+    }
+
+    .search-box button {
+      border: none;
+      background: #111827;
+      color: white;
+      border-radius: 50px;
+      padding: 0 22px;
+      cursor: pointer;
+    }
+
+    /* CATEGORIES */
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .category-card {
+      height: 270px;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+
+    .category-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .category-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .category-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent 30%, rgba(0,0,0,0.8));
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 22px;
+    }
+
+    .category-overlay h3 {
+      font-size: 23px;
+      margin-bottom: 5px;
+    }
+
+    .category-overlay p {
+      font-size: 13px;
+      color: #e5e7eb;
+    }
+
+    /* FEATURED PRODUCTS */
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+      transition: 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .product-image {
+      height: 210px;
+      position: relative;
+      overflow: hidden;
+      background: #f3f4f6;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.05);
+    }
+
+    .tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: #f59e0b;
+      color: #111827;
+      padding: 5px 9px;
+      font-size: 11px;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .product-info {
+      padding: 18px;
+    }
+
+    .product-category {
+      color: #6b7280;
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .product-info h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .rating {
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .shop-btn {
+      width: 100%;
+      display: block;
+      text-align: center;
+      background: #111827;
+      color: white;
+      padding: 10px;
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .shop-btn:hover {
+      background: #f59e0b;
+      color: #111827;
+    }
+
+    /* FUTURE PRODUCTS */
+
+    .future {
+      background: #111827;
+      color: white;
+    }
+
+    .future-content {
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .future-icon {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .future h2 {
+      font-size: 35px;
+      margin-bottom: 12px;
+    }
+
+    .future p {
+      color: #d1d5db;
+      max-width: 650px;
+      margin: 0 auto 25px;
+    }
+
+    .future-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .future-list span {
+      background: #1f2937;
+      border: 1px solid #374151;
+      padding: 9px 15px;
+      border-radius: 30px;
+      font-size: 13px;
+    }
+
+    /* WHY US */
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .feature {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
+
+    .feature-icon {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .feature h3 {
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-image {
+      border-radius: 18px;
+      overflow: hidden;
+      height: 380px;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-text h2 {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .about-text p {
+      color: #6b7280;
+      margin-bottom: 15px;
+    }
+
+    /* NEWSLETTER */
+
+    .newsletter {
+      background: #f59e0b;
+    }
+
+    .newsletter-content {
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .newsletter h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .newsletter p {
+      margin-bottom: 22px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      max-width: 550px;
+      margin: auto;
+      gap: 8px;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      border: none;
+      border-radius: 7px;
+      padding: 13px;
+      outline: none;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #0b1120;
+      color: white;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+      padding: 55px 20px 30px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 35px;
+    }
+
+    footer h3 {
+      margin-bottom: 15px;
+    }
+
+    footer p,
+    footer a {
+      color: #9ca3af;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 9px;
+    }
+
+    footer a:hover {
+      color: #f59e0b;
+    }
+
+    .copyright {
+      max-width: 1200px;
+      margin: auto;
+      border-top: 1px solid #1f2937;
+      padding: 20px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 13px;
+    }
+
+    .affiliate {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      padding: 0 20px 25px;
+      color: #6b7280;
+      font-size: 11px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+      .categories,
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      nav {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        background: #111827;
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero {
+        min-height: 580px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .categories,
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .category-card {
+        height: 250px;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .newsletter-form button {
+        padding: 13px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        padding: 55px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="navbar">
+
+      <a href="#" class="logo">
+        Pro<span>Ecommerce</span> UAE
+      </a>
+
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+      <nav id="nav">
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#products">Products</a>
+        <a href="#future">Future Products</a>
+        <a href="#about">About</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <span class="hero-badge">🇦🇪 PROECOMMERCE UAE</span>
+
+      <h1>
+        Discover What's <span>Trending.</span>
+      </h1>
+
+      <p>
+        Explore popular gadgets, fashion, home & living products
+        and gaming gear — all in one place.
+      </p>
+
+      <a href="#categories" class="btn btn-primary">
+        Explore Products →
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- SEARCH -->
+
+  <section class="search-area">
+
+    <div class="search-box">
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search products..."
+        onkeyup="searchProducts()"
+      >
+
+      <button onclick="searchProducts()">
+        🔍 Search
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- CATEGORIES -->
+
+  <section class="container" id="categories">
+
+    <div class="section-title">
+
+      <h2>Explore Products</h2>
+
+      <p>
+        Discover products across our most popular categories.
+      </p>
+
+    </div>
+
+
+    <div class="categories">
+
+      <!-- GADGETS -->
+
+      <a href="#products" class="category-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?auto=format&fit=crop&w=800&q=80"
+          alt="Gadgets"
+        >
+
+        <div class="category-overlay">
+
+          <h3>📱 Gadgets</h3>
+
+          <p>
+            Phones, accessories, smart devices and technology.
+          </p>
+
+        </div>
+
+      </a>
+
+
+      <!-- FASHION -->
+
+      <a href="#products" class="category-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=800&q=80"
+          alt="Fashion"
+        >
+
+        <div class="category-overlay">
+
+          <h3>👕 Fashion</h3>
+
+          <p>
+            Trending clothes, shoes, bags and accessories.
+          </p>
+
+        </div>
+
+      </a>
+
+
+      <!-- HOME -->
+
+      <a href="#products" class="category-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80"
+          alt="Home and Living"
+        >
+
+        <div class="category-overlay">
+
+          <h3>🏠 Home & Living</h3>
+
+          <p>
+            Useful products for your home and everyday life.
+          </p>
+
+        </div>
+
+      </a>
+
+
+      <!-- GAMING -->
+
+      <a href="#products" class="category-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=800&q=80"
+          alt="Gaming"
+        >
+
+        <div class="category-overlay">
+
+          <h3>🎮 Gaming</h3>
+
+          <p>
+            Consoles, accessories and gaming equipment.
+          </p>
+
+        </div>
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURED PRODUCTS -->
+
+  <section class="container" id="products">
+
+    <div class="section-title">
+
+      <h2>🔥 Featured Products</h2>
+
+      <p>
+        A preview of the products we'll be featuring.
+      </p>
+
+    </div>
+
+
+    <div class="products" id="productGrid">
+
+
+      <!-- PRODUCT 1 -->
+
+      <div class="product-card" data-name="wireless headphones">
+
+        <div class="product-image">
+
+          <span class="tag">TRENDING</span>
+
+          <img
+            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+            alt="Wireless headphones"
+          >
+
+        </div>
+
+        <div class="product-info">
+
+          <div class="product-category">
+            Gadgets
+          </div>
+
+          <h3>Wireless Headphones</h3>
+
+          <div class="rating">
+            ⭐⭐⭐⭐⭐
+          </div>
+
+          <div class="price">
+            AED 99
+          </div>
+
+          <a href="#" class="shop-btn">
+            Shop Now →
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUCT 2 -->
+
+      <div class="product-card" data-name="fashion sneakers">
+
+        <div class="product-image">
+
+          <span class="tag">POPULAR</span>
+
+          <img
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80"
+            alt="Fashion sneakers"
+          >
+
+        </div>
+
+        <div class="product-info">
+
+          <div class="product-category">
+            Fashion
+          </div>
+
+          <h3>Trending Sneakers</h3>
+
+          <div class="rating">
+            ⭐⭐⭐⭐⭐
+          </div>
+
+          <div class="price">
+            AED 129
+          </div>
+
+          <a href="#" class="shop-btn">
+            Shop Now →
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUCT 3 -->
+
+      <div class="product-card" data-name="smart home">
+
+        <div class="product-image">
+
+          <span class="tag">NEW</span>
+
+          <img
+            src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=800&q=80"
+            alt="Smart home product"
+          >
+
+        </div>
+
+        <div class="product-info">
+
+          <div class="product-category">
+            Home & Living
+          </div>
+
+          <h3>Smart Home Device</h3>
+
+          <div class="rating">
+            ⭐⭐⭐⭐☆
+          </div>
+
+          <div class="price">
+            AED 79
+          </div>
+
+          <a href="#" class="shop-btn">
+            Shop Now →
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUCT 4 -->
+
+      <div class="product-card" data-name="gaming controller">
+
+        <div class="product-image">
+
+          <span class="tag">GAMING</span>
+
+          <img
+            src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&w=800&q=80"
+            alt="Gaming controller"
+          >
+
+        </div>
+
+        <div class="product-info">
+
+          <div class="product-category">
+            Gaming
+          </div>
+
+          <h3>Gaming Controller</h3>
+
+          <div class="rating">
+            ⭐⭐⭐⭐⭐
+          </div>
+
+          <div class="price">
+            AED 149
+          </div>
+
+          <a href="#" class="shop-btn">
+            Shop Now →
+          </a>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- FUTURE PRODUCTS -->
+
+  <section class="future" id="future">
+
+    <div class="container">
+
+      <div class="future-content">
+
+        <div class="future-icon">
+          🚀
+        </div>
+
+        <h2>Future Products</h2>
+
+        <p>
+          We're constantly looking for exciting products and great
+          deals to bring to ProEcommerce UAE. More categories and
+          products are coming soon.
+        </p>
+
+        <div class="future-list">
+
+          <span>⌚ Smart Watches</span>
+
+          <span>🎧 Audio</span>
+
+          <span>💻 Laptops</span>
+
+          <span>📷 Cameras</span>
+
+          <span>🏋️ Fitness</span>
+
+          <span>🚗 Car Accessories</span>
+
+          <span>💡 Smart Home</span>
+
+          <span>🎮 Gaming</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHY PROECOMMERCE -->
+
+  <section class="container">
+
+    <div class="section-title">
+
+      <h2>Why ProEcommerce?</h2>
+
+      <p>
+        Your place to discover products worth checking out.
+      </p>
+
+    </div>
+
+
+    <div class="features">
+
+      <div class="feature">
+
+        <div class="feature-icon">
+          🔎
+        </div>
+
+        <h3>Discover</h3>
+
+        <p>
+          Find interesting and trending products from different categories.
+        </p>
+
+      </div>
+
+
+      <div class="feature">
+
+        <div class="feature-icon">
+          ⭐
+        </div>
+
+        <h3>Explore</h3>
+
+        <p>
+          Browse products and discover items that match your interests.
+        </p>
+
+      </div>
+
+
+      <div class="feature">
+
+        <div class="feature-icon">
+          🛒
+        </div>
+
+        <h3>Shop</h3>
+
+        <p>
+          When available, we'll connect you to trusted shopping platforms.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <div class="container">
+
+      <div class="about-grid">
+
+        <div class="about-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1000&q=80"
+            alt="Online shopping"
+          >
+
+        </div>
+
+
+        <div class="about-text">
+
+          <h2>About ProEcommerce UAE</h2>
+
+          <p>
+            ProEcommerce UAE is a product discovery platform
+            created to help shoppers find interesting products
+            across popular categories.
+          </p>
+
+          <p>
+            From gadgets and fashion to home products and gaming,
+            our goal is to make discovering products simple,
+            convenient and enjoyable.
+          </p>
+
+          <p>
+            We are continuously expanding our product selection
+            and will be adding more products in the future.
+          </p>
+
+          <a href="#products" class="btn btn-dark">
+            Explore Products
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- NEWSLETTER -->
+
+  <section class="newsletter">
+
+    <div class="container">
+
+      <div class="newsletter-content">
+
+        <h2>Stay Updated 🚀</h2>
+
+        <p>
+          Get updates when new products and categories are added.
+        </p>
+
+        <form class="newsletter-form" onsubmit="subscribe(event)">
+
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            required
+          >
+
+          <button class="btn btn-dark" type="submit">
+            Subscribe
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+
+      <div>
+
+        <h3>
+          Pro<span style="color:#f59e0b;">Ecommerce</span> UAE
+        </h3>
+
+        <p>
+          Discover trending products across gadgets, fashion,
+          home & living and gaming.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>Explore</h3>
+
+        <a href="#home">Home</a>
+
+        <a href="#categories">Categories</a>
+
+        <a href="#products">Products</a>
+
+        <a href="#future">Future Products</a>
+
+      </div>
+
+
+      <div>
+
+        <h3>Categories</h3>
+
+        <a href="#products">Gadgets</a>
+
+        <a href="#products">Fashion</a>
+
+        <a href="#products">Home & Living</a>
+
+        <a href="#products">Gaming</a>
+
+      </div>
+
+
+      <div>
+
+        <h3>Information</h3>
+
+        <a href="#">About Us</a>
+
+        <a href="#">Privacy Policy</a>
+
+        <a href="#">Terms & Conditions</a>
+
+        <a href="#">Affiliate Disclosure</a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="affiliate">
+
+      ProEcommerce UAE may earn a commission from qualifying
+      purchases made through affiliate links. Product availability,
+      prices and offers may change.
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 ProEcommerce UAE. All rights reserved.
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    /* MOBILE MENU */
+
+    function toggleMenu() {
+
+      document.getElementById("nav").classList.toggle("active");
+
+    }
+
+
+    /* SEARCH */
+
+    function searchProducts() {
+
+      const input =
+        document.getElementById("searchInput").value.toLowerCase();
+
+      const products =
+        document.querySelectorAll(".product-card");
+
+      products.forEach(function(product) {
+
+        const name =
+          product.getAttribute("data-name").toLowerCase();
+
+        if (name.includes(input)) {
+
+          product.style.display = "block";
+
+        } else {
+
+          product.style.display = "none";
+
+        }
+
+      });
+
+    }
+
+
+    /* NEWSLETTER */
+
+    function subscribe(event) {
+
+      event.preventDefault();
+
+      alert(
+        "Thank you for subscribing to ProEcommerce UAE!"
+      );
+
+      event.target.reset();
+
+    }
+
+  </script>
+
+</body>
+</html>
