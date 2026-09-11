@@ -1,1342 +1,1206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ProEcommerce UAE | Shop Smart</title>
+  <title>ProEcommerce UAE | Discover Great Products</title>
 
-<style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body{
-  font-family:Arial,sans-serif;
-  background:#f5f6f8;
-  color:#222;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-header{
-  background:#111827;
-  color:white;
-  padding:18px 5%;
-  position:sticky;
-  top:0;
-  z-index:1000;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+      line-height: 1.6;
+    }
 
-.nav{
-  max-width:1200px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
+    /* HEADER */
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-.logo{
-  font-size:25px;
-  font-weight:bold;
-}
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
 
-.logo span{
-  color:#f59e0b;
-}
+    .logo span {
+      color: #f59e0b;
+    }
 
-nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:20px;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 15px;
+    }
 
-nav a:hover{
-  color:#f59e0b;
-}
+    nav a:hover {
+      color: #f59e0b;
+    }
 
-.hero{
-  background:linear-gradient(135deg,#111827,#374151);
-  color:white;
-  text-align:center;
-  padding:65px 20px;
-}
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #111827, #374151);
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
 
-.hero h1{
-  font-size:42px;
-  margin-bottom:12px;
-}
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
 
-.hero h1 span{
-  color:#f59e0b;
-}
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+      color: #e5e7eb;
+    }
 
-.hero p{
-  font-size:18px;
-  margin-bottom:25px;
-}
+    /* SEARCH */
+    .search-section {
+      background: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
 
-.search-box{
-  max-width:650px;
-  margin:auto;
-  display:flex;
-}
+    .search-section h2 {
+      margin-bottom: 15px;
+    }
 
-.search-box input{
-  flex:1;
-  padding:17px;
-  border:0;
-  outline:none;
-  font-size:16px;
-  border-radius:8px 0 0 8px;
-}
+    #searchForm {
+      display: flex;
+      max-width: 650px;
+      margin: auto;
+      gap: 10px;
+    }
 
-.search-box button{
-  border:0;
-  padding:0 25px;
-  background:#f59e0b;
-  font-weight:bold;
-  cursor:pointer;
-  border-radius:0 8px 8px 0;
-  font-size:16px;
-}
+    #searchInput {
+      flex: 1;
+      padding: 15px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+    }
 
-.search-box button:hover{
-  background:#d97706;
-}
+    #searchInput:focus {
+      border-color: #f59e0b;
+    }
 
-.amazon-disclosure{
-  background:#fff3cd;
-  color:#664d03;
-  text-align:center;
-  padding:15px 20px;
-  font-size:13px;
-  line-height:1.5;
-  border-bottom:1px solid #ffe69c;
-}
+    #searchButton {
+      padding: 15px 25px;
+      border: none;
+      border-radius: 8px;
+      background: #f59e0b;
+      color: #111827;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+    }
 
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:45px 20px;
-}
+    #searchButton:hover {
+      background: #d97706;
+      color: white;
+    }
 
-.section-title{
-  text-align:center;
-  margin-bottom:30px;
-}
+    /* DISCLOSURE */
+    .disclosure {
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 15px 20px;
+      background: #fff7ed;
+      border-left: 5px solid #f59e0b;
+      border-radius: 6px;
+      font-size: 14px;
+    }
 
-.section-title h2{
-  font-size:30px;
-  margin-bottom:8px;
-}
+    /* MAIN CONTAINER */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
 
-.categories{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-  margin-bottom:55px;
-}
+    .section-title {
+      text-align: center;
+      margin-bottom: 25px;
+    }
 
-.category{
-  background:white;
-  padding:28px 15px;
-  text-align:center;
-  border-radius:12px;
-  box-shadow:0 3px 12px rgba(0,0,0,.08);
-  cursor:pointer;
-  transition:.25s;
-}
+    .section-title h2 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
 
-.category:hover{
-  transform:translateY(-5px);
-  box-shadow:0 6px 18px rgba(0,0,0,.12);
-}
+    .section-title p {
+      color: #6b7280;
+    }
 
-.category .icon{
-  font-size:42px;
-  margin-bottom:10px;
-}
+    /* CATEGORIES */
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 50px;
+    }
 
-.category h3{
-  margin-bottom:7px;
-}
+    .category {
+      background: white;
+      padding: 30px 15px;
+      text-align: center;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
 
-.category p{
-  color:#666;
-}
+    .category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
 
-.products{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:24px;
-}
+    .category-icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
 
-.product{
-  background:white;
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 3px 14px rgba(0,0,0,.09);
-  transition:.25s;
-}
+    .category h3 {
+      font-size: 18px;
+    }
 
-.product:hover{
-  transform:translateY(-5px);
-}
+    /* PRODUCTS */
+    #products {
+      scroll-margin-top: 90px;
+    }
 
-.product-image{
-  width:100%;
-  height:230px;
-  object-fit:cover;
-  background:#eee;
-}
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
 
-.product-info{
-  padding:20px;
-}
+    .product {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
 
-.category-name{
-  font-size:12px;
-  color:#f59e0b;
-  font-weight:bold;
-  text-transform:uppercase;
-  margin-bottom:8px;
-}
+    .product:hover {
+      transform: translateY(-5px);
+    }
 
-.product h3{
-  font-size:19px;
-  margin-bottom:8px;
-}
+    .product-image {
+      height: 210px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f3f4f6;
+      font-size: 80px;
+    }
 
-.product p{
-  color:#666;
-  line-height:1.5;
-  min-height:45px;
-}
+    .product-info {
+      padding: 20px;
+    }
 
-.price{
-  font-weight:bold;
-  font-size:19px;
-  margin:15px 0;
-}
+    .product-info h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
 
-.btn{
-  display:block;
-  width:100%;
-  padding:13px;
-  background:#f59e0b;
-  color:#111;
-  text-align:center;
-  text-decoration:none;
-  border-radius:7px;
-  font-weight:bold;
-}
+    .product-info p {
+      color: #6b7280;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
 
-.btn:hover{
-  background:#d97706;
-}
+    .product-category {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
 
-.no-results{
-  display:none;
-  text-align:center;
-  padding:40px;
-  background:white;
-  border-radius:12px;
-  margin-top:20px;
-}
+    .amazon-button {
+      display: block;
+      text-align: center;
+      background: #ff9900;
+      color: #111;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 7px;
+      font-weight: bold;
+    }
 
-.no-results h3{
-  margin-bottom:10px;
-}
+    .amazon-button:hover {
+      background: #e68a00;
+    }
 
-.no-results p{
-  color:#666;
-}
+    /* NO RESULTS */
+    #noResults {
+      display: none;
+      text-align: center;
+      background: white;
+      padding: 40px 20px;
+      margin-top: 25px;
+      border-radius: 10px;
+    }
 
-.noon-box{
-  margin-top:60px;
-  background:white;
-  text-align:center;
-  padding:40px 20px;
-  border-radius:14px;
-}
+    #noResults h3 {
+      margin-bottom: 10px;
+    }
 
-.noon-box h2{
-  margin-bottom:10px;
-}
+    #noResults p {
+      color: #6b7280;
+    }
 
-.noon-box p{
-  color:#666;
-}
+    /* NOON */
+    .noon-box {
+      margin-top: 50px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
 
-footer{
-  background:#111827;
-  color:white;
-  text-align:center;
-  padding:35px 20px;
-  margin-top:50px;
-}
+    .noon-box h2 {
+      margin-bottom: 10px;
+    }
 
-footer p{
-  color:#d1d5db;
-  margin-top:8px;
-}
+    .noon-box p {
+      color: #6b7280;
+    }
 
-.footer-disclosure{
-  max-width:850px;
-  margin:20px auto 0;
-  padding-top:18px;
-  border-top:1px solid #374151;
-  font-size:13px;
-  line-height:1.6;
-  color:#d1d5db;
-}
+    /* FOOTER */
+    footer {
+      background: #111827;
+      color: white;
+      margin-top: 60px;
+      padding: 35px 20px;
+      text-align: center;
+    }
 
-@media(max-width:900px){
+    footer p {
+      margin-bottom: 10px;
+      color: #d1d5db;
+      font-size: 14px;
+    }
 
-  .categories{
-    grid-template-columns:repeat(2,1fr);
-  }
+    /* MOBILE */
+    @media (max-width: 800px) {
 
-  .products{
-    grid-template-columns:repeat(2,1fr);
-  }
+      header {
+        flex-direction: column;
+        padding: 15px;
+      }
 
-}
+      nav a {
+        margin: 0 8px;
+      }
 
-@media(max-width:600px){
+      .hero h1 {
+        font-size: 32px;
+      }
 
-  .nav{
-    flex-direction:column;
-    gap:15px;
-  }
+      .categories {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-  nav a{
-    margin:0 7px;
-  }
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
-  .hero h1{
-    font-size:31px;
-  }
+    @media (max-width: 550px) {
 
-  .hero p{
-    font-size:16px;
-  }
+      .hero {
+        padding: 50px 15px;
+      }
 
-  .search-box{
-    width:100%;
-  }
+      .hero h1 {
+        font-size: 28px;
+      }
 
-  .search-box input{
-    min-width:0;
-    padding:15px;
-  }
+      #searchForm {
+        flex-direction: column;
+      }
 
-  .search-box button{
-    padding:0 18px;
-  }
+      #searchButton {
+        width: 100%;
+      }
 
-  .categories,
-  .products{
-    grid-template-columns:1fr;
-  }
+      .categories {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
 
-}
-</style>
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-image {
+        height: 180px;
+      }
+    }
+  </style>
 </head>
-
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      ProEcommerce <span>UAE</span>
+    </div>
 
-<header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#products">Products</a>
+    </nav>
+  </header>
 
-<div class="nav">
 
-<div class="logo">
-Pro<span>Ecommerce</span>
-</div>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <h1>Discover Great Products</h1>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#categories">Categories</a>
-<a href="#products">Products</a>
-</nav>
+    <p>
+      Explore popular gadgets, fashion, home products and gaming accessories.
+      Find products you love and shop through trusted stores.
+    </p>
+  </section>
 
-</div>
 
-</header>
+  <!-- SEARCH -->
+  <section class="search-section">
 
+    <h2>Search Products</h2>
 
-<!-- =========================
-     HERO + SEARCH
-========================= -->
+    <form id="searchForm">
 
-<section class="hero" id="home">
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Search for a product..."
+        autocomplete="off"
+      >
 
-<h1>
-Discover <span>Great Products</span>
-</h1>
+      <button type="submit" id="searchButton">
+        Search
+      </button>
 
-<p>
-Find useful products and shop smarter with ProEcommerce UAE.
-</p>
+    </form>
 
-<form class="search-box" id="searchForm">
+  </section>
 
-<input
-type="search"
-id="searchInput"
-placeholder="Search for earbuds, smartwatch, sneakers..."
-autocomplete="off"
->
 
-<button type="submit">
-Search
-</button>
+  <!-- AMAZON DISCLOSURE -->
+  <div class="disclosure">
+    <strong>Amazon Associates Disclosure:</strong>
+    As an Amazon Associate I earn from qualifying purchases.
+  </div>
 
-</form>
 
-</section>
+  <!-- MAIN -->
+  <main class="container">
 
+    <!-- CATEGORIES -->
+    <section id="categories">
 
-<!-- =========================
-     AMAZON DISCLOSURE
-========================= -->
+      <div class="section-title">
+        <h2>Explore Categories</h2>
+        <p>Choose a category to find products</p>
+      </div>
 
-<div class="amazon-disclosure">
+      <div class="categories">
 
-<strong>Amazon Associates Disclosure:</strong>
+        <div class="category" data-category="Gadgets">
+          <div class="category-icon">📱</div>
+          <h3>Gadgets</h3>
+        </div>
 
-As an Amazon Associate I earn from qualifying purchases.
+        <div class="category" data-category="Fashion">
+          <div class="category-icon">👟</div>
+          <h3>Fashion</h3>
+        </div>
 
-</div>
+        <div class="category" data-category="Home & Living">
+          <div class="category-icon">🏠</div>
+          <h3>Home & Living</h3>
+        </div>
 
+        <div class="category" data-category="Gaming">
+          <div class="category-icon">🎮</div>
+          <h3>Gaming</h3>
+        </div>
 
-<!-- =========================
-     MAIN CONTENT
-========================= -->
+      </div>
 
-<main class="container">
+    </section>
 
 
-<!-- =========================
-     CATEGORIES
-========================= -->
+    <!-- PRODUCTS -->
+    <section id="products">
 
-<section id="categories">
+      <div class="section-title">
 
-<div class="section-title">
+        <h2>Our Products</h2>
 
-<h2>Explore Categories</h2>
+        <p id="resultsText">
+          Explore our selected products
+        </p>
 
-<p>Choose a category to find products</p>
+      </div>
 
-</div>
 
+      <div class="products-grid">
 
-<div class="categories">
 
+        <!-- PRODUCT 1 -->
+        <div
+          class="product"
+          data-category="Gadgets"
+          data-name="Wireless Earbuds"
+          data-description="Wireless Bluetooth earbuds"
+        >
 
-<div class="category" data-category="Gadgets">
+          <div class="product-image">
+            🎧
+          </div>
 
-<div class="icon">📱</div>
+          <div class="product-info">
 
-<h3>Gadgets</h3>
+            <span class="product-category">
+              Gadgets
+            </span>
 
-<p>Smart electronics & accessories</p>
+            <h3>Wireless Earbuds</h3>
 
-</div>
+            <p>
+              Wireless Bluetooth earbuds for music,
+              calls and everyday use.
+            </p>
 
+            <a
+              href="https://link.amazon/B0hhImmcI"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+              class="amazon-button"
+            >
+              View on Amazon
+            </a>
 
-<div class="category" data-category="Fashion">
+          </div>
 
-<div class="icon">👟</div>
+        </div>
 
-<h3>Fashion</h3>
 
-<p>Shoes, watches & accessories</p>
+        <!-- PRODUCT 2 -->
+        <div
+          class="product"
+          data-category="Gadgets"
+          data-name="Smart Watch"
+          data-description="Smart watch fitness tracker digital watch"
+        >
 
-</div>
+          <div class="product-image">
+            ⌚
+          </div>
 
+          <div class="product-info">
 
-<div class="category" data-category="Home">
+            <span class="product-category">
+              Gadgets
+            </span>
 
-<div class="icon">🏠</div>
+            <h3>Smart Watch</h3>
 
-<h3>Home & Living</h3>
+            <p>
+              Smart watch for fitness,
+              notifications and everyday activities.
+            </p>
 
-<p>Useful products for your home</p>
+            <a
+              href="https://link.amazon/B0cNATNP1"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+              class="amazon-button"
+            >
+              View on Amazon
+            </a>
 
-</div>
+          </div>
 
+        </div>
 
-<div class="category" data-category="Gaming">
 
-<div class="icon">🎮</div>
+        <!-- PRODUCT 3 -->
+        <div
+          class="product"
+          data-category="Gaming"
+          data-name="Gaming Headset"
+          data-description="Gaming headset headphones computer audio"
+        >
 
-<h3>Gaming</h3>
+          <div class="product-image">
+            🎧
+          </div>
 
-<p>Gaming accessories & equipment</p>
+          <div class="product-info">
 
-</div>
+            <span class="product-category">
+              Gaming
+            </span>
 
+            <h3>Gaming Headset</h3>
 
-</div>
+            <p>
+              Gaming headset with immersive audio
+              for gaming and entertainment.
+            </p>
 
-</section>
+            <a
+              href="https://link.amazon/B06xwYhf1"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+              class="amazon-button"
+            >
+              View on Amazon
+            </a>
 
+          </div>
 
-<!-- =========================
-     PRODUCTS
-========================= -->
+        </div>
 
-<section id="products">
 
-<div class="section-title">
+        <!-- PRODUCT 4 -->
+        <div
+          class="product"
+          data-category="Gadgets"
+          data-name="Power Bank"
+          data-description="Portable charger power bank battery charger"
+        >
 
-<h2>Featured Products</h2>
+          <div class="product-image">
+            🔋
+          </div>
 
-<p id="resultsText">
-Explore our selected products
-</p>
+          <div class="product-info">
 
-</div>
+            <span class="product-category">
+              Gadgets
+            </span>
 
+            <h3>Power Bank</h3>
 
-<div class="products" id="productGrid">
+            <p>
+              Portable power bank for charging
+              smartphones and other devices.
+            </p>
 
+            <a
+              href="https://link.amazon/A0hmsjDmY"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+              class="amazon-button"
+            >
+              View on Amazon
+            </a>
 
-<!-- 1. WIRELESS EARBUDS -->
+          </div>
 
-<div class="product"
-data-category="Gadgets"
-data-name="wireless earbuds bluetooth earphones"
-data-description="wireless earbuds music calls everyday use">
+        </div>
 
-<img
-class="product-image"
-src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=700&q=80"
-alt="Wireless Earbuds"
->
 
-<div class="product-info">
+        <!-- PRODUCT 5 -->
+        <div
+          class="product"
+          data-category="Fashion"
+          data-name="Sneakers"
+          data-description="Sneakers shoes footwear sports shoes"
+        >
 
-<div class="category-name">
-Gadgets
-</div>
+          <div class="product-image">
+            👟
+          </div>
 
-<h3>
-Wireless Earbuds
-</h3>
+          <div class="product-info">
 
-<p>
-Wireless earbuds for music, calls and everyday use.
-</p>
+            <span class="product-category">
+              Fashion
+            </span>
 
-<div class="price">
-Check Price
-</div>
+            <h3>Sneakers</h3>
 
-<a
-class="btn"
-href="https://link.amazon/B0hhImmcI"
-target="_blank"
-rel="noopener noreferrer"
->
-View Product
-</a>
+            <p>
+              Stylish sneakers suitable for
+              casual and everyday wear.
+            </p>
 
-</div>
-</div>
+            <a
+              href="https://link.amazon/B074JduPF"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+              class="amazon-button"
+            >
+              View on Amazon
+            </a>
 
+          </div>
 
-<!-- 2. SMART WATCH -->
+        </div>
 
-<div class="product"
-data-category="Gadgets"
-data-name="smart watch smartwatch fitness watch digital watch"
-data-description="modern smartwatch fitness notifications everyday use">
 
-<img
-class="product-image"
-src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80"
-alt="Smart Watch"
->
+        <!-- PRODUCT 6 -->
+        <div
+          class="product"
+          data-category="Fashion"
+          data-name="Fashion Watch"
+          data-description="Fashion watch wrist watch men's women's watch"
+        >
 
-<div class="product-info">
+          <div class="product-image">
+            ⌚
+          </div>
 
-<div class="category-name">
-Gadgets
-</div>
+          <div class="product-info">
 
-<h3>
-Smart Watch
-</h3>
+            <span class="product-category">
+              Fashion
+            </span>
 
-<p>
-Modern smartwatch for fitness, notifications and everyday use.
-</p>
+            <h3>Fashion Watch</h3>
 
-<div class="price">
-Check Price
-</div>
+            <p>
+              Stylish wrist watch designed
+              for everyday fashion.
+            </p>
 
-<a
-class="btn"
-href="https://link.amazon/B0cNATNP1"
-target="_blank"
-rel="noopener noreferrer"
->
-View Product
-</a>
+            <a
+              href="https://link.amazon/B04pX1hgj"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+              class="amazon-button"
+            >
+              View on Amazon
+            </a>
 
-</div>
-</div>
+          </div>
 
+        </div>
 
-<!-- 3. GAMING HEADSET -->
 
-<div class="product"
-data-category="Gaming"
-data-name="gaming headset headphones gaming headphones"
-data-description="immersive gaming audio music entertainment">
+        <!-- PRODUCT 7 -->
+        <div
+          class="product"
+          data-category="Home & Living"
+          data-name="LED Lights"
+          data-description="LED lights home lighting decoration light"
+        >
 
-<img
-class="product-image"
-src="https://images.unsplash.com/photo-1599669454699-248893623440?auto=format&fit=crop&w=700&q=80"
-alt="Gaming Headset"
->
+          <div class="product-image">
+            💡
+          </div>
 
-<div class="product-info">
+          <div class="product-info">
 
-<div class="category-name">
-Gaming
-</div>
+            <span class="product-category">
+              Home & Living
+            </span>
 
-<h3>
-Gaming Headset
-</h3>
+            <h3>LED Lights</h3>
 
-<p>
-Immersive gaming audio for gaming, music and entertainment.
-</p>
+            <p>
+              LED lighting for home decoration,
+              rooms and entertainment spaces.
+            </p>
 
-<div class="price">
-Check Price
-</div>
+            <a
+              href="https://link.amazon/B09pTAxuy"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+              class="amazon-button"
+            >
+              View on Amazon
+            </a>
 
-<a
-class="btn"
-href="https://link.amazon/B06xwYhf1"
-target="_blank"
-rel="noopener noreferrer"
->
-View Product
-</a>
+          </div>
 
-</div>
-</div>
+        </div>
 
 
-<!-- 4. POWER BANK -->
+        <!-- PRODUCT 8 -->
+        <div
+          class="product"
+          data-category="Gaming"
+          data-name="Gaming Controller"
+          data-description="Gaming controller gamepad console controller"
+        >
 
-<div class="product"
-data-category="Gadgets"
-data-name="power bank portable charger battery charger phone charger"
-data-description="portable power charging devices">
+          <div class="product-image">
+            🎮
+          </div>
 
-<img
-class="product-image"
-src="https://images.unsplash.com/photo-1609592424845-7c2f5e6c8d89?auto=format&fit=crop&w=700&q=80"
-alt="Power Bank"
->
+          <div class="product-info">
 
-<div class="product-info">
+            <span class="product-category">
+              Gaming
+            </span>
 
-<div class="category-name">
-Gadgets
-</div>
+            <h3>Gaming Controller</h3>
 
-<h3>
-Power Bank
-</h3>
+            <p>
+              Gaming controller for console
+              and compatible gaming systems.
+            </p>
 
-<p>
-Portable power bank for charging your devices on the go.
-</p>
+            <a
+              href="https://link.amazon/B0gt6bIcJ"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+              class="amazon-button"
+            >
+              View on Amazon
+            </a>
 
-<div class="price">
-Check Price
-</div>
+          </div>
 
-<a
-class="btn"
-href="https://link.amazon/A0hmsjDmY"
-target="_blank"
-rel="noopener noreferrer"
->
-View Product
-</a>
+        </div>
 
-</div>
-</div>
 
+        <!-- PRODUCT 9 -->
+        <div
+          class="product"
+          data-category="Home & Living"
+          data-name="Electric Egg Boiler"
+          data-description="Electric egg boiler egg cooker kitchen appliance"
+        >
 
-<!-- 5. SNEAKERS -->
+          <div class="product-image">
+            🥚
+          </div>
 
-<div class="product"
-data-category="Fashion"
-data-name="sneakers shoes running shoes sports shoes footwear"
-data-description="comfortable sneakers everyday activities">
+          <div class="product-info">
 
-<img
-class="product-image"
-src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80"
-alt="Sneakers"
->
+            <span class="product-category">
+              Home & Living
+            </span>
 
-<div class="product-info">
+            <h3>Electric Egg Boiler</h3>
 
-<div class="category-name">
-Fashion
-</div>
+            <p>
+              Convenient electric egg boiler
+              for quick kitchen preparation.
+            </p>
 
-<h3>
-Stylish Sneakers
-</h3>
+            <a
+              href="https://link.amazon/B043NNglj"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+              class="amazon-button"
+            >
+              View on Amazon
+            </a>
 
-<p>
-Comfortable sneakers suitable for everyday activities.
-</p>
+          </div>
 
-<div class="price">
-Check Price
-</div>
+        </div>
 
-<a
-class="btn"
-href="https://link.amazon/B074JduPF"
-target="_blank"
-rel="noopener noreferrer"
->
-View Product
-</a>
 
-</div>
-</div>
+      </div>
 
 
-<!-- 6. FASHION WATCH -->
+      <!-- NO RESULTS -->
+      <div id="noResults">
 
-<div class="product"
-data-category="Fashion"
-data-name="watch wrist watch fashion watch mens watch womens watch"
-data-description="stylish wrist watch everyday wear">
+        <h3>No products found</h3>
 
-<img
-class="product-image"
-src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=700&q=80"
-alt="Fashion Watch"
->
+        <p>
+          Try searching for another product such as
+          watch, earbuds, shoes, lights or gaming.
+        </p>
 
-<div class="product-info">
+      </div>
 
-<div class="category-name">
-Fashion
-</div>
+    </section>
 
-<h3>
-Fashion Watch
-</h3>
 
-<p>
-Stylish wrist watch designed for everyday wear.
-</p>
+    <!-- NOON SECTION -->
+    <div class="noon-box">
 
-<div class="price">
-Check Price
-</div>
+      <h2>More Products Coming Soon</h2>
 
-<a
-class="btn"
-href="https://link.amazon/B04pX1hgj"
-target="_blank"
-rel="noopener noreferrer"
->
-View Product
-</a>
+      <p>
+        We are working on bringing more products
+        and shopping options to ProEcommerce UAE.
+      </p>
 
-</div>
-</div>
+    </div>
 
+  </main>
 
-<!-- 7. LED LIGHTS -->
 
-<div class="product"
-data-category="Home"
-data-name="led lights led light lighting bedroom lights home lights"
-data-description="modern LED lighting bedroom room home decoration">
+  <!-- FOOTER -->
+  <footer>
 
-<img
-class="product-image"
-src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=700&q=80"
-alt="LED Lights"
->
+    <p>
+      <strong>ProEcommerce UAE</strong>
+    </p>
 
-<div class="product-info">
+    <p>
+      Discover products from trusted online stores.
+    </p>
 
-<div class="category-name">
-Home & Living
-</div>
+    <p>
+      As an Amazon Associate I earn from qualifying purchases.
+    </p>
 
-<h3>
-LED Lights
-</h3>
+    <p>
+      © 2026 ProEcommerce UAE. All rights reserved.
+    </p>
 
-<p>
-Modern LED lighting for bedrooms, rooms and home decoration.
-</p>
+  </footer>
 
-<div class="price">
-Check Price
-</div>
 
-<a
-class="btn"
-href="https://link.amazon/B09pTAxuy"
-target="_blank"
-rel="noopener noreferrer"
->
-View Product
-</a>
+  <!-- JAVASCRIPT -->
+  <script>
 
-</div>
-</div>
+    document.addEventListener("DOMContentLoaded", function () {
 
+      const searchForm =
+        document.getElementById("searchForm");
 
-<!-- 8. GAMING CONTROLLER -->
+      const searchInput =
+        document.getElementById("searchInput");
 
-<div class="product"
-data-category="Gaming"
-data-name="gaming controller controller gamepad game controller"
-data-description="console PC gaming controller">
+      const products =
+        document.querySelectorAll(".product");
 
-<img
-class="product-image"
-src="https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&w=700&q=80"
-alt="Gaming Controller"
->
+      const noResults =
+        document.getElementById("noResults");
 
-<div class="product-info">
+      const resultsText =
+        document.getElementById("resultsText");
 
-<div class="category-name">
-Gaming
-</div>
-
-<h3>
-Gaming Controller
-</h3>
-
-<p>
-Gaming controller for a better console and PC gaming experience.
-</p>
-
-<div class="price">
-Check Price
-</div>
-
-<a
-class="btn"
-href="https://link.amazon/B0gt6bIcJ"
-target="_blank"
-rel="noopener noreferrer"
->
-View Product
-</a>
-
-</div>
-</div>
-
-
-<!-- 9. ELECTRIC EGG BOILER -->
-
-<div class="product"
-data-category="Home"
-data-name="electric egg boiler egg cooker egg maker kitchen egg boiler"
-data-description="electric egg cooker quick breakfast kitchen">
-
-<img
-class="product-image"
-src="https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?auto=format&fit=crop&w=700&q=80"
-alt="Electric Egg Boiler"
->
-
-<div class="product-info">
-
-<div class="category-name">
-Home & Living
-</div>
-
-<h3>
-Electric Egg Boiler
-</h3>
-
-<p>
-Convenient electric egg cooker for quick breakfast preparation.
-</p>
-
-<div class="price">
-Check Price
-</div>
-
-<a
-class="btn"
-href="https://link.amazon/B043NNglj"
-target="_blank"
-rel="noopener noreferrer"
->
-View Product
-</a>
-
-</div>
-</div>
-
-
-</div>
-
-
-<!-- =========================
-     NO SEARCH RESULTS
-========================= -->
-
-<div class="no-results" id="noResults">
-
-<h3>
-No product found
-</h3>
-
-<p>
-Try another search such as
-"watch", "gaming", "lights",
-"sneakers" or "earbuds".
-</p>
-
-</div>
-
-
-<!-- =========================
-     MORE PRODUCTS
-========================= -->
-
-<div class="noon-box">
-
-<h2>
-🛒 More Products Coming Soon
-</h2>
-
-<p>
-We are adding more products from Amazon and Noon UAE.
-</p>
-
-</div>
-
-
-</section>
-
-</main>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-<h2>
-ProEcommerce UAE
-</h2>
-
-<p>
-Discover products. Shop smarter.
-</p>
-
-<p>
-© 2026 ProEcommerce UAE
-</p>
-
-
-<div class="footer-disclosure">
-
-<strong>
-Amazon Associates Disclosure:
-</strong>
-
-As an Amazon Associate I earn from qualifying purchases.
-
-</div>
-
-</footer>
-
-
-<!-- =========================
-     JAVASCRIPT
-     FIXED SEARCH SYSTEM
-========================= -->
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function () {
-
-  const searchForm =
-    document.getElementById("searchForm");
-
-  const searchInput =
-    document.getElementById("searchInput");
-
-  const products =
-    document.querySelectorAll(".product");
-
-  const noResults =
-    document.getElementById("noResults");
-
-  const resultsText =
-    document.getElementById("resultsText");
-
-  const categories =
-    document.querySelectorAll(".category");
-
-
-  /* =========================
-     CLEAN SEARCH TEXT
-  ========================= */
-
-  function cleanText(text) {
-
-    return text
-      .toLowerCase()
-      .replace(/[^a-z0-9\s]/g, " ")
-      .replace(/\s+/g, " ")
-      .trim();
-
-  }
-
-
-  /* =========================
-     SEARCH PRODUCTS
-  ========================= */
-
-  function searchProducts(scrollToProducts) {
-
-    const search =
-      cleanText(searchInput.value);
-
-    let found = 0;
-
-
-    products.forEach(function (product) {
-
-      const name =
-        cleanText(
-          product.getAttribute("data-name") || ""
-        );
-
-      const category =
-        cleanText(
-          product.getAttribute("data-category") || ""
-        );
-
-      const description =
-        cleanText(
-          product.getAttribute("data-description") || ""
-        );
-
-      const title =
-        cleanText(
-          product.querySelector("h3")?.textContent || ""
-        );
-
-
-      const productText =
-        name + " " +
-        category + " " +
-        description + " " +
-        title;
+      const categories =
+        document.querySelectorAll(".category");
 
 
       /* =========================
-         SHOW EVERYTHING
-         WHEN SEARCH IS EMPTY
-      ========================= */
+         PRODUCT SEARCH
+         ========================= */
 
-      if (search === "") {
+      function searchProducts() {
 
-        product.style.display = "";
+        const search =
+          searchInput.value.toLowerCase().trim();
 
-        found++;
-
-        return;
-      }
+        let found = 0;
 
 
-      /* =========================
-         SEARCH ALTERNATIVES
-      ========================= */
+        /* If search box is empty,
+           show all products */
 
-      const alternatives = {
+        if (search === "") {
 
-        smartwatch: ["smart watch"],
+          products.forEach(function (product) {
 
-        headphones: [
-          "headset",
-          "gaming headset"
-        ],
+            product.style.display = "";
 
-        headset: [
-          "headphones"
-        ],
+          });
 
-        shoes: [
-          "sneakers",
-          "footwear"
-        ],
+          noResults.style.display = "none";
 
-        sneaker: [
-          "sneakers"
-        ],
+          resultsText.textContent =
+            "Explore our selected products";
 
-        light: [
-          "lights",
-          "led"
-        ],
+          document
+            .getElementById("products")
+            .scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
 
-        lights: [
-          "light",
-          "led"
-        ],
-
-        controller: [
-          "gamepad",
-          "gaming controller"
-        ],
-
-        charger: [
-          "power bank",
-          "portable charger"
-        ],
-
-        watch: [
-          "smart watch",
-          "fashion watch"
-        ],
-
-        earphone: [
-          "earbuds",
-          "wireless earbuds"
-        ],
-
-        earphones: [
-          "earbuds",
-          "wireless earbuds"
-        ],
-
-        egg: [
-          "egg boiler",
-          "egg cooker"
-        ]
-
-      };
+          return;
+        }
 
 
-      /* =========================
-         CHECK EACH SEARCH WORD
-      ========================= */
+        /* Check every product */
 
-      const words =
-        search.split(" ");
+        products.forEach(function (product) {
+
+          const name =
+            (product.getAttribute("data-name") || "")
+              .toLowerCase();
+
+          const category =
+            (product.getAttribute("data-category") || "")
+              .toLowerCase();
+
+          const description =
+            (product.getAttribute("data-description") || "")
+              .toLowerCase();
+
+          const title =
+            (
+              product.querySelector("h3")?.textContent || ""
+            ).toLowerCase();
 
 
-      const matches =
-        words.every(function (word) {
+          const productText =
+            name +
+            " " +
+            category +
+            " " +
+            description +
+            " " +
+            title;
 
 
-          /* Normal match */
+          /* Alternative search words */
 
-          if (productText.includes(word)) {
+          let searchTerms = [search];
 
-            return true;
 
+          if (search === "smartwatch") {
+            searchTerms.push("smart watch");
           }
 
 
-          /* Alternative match */
-
-          if (alternatives[word]) {
-
-            return alternatives[word].some(
-              function (alternative) {
-
-                return productText.includes(
-                  alternative
-                );
-
-              }
-            );
-
+          if (search === "headphones") {
+            searchTerms.push("gaming headset");
+            searchTerms.push("headset");
           }
 
 
-          return false;
+          if (search === "headset") {
+            searchTerms.push("headphones");
+          }
+
+
+          if (search === "shoes") {
+            searchTerms.push("sneakers");
+            searchTerms.push("footwear");
+          }
+
+
+          if (search === "sneaker") {
+            searchTerms.push("sneakers");
+          }
+
+
+          if (search === "lights") {
+            searchTerms.push("led");
+            searchTerms.push("light");
+          }
+
+
+          if (search === "light") {
+            searchTerms.push("led");
+            searchTerms.push("lights");
+          }
+
+
+          if (search === "controller") {
+            searchTerms.push("gamepad");
+            searchTerms.push("gaming controller");
+          }
+
+
+          if (search === "charger") {
+            searchTerms.push("power bank");
+            searchTerms.push("portable charger");
+          }
+
+
+          if (search === "watch") {
+            searchTerms.push("smart watch");
+            searchTerms.push("fashion watch");
+          }
+
+
+          if (search === "earphone") {
+            searchTerms.push("earbuds");
+            searchTerms.push("wireless earbuds");
+          }
+
+
+          if (search === "earphones") {
+            searchTerms.push("earbuds");
+            searchTerms.push("wireless earbuds");
+          }
+
+
+          if (search === "earbud") {
+            searchTerms.push("earbuds");
+            searchTerms.push("wireless earbuds");
+          }
+
+
+          if (search === "egg") {
+            searchTerms.push("egg boiler");
+            searchTerms.push("egg cooker");
+          }
+
+
+          /* Determine if product matches */
+
+          let matches = false;
+
+
+          searchTerms.forEach(function (term) {
+
+            if (productText.includes(term)) {
+              matches = true;
+            }
+
+          });
+
+
+          if (matches) {
+
+            product.style.display = "";
+
+            found++;
+
+          } else {
+
+            product.style.display = "none";
+
+          }
 
         });
 
 
-      /* =========================
-         SHOW / HIDE PRODUCT
-      ========================= */
+        /* Results message */
 
-      if (matches) {
+        if (found === 0) {
 
-        product.style.display = "";
+          noResults.style.display = "block";
 
-        found++;
+          resultsText.textContent =
+            "No products match your search.";
 
-      } else {
+        } else {
 
-        product.style.display = "none";
+          noResults.style.display = "none";
+
+          resultsText.textContent =
+            found +
+            " product" +
+            (found === 1 ? "" : "s") +
+            " found";
+
+        }
+
+
+        /* Move to products ONLY after
+           the Search button is pressed */
+
+        document
+          .getElementById("products")
+          .scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
 
       }
 
-    });
+
+      /* =========================
+         SEARCH BUTTON / ENTER
+         ========================= */
+
+      searchForm.addEventListener(
+        "submit",
+        function (event) {
+
+          event.preventDefault();
+
+          searchProducts();
+
+        }
+      );
 
 
-    /* =========================
-       SEARCH RESULTS MESSAGE
-    ========================= */
-
-    if (search === "") {
-
-      noResults.style.display = "none";
-
-      resultsText.textContent =
-        "Explore our selected products";
-
-    }
-
-    else if (found === 0) {
-
-      noResults.style.display = "block";
-
-      resultsText.textContent =
-        "No products match your search.";
-
-    }
-
-    else {
-
-      noResults.style.display = "none";
-
-      resultsText.textContent =
-        found +
-        " product" +
-        (found === 1 ? "" : "s") +
-        " found";
-
-    }
+      /*
+       * IMPORTANT:
+       *
+       * There is NO input event here.
+       *
+       * Therefore:
+       *
+       * typing = nothing happens
+       *
+       * Search button = search
+       *
+       * Enter = search
+       *
+       */
 
 
-    /* =========================
-       SCROLL ONLY WHEN BUTTON
-       IS PRESSED
-    ========================= */
+      /* =========================
+         CATEGORY FILTER
+         ========================= */
 
-    if (scrollToProducts) {
+      categories.forEach(function (category) {
 
-      document
-        .getElementById("products")
-        .scrollIntoView({
+        category.addEventListener(
+          "click",
+          function () {
 
-          behavior:"smooth",
-
-          block:"start"
-
-        });
-
-    }
-
-  }
+            const selectedCategory =
+              category.getAttribute("data-category");
 
 
-  /* =========================
-     SEARCH BUTTON
-  ========================= */
+            /* Clear search box */
 
-  searchForm.addEventListener(
-    "submit",
-    function (event) {
-
-      event.preventDefault();
-
-      searchProducts(true);
-
-    }
-  );
+            searchInput.value = "";
 
 
-  /* =========================
-     SEARCH WHILE TYPING
-  ========================= */
-
-  searchInput.addEventListener(
-    "input",
-    function () {
-
-      searchProducts(false);
-
-    }
-  );
+            let found = 0;
 
 
-  /* =========================
-     CATEGORY FILTER
-  ========================= */
+            /* Show only selected category */
 
-  categories.forEach(
-    function (category) {
-
-      category.addEventListener(
-        "click",
-        function () {
-
-
-          const selectedCategory =
-            category.getAttribute(
-              "data-category"
-            );
-
-
-          searchInput.value = "";
-
-
-          let found = 0;
-
-
-          products.forEach(
-            function (product) {
-
+            products.forEach(function (product) {
 
               const productCategory =
-                product.getAttribute(
-                  "data-category"
-                );
+                (
+                  product.getAttribute("data-category") || ""
+                ).toLowerCase();
 
 
               if (
-                productCategory &&
-                productCategory.toLowerCase() ===
+                productCategory ===
                 selectedCategory.toLowerCase()
               ) {
 
@@ -1344,49 +1208,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 found++;
 
-              }
-
-              else {
+              } else {
 
                 product.style.display = "none";
 
               }
 
-            }
-          );
-
-
-          noResults.style.display =
-            "none";
-
-
-          resultsText.textContent =
-            found +
-            " product" +
-            (found === 1 ? "" : "s") +
-            " found in " +
-            selectedCategory;
-
-
-          document
-            .getElementById("products")
-            .scrollIntoView({
-
-              behavior:"smooth",
-
-              block:"start"
-
             });
 
-        }
-      );
 
-    }
-  );
+            noResults.style.display = "none";
 
-});
 
-</script>
+            resultsText.textContent =
+              found +
+              " product" +
+              (found === 1 ? "" : "s") +
+              " found in " +
+              selectedCategory;
+
+
+            /* Scroll to products */
+
+            document
+              .getElementById("products")
+              .scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+              });
+
+          }
+        );
+
+      });
+
+    });
+
+  </script>
 
 </body>
 </html>
