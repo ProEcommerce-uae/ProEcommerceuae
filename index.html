@@ -137,7 +137,7 @@
       font-size: 14px;
     }
 
-    /* MAIN CONTAINER */
+    /* MAIN */
     .container {
       width: 90%;
       max-width: 1200px;
@@ -206,20 +206,30 @@
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      transition: transform 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .product:hover {
       transform: translateY(-5px);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.12);
     }
 
+    /* PRODUCT IMAGE */
     .product-image {
-      height: 210px;
+      width: 100%;
+      height: 240px;
+      background: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #f3f4f6;
-      font-size: 80px;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
     }
 
     .product-info {
@@ -260,6 +270,7 @@
 
     .amazon-button:hover {
       background: #e68a00;
+      color: white;
     }
 
     /* NO RESULTS */
@@ -313,7 +324,7 @@
       font-size: 14px;
     }
 
-    /* MOBILE */
+    /* TABLET */
     @media (max-width: 800px) {
 
       header {
@@ -336,8 +347,13 @@
       .products-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .product-image {
+        height: 210px;
+      }
     }
 
+    /* PHONE */
     @media (max-width: 550px) {
 
       .hero {
@@ -366,7 +382,11 @@
       }
 
       .product-image {
-        height: 180px;
+        height: 230px;
+      }
+
+      .product-info h3 {
+        font-size: 19px;
       }
     }
   </style>
@@ -376,6 +396,7 @@
 
   <!-- HEADER -->
   <header>
+
     <div class="logo">
       ProEcommerce <span>UAE</span>
     </div>
@@ -385,17 +406,20 @@
       <a href="#categories">Categories</a>
       <a href="#products">Products</a>
     </nav>
+
   </header>
 
 
   <!-- HERO -->
   <section class="hero" id="home">
+
     <h1>Discover Great Products</h1>
 
     <p>
       Explore popular gadgets, fashion, home products and gaming accessories.
       Find products you love and shop through trusted stores.
     </p>
+
   </section>
 
 
@@ -424,42 +448,75 @@
 
   <!-- AMAZON DISCLOSURE -->
   <div class="disclosure">
+
     <strong>Amazon Associates Disclosure:</strong>
+
     As an Amazon Associate I earn from qualifying purchases.
+
   </div>
 
 
   <!-- MAIN -->
   <main class="container">
 
+
     <!-- CATEGORIES -->
     <section id="categories">
 
       <div class="section-title">
+
         <h2>Explore Categories</h2>
-        <p>Choose a category to find products</p>
+
+        <p>
+          Choose a category to find products
+        </p>
+
       </div>
+
 
       <div class="categories">
 
         <div class="category" data-category="Gadgets">
-          <div class="category-icon">📱</div>
+
+          <div class="category-icon">
+            📱
+          </div>
+
           <h3>Gadgets</h3>
+
         </div>
+
 
         <div class="category" data-category="Fashion">
-          <div class="category-icon">👟</div>
+
+          <div class="category-icon">
+            👟
+          </div>
+
           <h3>Fashion</h3>
+
         </div>
+
 
         <div class="category" data-category="Home & Living">
-          <div class="category-icon">🏠</div>
+
+          <div class="category-icon">
+            🏠
+          </div>
+
           <h3>Home & Living</h3>
+
         </div>
 
+
         <div class="category" data-category="Gaming">
-          <div class="category-icon">🎮</div>
+
+          <div class="category-icon">
+            🎮
+          </div>
+
           <h3>Gaming</h3>
+
         </div>
 
       </div>
@@ -484,16 +541,21 @@
       <div class="products-grid">
 
 
-        <!-- PRODUCT 1 -->
+        <!-- PRODUCT 1: WIRELESS EARBUDS -->
         <div
           class="product"
           data-category="Gadgets"
           data-name="Wireless Earbuds"
-          data-description="Wireless Bluetooth earbuds"
+          data-description="Wireless Bluetooth earbuds earphones headphones"
         >
 
           <div class="product-image">
-            🎧
+
+            <img
+              src="product-images/wireless-earbuds.jpg"
+              alt="Wireless Earbuds"
+            >
+
           </div>
 
           <div class="product-info">
@@ -502,7 +564,9 @@
               Gadgets
             </span>
 
-            <h3>Wireless Earbuds</h3>
+            <h3>
+              Wireless Earbuds
+            </h3>
 
             <p>
               Wireless Bluetooth earbuds for music,
@@ -523,16 +587,21 @@
         </div>
 
 
-        <!-- PRODUCT 2 -->
+        <!-- PRODUCT 2: SMART WATCH -->
         <div
           class="product"
           data-category="Gadgets"
           data-name="Smart Watch"
-          data-description="Smart watch fitness tracker digital watch"
+          data-description="Smart watch smartwatch fitness tracker digital watch"
         >
 
           <div class="product-image">
-            ⌚
+
+            <img
+              src="product-images/smart-watch.jpg"
+              alt="Smart Watch"
+            >
+
           </div>
 
           <div class="product-info">
@@ -541,7 +610,9 @@
               Gadgets
             </span>
 
-            <h3>Smart Watch</h3>
+            <h3>
+              Smart Watch
+            </h3>
 
             <p>
               Smart watch for fitness,
@@ -562,16 +633,21 @@
         </div>
 
 
-        <!-- PRODUCT 3 -->
+        <!-- PRODUCT 3: GAMING HEADSET -->
         <div
           class="product"
           data-category="Gaming"
           data-name="Gaming Headset"
-          data-description="Gaming headset headphones computer audio"
+          data-description="Gaming headset headphones computer audio microphone"
         >
 
           <div class="product-image">
-            🎧
+
+            <img
+              src="product-images/gaming-headset.jpg"
+              alt="Gaming Headset"
+            >
+
           </div>
 
           <div class="product-info">
@@ -580,7 +656,9 @@
               Gaming
             </span>
 
-            <h3>Gaming Headset</h3>
+            <h3>
+              Gaming Headset
+            </h3>
 
             <p>
               Gaming headset with immersive audio
@@ -601,16 +679,21 @@
         </div>
 
 
-        <!-- PRODUCT 4 -->
+        <!-- PRODUCT 4: POWER BANK -->
         <div
           class="product"
           data-category="Gadgets"
           data-name="Power Bank"
-          data-description="Portable charger power bank battery charger"
+          data-description="Portable charger power bank battery charger phone charger"
         >
 
           <div class="product-image">
-            🔋
+
+            <img
+              src="product-images/power-bank.jpg"
+              alt="Power Bank"
+            >
+
           </div>
 
           <div class="product-info">
@@ -619,7 +702,9 @@
               Gadgets
             </span>
 
-            <h3>Power Bank</h3>
+            <h3>
+              Power Bank
+            </h3>
 
             <p>
               Portable power bank for charging
@@ -640,16 +725,21 @@
         </div>
 
 
-        <!-- PRODUCT 5 -->
+        <!-- PRODUCT 5: SNEAKERS -->
         <div
           class="product"
           data-category="Fashion"
           data-name="Sneakers"
-          data-description="Sneakers shoes footwear sports shoes"
+          data-description="Sneakers shoes footwear sports shoes running shoes"
         >
 
           <div class="product-image">
-            👟
+
+            <img
+              src="product-images/sneakers.jpg"
+              alt="Sneakers"
+            >
+
           </div>
 
           <div class="product-info">
@@ -658,7 +748,9 @@
               Fashion
             </span>
 
-            <h3>Sneakers</h3>
+            <h3>
+              Sneakers
+            </h3>
 
             <p>
               Stylish sneakers suitable for
@@ -679,7 +771,7 @@
         </div>
 
 
-        <!-- PRODUCT 6 -->
+        <!-- PRODUCT 6: FASHION WATCH -->
         <div
           class="product"
           data-category="Fashion"
@@ -688,7 +780,12 @@
         >
 
           <div class="product-image">
-            ⌚
+
+            <img
+              src="product-images/fashion-watch.jpg"
+              alt="Fashion Watch"
+            >
+
           </div>
 
           <div class="product-info">
@@ -697,7 +794,9 @@
               Fashion
             </span>
 
-            <h3>Fashion Watch</h3>
+            <h3>
+              Fashion Watch
+            </h3>
 
             <p>
               Stylish wrist watch designed
@@ -718,16 +817,21 @@
         </div>
 
 
-        <!-- PRODUCT 7 -->
+        <!-- PRODUCT 7: LED LIGHTS -->
         <div
           class="product"
           data-category="Home & Living"
           data-name="LED Lights"
-          data-description="LED lights home lighting decoration light"
+          data-description="LED lights home lighting decoration light strip RGB"
         >
 
           <div class="product-image">
-            💡
+
+            <img
+              src="product-images/led-lights.jpg"
+              alt="LED Lights"
+            >
+
           </div>
 
           <div class="product-info">
@@ -736,7 +840,9 @@
               Home & Living
             </span>
 
-            <h3>LED Lights</h3>
+            <h3>
+              LED Lights
+            </h3>
 
             <p>
               LED lighting for home decoration,
@@ -757,16 +863,21 @@
         </div>
 
 
-        <!-- PRODUCT 8 -->
+        <!-- PRODUCT 8: GAMING CONTROLLER -->
         <div
           class="product"
           data-category="Gaming"
           data-name="Gaming Controller"
-          data-description="Gaming controller gamepad console controller"
+          data-description="Gaming controller gamepad console controller wireless game"
         >
 
           <div class="product-image">
-            🎮
+
+            <img
+              src="product-images/gaming-controller.jpg"
+              alt="Gaming Controller"
+            >
+
           </div>
 
           <div class="product-info">
@@ -775,7 +886,9 @@
               Gaming
             </span>
 
-            <h3>Gaming Controller</h3>
+            <h3>
+              Gaming Controller
+            </h3>
 
             <p>
               Gaming controller for console
@@ -796,7 +909,7 @@
         </div>
 
 
-        <!-- PRODUCT 9 -->
+        <!-- PRODUCT 9: ELECTRIC EGG BOILER -->
         <div
           class="product"
           data-category="Home & Living"
@@ -805,7 +918,12 @@
         >
 
           <div class="product-image">
-            🥚
+
+            <img
+              src="product-images/egg-boiler.jpg"
+              alt="Electric Egg Boiler"
+            >
+
           </div>
 
           <div class="product-info">
@@ -814,7 +932,9 @@
               Home & Living
             </span>
 
-            <h3>Electric Egg Boiler</h3>
+            <h3>
+              Electric Egg Boiler
+            </h3>
 
             <p>
               Convenient electric egg boiler
@@ -841,7 +961,9 @@
       <!-- NO RESULTS -->
       <div id="noResults">
 
-        <h3>No products found</h3>
+        <h3>
+          No products found
+        </h3>
 
         <p>
           Try searching for another product such as
@@ -853,10 +975,12 @@
     </section>
 
 
-    <!-- NOON SECTION -->
+    <!-- NOON -->
     <div class="noon-box">
 
-      <h2>More Products Coming Soon</h2>
+      <h2>
+        More Products Coming Soon
+      </h2>
 
       <p>
         We are working on bringing more products
@@ -872,7 +996,9 @@
   <footer>
 
     <p>
-      <strong>ProEcommerce UAE</strong>
+      <strong>
+        ProEcommerce UAE
+      </strong>
     </p>
 
     <p>
@@ -915,7 +1041,7 @@
 
 
       /* =========================
-         PRODUCT SEARCH
+         SEARCH PRODUCTS
          ========================= */
 
       function searchProducts() {
@@ -926,8 +1052,7 @@
         let found = 0;
 
 
-        /* If search box is empty,
-           show all products */
+        /* EMPTY SEARCH = SHOW ALL */
 
         if (search === "") {
 
@@ -953,7 +1078,7 @@
         }
 
 
-        /* Check every product */
+        /* CHECK PRODUCTS */
 
         products.forEach(function (product) {
 
@@ -985,96 +1110,113 @@
             title;
 
 
-          /* Alternative search words */
-
           let searchTerms = [search];
 
+
+          /* SEARCH ALIASES */
 
           if (search === "smartwatch") {
             searchTerms.push("smart watch");
           }
 
+          if (search === "smart") {
+            searchTerms.push("smart watch");
+          }
 
           if (search === "headphones") {
             searchTerms.push("gaming headset");
             searchTerms.push("headset");
           }
 
-
           if (search === "headset") {
             searchTerms.push("headphones");
           }
-
 
           if (search === "shoes") {
             searchTerms.push("sneakers");
             searchTerms.push("footwear");
           }
 
-
           if (search === "sneaker") {
             searchTerms.push("sneakers");
           }
-
 
           if (search === "lights") {
             searchTerms.push("led");
             searchTerms.push("light");
           }
 
-
           if (search === "light") {
             searchTerms.push("led");
             searchTerms.push("lights");
           }
 
+          if (search === "led") {
+            searchTerms.push("lights");
+            searchTerms.push("led lights");
+          }
 
           if (search === "controller") {
             searchTerms.push("gamepad");
             searchTerms.push("gaming controller");
           }
 
+          if (search === "gamepad") {
+            searchTerms.push("gaming controller");
+          }
 
           if (search === "charger") {
             searchTerms.push("power bank");
             searchTerms.push("portable charger");
           }
 
+          if (search === "power") {
+            searchTerms.push("power bank");
+          }
 
           if (search === "watch") {
             searchTerms.push("smart watch");
             searchTerms.push("fashion watch");
           }
 
-
           if (search === "earphone") {
             searchTerms.push("earbuds");
             searchTerms.push("wireless earbuds");
           }
-
 
           if (search === "earphones") {
             searchTerms.push("earbuds");
             searchTerms.push("wireless earbuds");
           }
 
-
           if (search === "earbud") {
             searchTerms.push("earbuds");
             searchTerms.push("wireless earbuds");
           }
-
 
           if (search === "egg") {
             searchTerms.push("egg boiler");
             searchTerms.push("egg cooker");
           }
 
+          if (search === "boiler") {
+            searchTerms.push("egg boiler");
+          }
 
-          /* Determine if product matches */
+          if (search === "gaming") {
+            searchTerms.push("gaming headset");
+            searchTerms.push("gaming controller");
+          }
+
+          if (search === "fashion") {
+            searchTerms.push("fashion watch");
+            searchTerms.push("sneakers");
+          }
+
+
+          /* DETERMINE MATCH */
 
           let matches = false;
-
 
           searchTerms.forEach(function (term) {
 
@@ -1100,7 +1242,7 @@
         });
 
 
-        /* Results message */
+        /* RESULTS */
 
         if (found === 0) {
 
@@ -1122,8 +1264,7 @@
         }
 
 
-        /* Move to products ONLY after
-           the Search button is pressed */
+        /* SCROLL ONLY AFTER SEARCH */
 
         document
           .getElementById("products")
@@ -1136,7 +1277,7 @@
 
 
       /* =========================
-         SEARCH BUTTON / ENTER
+         SEARCH FORM
          ========================= */
 
       searchForm.addEventListener(
@@ -1149,22 +1290,6 @@
 
         }
       );
-
-
-      /*
-       * IMPORTANT:
-       *
-       * There is NO input event here.
-       *
-       * Therefore:
-       *
-       * typing = nothing happens
-       *
-       * Search button = search
-       *
-       * Enter = search
-       *
-       */
 
 
       /* =========================
@@ -1181,7 +1306,7 @@
               category.getAttribute("data-category");
 
 
-            /* Clear search box */
+            /* CLEAR SEARCH */
 
             searchInput.value = "";
 
@@ -1189,7 +1314,7 @@
             let found = 0;
 
 
-            /* Show only selected category */
+            /* FILTER */
 
             products.forEach(function (product) {
 
@@ -1228,7 +1353,7 @@
               selectedCategory;
 
 
-            /* Scroll to products */
+            /* SCROLL */
 
             document
               .getElementById("products")
