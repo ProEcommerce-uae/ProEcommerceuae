@@ -214,7 +214,7 @@
       box-shadow: 0 8px 22px rgba(0,0,0,0.12);
     }
 
-    /* PRODUCT IMAGE */
+    /* REAL PRODUCT IMAGES */
     .product-image {
       width: 100%;
       height: 240px;
@@ -229,6 +229,7 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
+      padding: 10px;
       display: block;
     }
 
@@ -384,10 +385,6 @@
       .product-image {
         height: 230px;
       }
-
-      .product-info h3 {
-        font-size: 19px;
-      }
     }
   </style>
 </head>
@@ -541,7 +538,7 @@
       <div class="products-grid">
 
 
-        <!-- PRODUCT 1: WIRELESS EARBUDS -->
+        <!-- PRODUCT 1 -->
         <div
           class="product"
           data-category="Gadgets"
@@ -552,8 +549,9 @@
           <div class="product-image">
 
             <img
-              src="product-images/wireless-earbuds.jpg"
+              src="./images/wireless-earbuds.jpg"
               alt="Wireless Earbuds"
+              loading="lazy"
             >
 
           </div>
@@ -587,7 +585,7 @@
         </div>
 
 
-        <!-- PRODUCT 2: SMART WATCH -->
+        <!-- PRODUCT 2 -->
         <div
           class="product"
           data-category="Gadgets"
@@ -598,8 +596,9 @@
           <div class="product-image">
 
             <img
-              src="product-images/smart-watch.jpg"
+              src="./images/smart-watch.jpg"
               alt="Smart Watch"
+              loading="lazy"
             >
 
           </div>
@@ -633,7 +632,7 @@
         </div>
 
 
-        <!-- PRODUCT 3: GAMING HEADSET -->
+        <!-- PRODUCT 3 -->
         <div
           class="product"
           data-category="Gaming"
@@ -644,8 +643,9 @@
           <div class="product-image">
 
             <img
-              src="product-images/gaming-headset.jpg"
+              src="./images/gaming-headset.jpg"
               alt="Gaming Headset"
+              loading="lazy"
             >
 
           </div>
@@ -679,7 +679,7 @@
         </div>
 
 
-        <!-- PRODUCT 4: POWER BANK -->
+        <!-- PRODUCT 4 -->
         <div
           class="product"
           data-category="Gadgets"
@@ -690,8 +690,9 @@
           <div class="product-image">
 
             <img
-              src="product-images/power-bank.jpg"
+              src="./images/power-bank.jpg"
               alt="Power Bank"
+              loading="lazy"
             >
 
           </div>
@@ -725,7 +726,7 @@
         </div>
 
 
-        <!-- PRODUCT 5: SNEAKERS -->
+        <!-- PRODUCT 5 -->
         <div
           class="product"
           data-category="Fashion"
@@ -736,8 +737,9 @@
           <div class="product-image">
 
             <img
-              src="product-images/sneakers.jpg"
+              src="./images/sneakers.jpg"
               alt="Sneakers"
+              loading="lazy"
             >
 
           </div>
@@ -771,7 +773,7 @@
         </div>
 
 
-        <!-- PRODUCT 6: FASHION WATCH -->
+        <!-- PRODUCT 6 -->
         <div
           class="product"
           data-category="Fashion"
@@ -782,8 +784,9 @@
           <div class="product-image">
 
             <img
-              src="product-images/fashion-watch.jpg"
+              src="./images/fashion-watch.jpg"
               alt="Fashion Watch"
+              loading="lazy"
             >
 
           </div>
@@ -817,7 +820,7 @@
         </div>
 
 
-        <!-- PRODUCT 7: LED LIGHTS -->
+        <!-- PRODUCT 7 -->
         <div
           class="product"
           data-category="Home & Living"
@@ -828,8 +831,9 @@
           <div class="product-image">
 
             <img
-              src="product-images/led-lights.jpg"
+              src="./images/led-lights.jpg"
               alt="LED Lights"
+              loading="lazy"
             >
 
           </div>
@@ -863,7 +867,7 @@
         </div>
 
 
-        <!-- PRODUCT 8: GAMING CONTROLLER -->
+        <!-- PRODUCT 8 -->
         <div
           class="product"
           data-category="Gaming"
@@ -874,8 +878,9 @@
           <div class="product-image">
 
             <img
-              src="product-images/gaming-controller.jpg"
+              src="./images/gaming-controller.jpg"
               alt="Gaming Controller"
+              loading="lazy"
             >
 
           </div>
@@ -909,7 +914,7 @@
         </div>
 
 
-        <!-- PRODUCT 9: ELECTRIC EGG BOILER -->
+        <!-- PRODUCT 9 -->
         <div
           class="product"
           data-category="Home & Living"
@@ -920,8 +925,9 @@
           <div class="product-image">
 
             <img
-              src="product-images/egg-boiler.jpg"
+              src="./images/egg-boiler.jpg"
               alt="Electric Egg Boiler"
+              loading="lazy"
             >
 
           </div>
@@ -953,7 +959,6 @@
           </div>
 
         </div>
-
 
       </div>
 
@@ -996,9 +1001,7 @@
   <footer>
 
     <p>
-      <strong>
-        ProEcommerce UAE
-      </strong>
+      <strong>ProEcommerce UAE</strong>
     </p>
 
     <p>
@@ -1041,7 +1044,7 @@
 
 
       /* =========================
-         SEARCH PRODUCTS
+         SEARCH
          ========================= */
 
       function searchProducts() {
@@ -1052,14 +1055,12 @@
         let found = 0;
 
 
-        /* EMPTY SEARCH = SHOW ALL */
+        /* EMPTY SEARCH */
 
         if (search === "") {
 
           products.forEach(function (product) {
-
             product.style.display = "";
-
           });
 
           noResults.style.display = "none";
@@ -1078,21 +1079,19 @@
         }
 
 
-        /* CHECK PRODUCTS */
-
         products.forEach(function (product) {
 
           const name =
             (product.getAttribute("data-name") || "")
-              .toLowerCase();
+            .toLowerCase();
 
           const category =
             (product.getAttribute("data-category") || "")
-              .toLowerCase();
+            .toLowerCase();
 
           const description =
             (product.getAttribute("data-description") || "")
-              .toLowerCase();
+            .toLowerCase();
 
           const title =
             (
@@ -1101,12 +1100,9 @@
 
 
           const productText =
-            name +
-            " " +
-            category +
-            " " +
-            description +
-            " " +
+            name + " " +
+            category + " " +
+            description + " " +
             title;
 
 
@@ -1214,9 +1210,8 @@
           }
 
 
-          /* DETERMINE MATCH */
-
           let matches = false;
+
 
           searchTerms.forEach(function (term) {
 
@@ -1264,7 +1259,7 @@
         }
 
 
-        /* SCROLL ONLY AFTER SEARCH */
+        /* SCROLL */
 
         document
           .getElementById("products")
@@ -1276,9 +1271,7 @@
       }
 
 
-      /* =========================
-         SEARCH FORM
-         ========================= */
+      /* SEARCH ONLY WHEN BUTTON OR ENTER IS USED */
 
       searchForm.addEventListener(
         "submit",
@@ -1305,16 +1298,10 @@
             const selectedCategory =
               category.getAttribute("data-category");
 
-
-            /* CLEAR SEARCH */
-
             searchInput.value = "";
-
 
             let found = 0;
 
-
-            /* FILTER */
 
             products.forEach(function (product) {
 
@@ -1352,8 +1339,6 @@
               " found in " +
               selectedCategory;
 
-
-            /* SCROLL */
 
             document
               .getElementById("products")
