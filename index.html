@@ -3,14 +3,34 @@
 <head>
 
   <!-- Google Search Console Verification -->
-  <meta name="google-site-verification" content="C3E04qGEGMtmmr9IHt1gOGgtJL7hpCAds8Fg3YFarFE" />
+  <meta name="google-site-verification" content="C3E04qGEGMtmmr9IHt1gOGgtJL7hpCAds8Fg3YFarFE">
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ProEcommerce UAE | Discover Great Products</title>
+  <!-- SEO Title -->
+  <title>ProEcommerce UAE | Gadgets, Fashion, Home & Living and Gaming Products</title>
+
+  <!-- SEO Description -->
+  <meta
+    name="description"
+    content="Discover useful gadgets, fashion, home and living products, and gaming accessories at ProEcommerce UAE. Explore featured products and shop through Amazon."
+  >
+
+  <!-- Search Engine Instructions -->
+  <meta name="robots" content="index, follow">
+
+  <!-- Website Author -->
+  <meta name="author" content="ProEcommerce UAE">
+
+  <!-- Canonical URL -->
+  <link
+    rel="canonical"
+    href="https://proecommerce-uae.github.io/ProEcommerceuae/"
+  >
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -128,6 +148,20 @@
       text-align: center;
       font-size: 30px;
       margin-bottom: 30px;
+    }
+
+    /* INTRO CONTENT */
+
+    .intro {
+      max-width: 900px;
+      margin: 0 auto 20px auto;
+      text-align: center;
+      color: #555;
+      font-size: 16px;
+    }
+
+    .intro strong {
+      color: #222;
     }
 
     /* CATEGORIES */
@@ -340,7 +374,12 @@
       .product-image {
         height: 180px;
       }
+
+      .intro {
+        font-size: 15px;
+      }
     }
+
   </style>
 </head>
 
@@ -372,12 +411,12 @@
   <section class="hero" id="home">
 
     <h1>
-      Discover Great Products
+      Discover Great Products in UAE
     </h1>
 
     <p>
-      Find useful products across gadgets, fashion,
-      home & living, and gaming.
+      Explore useful gadgets, fashion, home & living products,
+      and gaming accessories.
     </p>
 
     <form class="search-box" id="searchForm">
@@ -386,6 +425,7 @@
         type="text"
         id="searchInput"
         placeholder="Search for a product..."
+        aria-label="Search for a product"
       >
 
       <button type="submit">
@@ -397,12 +437,30 @@
   </section>
 
 
+  <!-- INTRODUCTION -->
+
+  <section class="section">
+
+    <h2 class="section-title">
+      Welcome to ProEcommerce UAE
+    </h2>
+
+    <p class="intro">
+      ProEcommerce UAE helps shoppers discover useful and interesting
+      products across different categories. Browse our selection of
+      <strong>gadgets, fashion, home & living products, and gaming accessories</strong>
+      and explore products available through Amazon.
+    </p>
+
+  </section>
+
+
   <!-- CATEGORIES -->
 
   <section class="section" id="categories">
 
     <h2 class="section-title">
-      Explore Categories
+      Explore Product Categories
     </h2>
 
     <div class="categories">
@@ -507,6 +565,12 @@
       Featured Products
     </h2>
 
+    <p class="intro">
+      Browse our featured product selection, including wireless earbuds,
+      smart watches, gaming accessories, fashion items, lighting products,
+      kitchen appliances, and more.
+    </p>
+
     <div class="products" id="productGrid">
 
 
@@ -523,6 +587,7 @@
           <img
             src="Image/wireless-earbuds-18.jpg"
             alt="Wireless Earbuds"
+            loading="lazy"
           >
 
         </div>
@@ -564,6 +629,7 @@
           <img
             src="Image/smart-watch.jpg"
             alt="Smart Watch"
+            loading="lazy"
           >
 
         </div>
@@ -605,6 +671,7 @@
           <img
             src="Image/gaming-headset.jpg"
             alt="Gaming Headset"
+            loading="lazy"
           >
 
         </div>
@@ -646,6 +713,7 @@
           <img
             src="Image/magnetic-power-bank-original.jpg"
             alt="Magnetic Power Bank"
+            loading="lazy"
           >
 
         </div>
@@ -686,7 +754,8 @@
 
           <img
             src="Image/sneakers.jpg"
-            alt="Sneakers"
+            alt="Stylish Sneakers Shoes"
+            loading="lazy"
           >
 
         </div>
@@ -728,6 +797,7 @@
           <img
             src="Image/fashion-watch.jpg"
             alt="Fashion Watch"
+            loading="lazy"
           >
 
         </div>
@@ -768,7 +838,8 @@
 
           <img
             src="Image/led-lights.jpg"
-            alt="LED Lights"
+            alt="LED Lights for Home"
+            loading="lazy"
           >
 
         </div>
@@ -809,7 +880,8 @@
 
           <img
             src="Image/gaming-controller.jpg"
-            alt="Gaming Controller"
+            alt="Gaming Controller Gamepad"
+            loading="lazy"
           >
 
         </div>
@@ -850,7 +922,8 @@
 
           <img
             src="Image/egg-boiler.jpg"
-            alt="Electric Egg Boiler"
+            alt="Electric Egg Boiler Egg Cooker"
+            loading="lazy"
           >
 
         </div>
