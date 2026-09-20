@@ -29,7 +29,10 @@
   >
 
   <!-- Basic Open Graph -->
-  <meta property="og:title" content="ProEcommerce UAE | Shop Gadgets, Fashion & More">
+  <meta
+    property="og:title"
+    content="ProEcommerce UAE | Shop Gadgets, Fashion & More"
+  >
 
   <meta
     property="og:description"
@@ -731,7 +734,7 @@
     <section class="hero">
 
       <h1>
-        Discover <span>Great Products</span> in UAE
+        Discover <span>Gadgets, Fashion & More</span> in UAE
       </h1>
 
       <p>
@@ -1347,10 +1350,13 @@
       <!-- NO RESULTS -->
 
       <div id="noResults">
+
         <h3>No products found</h3>
+
         <p>
           Try another product name or category.
         </p>
+
       </div>
 
 
@@ -1454,16 +1460,22 @@
        MOBILE MENU
     ========================= */
 
-    const menuButton = document.getElementById("menuButton");
-    const navLinks = document.getElementById("navLinks");
+    const menuButton =
+      document.getElementById("menuButton");
 
-    menuButton.addEventListener("click", function () {
+    const navLinks =
+      document.getElementById("navLinks");
+
+
+    menuButton.addEventListener("click", function() {
 
       navLinks.classList.toggle("active");
 
-      const isOpen = navLinks.classList.contains("active");
+      const isOpen =
+        navLinks.classList.contains("active");
 
-      menuButton.textContent = isOpen ? "✕" : "☰";
+      menuButton.textContent =
+        isOpen ? "✕" : "☰";
 
       menuButton.setAttribute(
         "aria-expanded",
@@ -1475,31 +1487,35 @@
 
     /* Close mobile menu after clicking a link */
 
-    document.querySelectorAll(".nav-links a").forEach(function(link) {
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(function(link) {
 
-      link.addEventListener("click", function() {
+        link.addEventListener("click", function() {
 
-        navLinks.classList.remove("active");
+          navLinks.classList.remove("active");
 
-        menuButton.textContent = "☰";
+          menuButton.textContent = "☰";
 
-        menuButton.setAttribute(
-          "aria-expanded",
-          "false"
-        );
+          menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        });
 
       });
-
-    });
 
 
     /* =========================
        PRODUCT SEARCH
     ========================= */
 
-    const searchForm = document.getElementById("searchForm");
+    const searchForm =
+      document.getElementById("searchForm");
 
-    const searchInput = document.getElementById("searchInput");
+    const searchInput =
+      document.getElementById("searchInput");
 
     const productCards =
       document.querySelectorAll(".product-card");
@@ -1508,72 +1524,75 @@
       document.getElementById("noResults");
 
 
-    searchForm.addEventListener("submit", function(event) {
+    searchForm.addEventListener(
+      "submit",
+      function(event) {
 
-      event.preventDefault();
+        event.preventDefault();
 
-      const searchTerm =
-        searchInput.value.trim().toLowerCase();
+        const searchTerm =
+          searchInput.value.trim().toLowerCase();
 
-      let foundProducts = 0;
-
-
-      productCards.forEach(function(card) {
-
-        const name =
-          (card.dataset.name || "").toLowerCase();
-
-        const category =
-          (card.dataset.category || "").toLowerCase();
-
-        const description =
-          (card.dataset.description || "").toLowerCase();
-
-        const productText =
-          card.textContent.toLowerCase();
+        let foundProducts = 0;
 
 
-        const matches =
-          searchTerm === "" ||
-          name.includes(searchTerm) ||
-          category.includes(searchTerm) ||
-          description.includes(searchTerm) ||
-          productText.includes(searchTerm);
+        productCards.forEach(function(card) {
+
+          const name =
+            (card.dataset.name || "").toLowerCase();
+
+          const category =
+            (card.dataset.category || "").toLowerCase();
+
+          const description =
+            (card.dataset.description || "").toLowerCase();
+
+          const productText =
+            card.textContent.toLowerCase();
 
 
-        if (matches) {
+          const matches =
+            searchTerm === "" ||
+            name.includes(searchTerm) ||
+            category.includes(searchTerm) ||
+            description.includes(searchTerm) ||
+            productText.includes(searchTerm);
 
-          card.style.display = "flex";
 
-          foundProducts++;
+          if (matches) {
+
+            card.style.display = "flex";
+
+            foundProducts++;
+
+          } else {
+
+            card.style.display = "none";
+
+          }
+
+        });
+
+
+        if (foundProducts === 0) {
+
+          noResults.style.display = "block";
 
         } else {
 
-          card.style.display = "none";
+          noResults.style.display = "none";
 
         }
 
-      });
 
-
-      if (foundProducts === 0) {
-
-        noResults.style.display = "block";
-
-      } else {
-
-        noResults.style.display = "none";
+        document
+          .getElementById("products")
+          .scrollIntoView({
+            behavior: "smooth"
+          });
 
       }
-
-
-      document
-        .getElementById("products")
-        .scrollIntoView({
-          behavior: "smooth"
-        });
-
-    });
+    );
 
 
     /* =========================
@@ -1584,53 +1603,56 @@
       .querySelectorAll(".category-card")
       .forEach(function(categoryCard) {
 
-        categoryCard.addEventListener("click", function() {
+        categoryCard.addEventListener(
+          "click",
+          function() {
 
-          const selectedCategory =
-            categoryCard.dataset.categoryFilter
-              .toLowerCase();
-
-
-          let foundProducts = 0;
-
-
-          productCards.forEach(function(card) {
-
-            const productCategory =
-              (card.dataset.category || "")
+            const selectedCategory =
+              categoryCard.dataset.categoryFilter
                 .toLowerCase();
 
 
-            if (
-              productCategory === selectedCategory
-            ) {
-
-              card.style.display = "flex";
-
-              foundProducts++;
-
-            } else {
-
-              card.style.display = "none";
-
-            }
-
-          });
+            let foundProducts = 0;
 
 
-          noResults.style.display =
-            foundProducts === 0
-              ? "block"
-              : "none";
+            productCards.forEach(function(card) {
+
+              const productCategory =
+                (card.dataset.category || "")
+                  .toLowerCase();
 
 
-          document
-            .getElementById("products")
-            .scrollIntoView({
-              behavior: "smooth"
+              if (
+                productCategory === selectedCategory
+              ) {
+
+                card.style.display = "flex";
+
+                foundProducts++;
+
+              } else {
+
+                card.style.display = "none";
+
+              }
+
             });
 
-        });
+
+            noResults.style.display =
+              foundProducts === 0
+                ? "block"
+                : "none";
+
+
+            document
+              .getElementById("products")
+              .scrollIntoView({
+                behavior: "smooth"
+              });
+
+          }
+        );
 
       });
 
