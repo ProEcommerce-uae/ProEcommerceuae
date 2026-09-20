@@ -6,11 +6,13 @@
   <meta name="google-site-verification" content="C3E04qGEGMtmmr9IHt1gOGgtJL7hpCAds8Fg3YFarFE">
 
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <title>ProEcommerce UAE | Gadgets, Fashion, Home & Living and Gaming Products</title>
+  <!-- SEO TITLE -->
+  <title>ProEcommerce UAE | Shop Gadgets, Fashion & More</title>
 
+  <!-- SEO DESCRIPTION -->
   <meta
     name="description"
     content="Discover useful gadgets, fashion, home and living products, and gaming accessories at ProEcommerce UAE. Explore featured products and shop through Amazon."
@@ -20,16 +22,622 @@
 
   <meta name="author" content="ProEcommerce UAE">
 
+  <!-- Canonical URL -->
   <link
     rel="canonical"
     href="https://proecommerce-uae.github.io/ProEcommerceuae/"
   >
 
+  <!-- Basic Open Graph -->
+  <meta property="og:title" content="ProEcommerce UAE | Shop Gadgets, Fashion & More">
 
-  <!-- ==========================================
-       STRUCTURED DATA / SCHEMA
-  =========================================== -->
+  <meta
+    property="og:description"
+    content="Discover useful gadgets, fashion, home and living products, and gaming accessories at ProEcommerce UAE."
+  >
 
+  <meta
+    property="og:url"
+    content="https://proecommerce-uae.github.io/ProEcommerceuae/"
+  >
+
+  <meta property="og:type" content="website">
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      background: #071a35;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: #ffb300;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ffb300;
+    }
+
+    /* Mobile menu button */
+
+    .menu-button {
+      display: none;
+      border: none;
+      background: transparent;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+      padding: 4px 8px;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      background: linear-gradient(
+        135deg,
+        #071a35,
+        #12345c
+      );
+
+      color: white;
+      padding: 75px 20px 65px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: #ffb300;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto 30px;
+      color: #e4eaf2;
+      font-size: 18px;
+    }
+
+    /* =========================
+       SEARCH
+    ========================= */
+
+    .search-wrapper {
+      max-width: 720px;
+      margin: auto;
+    }
+
+    .search-form {
+      display: flex;
+      background: white;
+      padding: 6px;
+      border-radius: 50px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .search-form input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 15px 20px;
+      font-size: 16px;
+      border-radius: 50px;
+      min-width: 0;
+    }
+
+    .search-form button {
+      border: none;
+      background: #ffb300;
+      color: #111;
+      font-weight: bold;
+      padding: 0 28px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .search-form button:hover {
+      background: #ff9800;
+    }
+
+    /* =========================
+       DISCLOSURE
+    ========================= */
+
+    .disclosure {
+      max-width: 1100px;
+      margin: 25px auto 0;
+      padding: 15px 20px;
+      background: #fff8df;
+      border: 1px solid #f0df9b;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 14px;
+      color: #5b4b17;
+    }
+
+    .disclosure strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      color: #071a35;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin: 0 auto 35px;
+      text-align: center;
+      color: #667085;
+    }
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro-box {
+      background: white;
+      padding: 35px;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    .intro-box h2 {
+      color: #071a35;
+      margin-bottom: 15px;
+    }
+
+    .intro-box p {
+      max-width: 800px;
+      margin: auto;
+      color: #596579;
+    }
+
+    /* =========================
+       CATEGORIES
+    ========================= */
+
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .category-card {
+      background: white;
+      padding: 28px 20px;
+      border-radius: 16px;
+      text-align: center;
+      cursor: pointer;
+      border: 2px solid transparent;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      transition: 0.25s;
+    }
+
+    .category-card:hover {
+      transform: translateY(-4px);
+      border-color: #ffb300;
+    }
+
+    .category-icon {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .category-card h3 {
+      color: #071a35;
+      margin-bottom: 5px;
+    }
+
+    .category-card p {
+      color: #697586;
+      font-size: 14px;
+    }
+
+    /* =========================
+       PRODUCTS
+    ========================= */
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      transition: 0.25s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.11);
+    }
+
+    .product-image {
+      height: 300px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 8px;
+    }
+
+    .product-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .product-category {
+      display: inline-block;
+      align-self: flex-start;
+      background: #fff3cd;
+      color: #755b00;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+
+    .product-card h3 {
+      color: #071a35;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .product-description {
+      color: #667085;
+      font-size: 14px;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .shop-button {
+      display: block;
+      text-align: center;
+      background: #ffb300;
+      color: #111;
+      font-weight: bold;
+      padding: 13px 15px;
+      border-radius: 8px;
+      transition: 0.25s;
+    }
+
+    .shop-button:hover {
+      background: #ff9800;
+    }
+
+    /* =========================
+       NO RESULTS
+    ========================= */
+
+    #noResults {
+      display: none;
+      text-align: center;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      color: #667085;
+      margin-top: 25px;
+    }
+
+    /* =========================
+       MORE PRODUCTS
+    ========================= */
+
+    .coming-soon {
+      margin-top: 35px;
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .coming-soon-icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .coming-soon h3 {
+      color: #071a35;
+      margin-bottom: 5px;
+    }
+
+    .coming-soon p {
+      color: #667085;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-section {
+      padding-top: 20px;
+    }
+
+    .about-box {
+      background: white;
+      padding: 35px;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .about-box p {
+      color: #596579;
+      margin-bottom: 15px;
+    }
+
+    .about-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #071a35;
+      color: white;
+      text-align: center;
+      padding: 40px 20px 25px;
+      margin-top: 30px;
+    }
+
+    footer h2 {
+      margin-bottom: 5px;
+    }
+
+    footer p {
+      color: #c7d0dc;
+      margin-bottom: 8px;
+    }
+
+    .footer-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.2);
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .footer-disclosure {
+      max-width: 800px;
+      margin: auto;
+      font-size: 12px;
+      color: #aeb8c5;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    @media (max-width: 650px) {
+
+      .nav-container {
+        padding: 13px 16px;
+      }
+
+      .logo {
+        font-size: 21px;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #071a35;
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 0 15px;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 13px 20px;
+      }
+
+      .hero {
+        padding: 55px 15px 50px;
+      }
+
+      .hero h1 {
+        font-size: 31px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .search-form {
+        border-radius: 12px;
+        padding: 6px;
+      }
+
+      .search-form input {
+        padding: 13px 12px;
+        font-size: 14px;
+      }
+
+      .search-form button {
+        padding: 0 18px;
+      }
+
+      .section {
+        padding: 45px 15px;
+      }
+
+      .section-title {
+        font-size: 27px;
+      }
+
+      .categories-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .category-card {
+        padding: 22px 10px;
+      }
+
+      .category-icon {
+        font-size: 35px;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-image {
+        height: 250px;
+      }
+
+      .product-image img {
+        padding: 5px;
+      }
+
+      .intro-box,
+      .about-box {
+        padding: 25px 18px;
+      }
+
+    }
+
+    @media (max-width: 400px) {
+
+      .categories-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .search-form button {
+        padding: 0 13px;
+      }
+
+    }
+
+  </style>
+
+  <!-- Structured Data: Organization / Website / WebPage only -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -57,7 +665,7 @@
         "@type": "WebPage",
         "@id": "https://proecommerce-uae.github.io/ProEcommerceuae/#webpage",
         "url": "https://proecommerce-uae.github.io/ProEcommerceuae/",
-        "name": "ProEcommerce UAE | Gadgets, Fashion, Home & Living and Gaming Products",
+        "name": "ProEcommerce UAE | Shop Gadgets, Fashion & More",
         "description": "Explore useful gadgets, fashion, home and living products, and gaming accessories at ProEcommerce UAE.",
         "isPartOf": {
           "@id": "https://proecommerce-uae.github.io/ProEcommerceuae/#website"
@@ -71,533 +679,9 @@
   }
   </script>
 
-
-  <style>
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f4f4;
-      color: #222;
-      line-height: 1.6;
-    }
-
-
-    /* =========================
-       HEADER
-    ========================= */
-
-    header {
-      background: #111827;
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      width: 100%;
-    }
-
-    .header-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 18px 25px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-      text-decoration: none;
-      color: white;
-    }
-
-    .nav-menu {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      list-style: none;
-    }
-
-    .nav-menu a {
-      color: white;
-      text-decoration: none;
-      font-size: 17px;
-      transition: 0.3s;
-    }
-
-    .nav-menu a:hover {
-      color: #f59e0b;
-    }
-
-    .menu-toggle {
-      display: none;
-      background: transparent;
-      border: none;
-      color: white;
-      font-size: 32px;
-      cursor: pointer;
-      line-height: 1;
-      padding: 5px;
-    }
-
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      background: linear-gradient(135deg, #111827, #374151);
-      color: white;
-      text-align: center;
-      padding: 90px 20px 80px;
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-      font-weight: bold;
-    }
-
-    .hero p {
-      font-size: 21px;
-      max-width: 800px;
-      margin: 0 auto 35px;
-      color: #e5e7eb;
-    }
-
-
-    /* =========================
-       SEARCH
-    ========================= */
-
-    .search-container {
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .search-container form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    #searchInput {
-      width: 100%;
-      padding: 18px 20px;
-      font-size: 20px;
-      border: none;
-      border-radius: 12px;
-      outline: none;
-    }
-
-    #searchButton {
-      width: 100%;
-      padding: 17px;
-      font-size: 18px;
-      font-weight: bold;
-      background: #f59e0b;
-      color: #111;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    #searchButton:hover {
-      background: #d97706;
-    }
-
-
-    /* =========================
-       SECTIONS
-    ========================= */
-
-    .section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 70px 20px;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 38px;
-      margin-bottom: 20px;
-    }
-
-    .section-intro {
-      text-align: center;
-      max-width: 850px;
-      margin: 0 auto 45px;
-      font-size: 18px;
-      color: #555;
-    }
-
-
-    /* =========================
-       INTRO
-    ========================= */
-
-    .intro {
-      text-align: center;
-    }
-
-    .intro h2 {
-      font-size: 38px;
-      margin-bottom: 30px;
-    }
-
-    .intro p {
-      max-width: 850px;
-      margin: auto;
-      font-size: 19px;
-      color: #555;
-    }
-
-
-    /* =========================
-       CATEGORIES
-    ========================= */
-
-    .categories-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
-      margin-top: 35px;
-    }
-
-    .category-card {
-      background: white;
-      padding: 35px 20px;
-      text-align: center;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .category-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-
-    .category-icon {
-      font-size: 50px;
-      margin-bottom: 15px;
-    }
-
-    .category-card h3 {
-      font-size: 22px;
-    }
-
-
-    /* =========================
-       PRODUCTS
-    ========================= */
-
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      margin-top: 35px;
-    }
-
-    .product-card {
-      background: white;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      transition: 0.3s;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-
-    .product-image {
-      width: 100%;
-      height: 300px;
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .product-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      padding: 8px;
-      display: block;
-    }
-
-    .product-info {
-      padding: 22px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-
-    .product-info h3 {
-      font-size: 23px;
-      margin-bottom: 10px;
-    }
-
-    .product-info p {
-      color: #666;
-      margin-bottom: 20px;
-      flex: 1;
-    }
-
-    .product-button {
-      display: block;
-      text-align: center;
-      text-decoration: none;
-      background: #f59e0b;
-      color: #111;
-      font-weight: bold;
-      padding: 13px;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-
-    .product-button:hover {
-      background: #d97706;
-    }
-
-
-    /* =========================
-       NO RESULTS
-    ========================= */
-
-    #noResults {
-      display: none;
-      text-align: center;
-      font-size: 20px;
-      color: #777;
-      margin-top: 35px;
-    }
-
-
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .about-section {
-      background: #fff;
-    }
-
-    .about-box {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .about-box p {
-      font-size: 18px;
-      color: #555;
-      margin-bottom: 18px;
-    }
-
-
-    /* =========================
-       AMAZON DISCLOSURE
-    ========================= */
-
-    .disclosure {
-      background: #fff;
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 20px;
-      text-align: center;
-      border-radius: 10px;
-      font-size: 14px;
-      color: #555;
-    }
-
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      background: #111827;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 30px;
-    }
-
-    footer p {
-      margin: 5px 0;
-      color: #d1d5db;
-    }
-
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 768px) {
-
-      .header-container {
-        padding: 16px 20px;
-      }
-
-      .logo {
-        font-size: 23px;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #111827;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-        padding: 10px 0 20px;
-        box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-      }
-
-      .nav-menu.active {
-        display: flex;
-      }
-
-      .nav-menu li {
-        width: 100%;
-        text-align: center;
-      }
-
-      .nav-menu a {
-        display: block;
-        padding: 14px 20px;
-        font-size: 18px;
-      }
-
-      .nav-menu a:hover {
-        background: #1f2937;
-      }
-
-
-      /* Hero */
-
-      .hero {
-        padding: 70px 20px 65px;
-      }
-
-      .hero h1 {
-        font-size: 38px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
-
-
-      /* Sections */
-
-      .section {
-        padding: 55px 20px;
-      }
-
-      .section-title {
-        font-size: 32px;
-      }
-
-      .intro h2 {
-        font-size: 34px;
-      }
-
-
-      /* Categories */
-
-      .categories-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-      }
-
-      .category-card {
-        padding: 25px 10px;
-      }
-
-      .category-icon {
-        font-size: 40px;
-      }
-
-      .category-card h3 {
-        font-size: 18px;
-      }
-
-
-      /* Products */
-
-      .products-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-      }
-
-      .product-image {
-        height: 250px;
-      }
-
-      .product-image img {
-        padding: 5px;
-      }
-
-      .product-info h3 {
-        font-size: 22px;
-      }
-
-      #searchInput {
-        font-size: 18px;
-      }
-
-    }
-
-
-    @media (max-width: 400px) {
-
-      .logo {
-        font-size: 21px;
-      }
-
-      .hero h1 {
-        font-size: 33px;
-      }
-
-      .categories-grid {
-        grid-template-columns: 1fr;
-      }
-
-    }
-
-  </style>
-
 </head>
 
-
 <body>
-
 
   <!-- =========================
        HEADER
@@ -605,46 +689,33 @@
 
   <header>
 
-    <div class="header-container">
+    <div class="nav-container">
 
       <a href="#home" class="logo">
-        ProEcommerce UAE
+        ProEcommerce <span>UAE</span>
       </a>
 
-      <!-- Mobile Menu -->
-
       <button
-        class="menu-toggle"
-        id="menuToggle"
-        aria-label="Open navigation menu"
-        aria-expanded="false">
-
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
         ☰
-
       </button>
 
+      <nav class="nav-links" id="navLinks">
 
-      <!-- Navigation -->
+        <a href="#home">Home</a>
 
-      <ul class="nav-menu" id="navMenu">
+        <a href="#categories">Categories</a>
 
-        <li>
-          <a href="#home">Home</a>
-        </li>
+        <a href="#products">Products</a>
 
-        <li>
-          <a href="#categories">Categories</a>
-        </li>
+        <a href="#about">About</a>
 
-        <li>
-          <a href="#products">Products</a>
-        </li>
-
-        <li>
-          <a href="#about">About</a>
-        </li>
-
-      </ul>
+      </nav>
 
     </div>
 
@@ -655,630 +726,692 @@
        HERO
   ========================= -->
 
-  <section class="hero" id="home">
+  <main id="home">
 
-    <h1>
-      Discover Great Products in UAE
-    </h1>
+    <section class="hero">
 
-    <p>
-      Explore useful gadgets, fashion, home & living products,
-      and gaming accessories.
-    </p>
+      <h1>
+        Discover <span>Great Products</span> in UAE
+      </h1>
 
+      <p>
+        Explore useful gadgets, fashion, home & living products,
+        and gaming accessories.
+      </p>
 
-    <div class="search-container">
+      <div class="search-wrapper">
 
-      <form id="searchForm">
+        <form class="search-form" id="searchForm">
 
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Search for a product..."
-          autocomplete="off"
-        >
-
-        <button
-          type="submit"
-          id="searchButton">
-
-          Search
-
-        </button>
-
-      </form>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       WELCOME
-  ========================= -->
-
-  <section class="section intro">
-
-    <h2>
-      Welcome to ProEcommerce UAE
-    </h2>
-
-    <p>
-
-      ProEcommerce UAE helps shoppers discover useful and
-      interesting products across different categories.
-      Browse our selection of
-      <strong>
-        gadgets, fashion, home & living products,
-        and gaming accessories
-      </strong>
-      and explore products available through Amazon.
-
-    </p>
-
-  </section>
-
-
-  <!-- =========================
-       CATEGORIES
-  ========================= -->
-
-  <section class="section" id="categories">
-
-    <h2 class="section-title">
-      Explore Product Categories
-    </h2>
-
-
-    <div class="categories-grid">
-
-
-      <div
-        class="category-card"
-        data-category="Gadgets">
-
-        <div class="category-icon">
-          📱
-        </div>
-
-        <h3>
-          Gadgets
-        </h3>
-
-      </div>
-
-
-      <div
-        class="category-card"
-        data-category="Fashion">
-
-        <div class="category-icon">
-          👟
-        </div>
-
-        <h3>
-          Fashion
-        </h3>
-
-      </div>
-
-
-      <div
-        class="category-card"
-        data-category="Home & Living">
-
-        <div class="category-icon">
-          🏠
-        </div>
-
-        <h3>
-          Home & Living
-        </h3>
-
-      </div>
-
-
-      <div
-        class="category-card"
-        data-category="Gaming">
-
-        <div class="category-icon">
-          🎮
-        </div>
-
-        <h3>
-          Gaming
-        </h3>
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       PRODUCTS
-  ========================= -->
-
-  <section class="section" id="products">
-
-    <h2 class="section-title">
-      Featured Products
-    </h2>
-
-    <p class="section-intro">
-
-      Browse our featured product selection, including wireless
-      earbuds, smart watches, gaming accessories, fashion items,
-      lighting products, kitchen appliances, and more.
-
-    </p>
-
-
-    <div
-      class="products-grid"
-      id="productsGrid">
-
-
-      <!-- PRODUCT 1 -->
-
-      <div
-        class="product-card"
-        data-category="Gadgets"
-        data-name="Wireless Earbuds"
-        data-description="Explore wireless earbuds and audio accessories.">
-
-        <div class="product-image">
-
-          <img
-            src="Image/wireless-earbuds-18.jpg"
-            alt="Wireless Earbuds"
-            loading="lazy"
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search for earbuds, smartwatch, sneakers..."
+            autocomplete="off"
           >
 
-        </div>
+          <button type="submit">
+            Search
+          </button>
 
-
-        <div class="product-info">
-
-          <h3>
-            Wireless Earbuds
-          </h3>
-
-          <p>
-            Explore wireless earbuds and audio accessories.
-          </p>
-
-          <a
-            href="https://link.amazon/B0hhImmcI"
-            class="product-button"
-            target="_blank"
-            rel="nofollow sponsored noopener">
-
-            View Product
-
-          </a>
-
-        </div>
+        </form>
 
       </div>
 
+    </section>
 
-      <!-- PRODUCT 2 -->
 
-      <div
-        class="product-card"
-        data-category="Gadgets"
-        data-name="Smart Watch"
-        data-description="Fitness tracker and digital smart watch.">
+    <!-- =========================
+         AMAZON DISCLOSURE
+    ========================= -->
 
-        <div class="product-image">
+    <div class="disclosure">
 
-          <img
-            src="Image/smart-watch.jpg"
-            alt="Smart Watch"
-            loading="lazy"
-          >
+      <strong>Amazon Associates Disclosure</strong>
 
-        </div>
-
-
-        <div class="product-info">
-
-          <h3>
-            Smart Watch
-          </h3>
-
-          <p>
-            Fitness tracker and digital smart watch.
-          </p>
-
-          <a
-            href="https://link.amazon/B0cNATNP1"
-            class="product-button"
-            target="_blank"
-            rel="nofollow sponsored noopener">
-
-            View Product
-
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- PRODUCT 3 -->
-
-      <div
-        class="product-card"
-        data-category="Gaming"
-        data-name="Gaming Headset"
-        data-description="Gaming headset for immersive gaming audio.">
-
-        <div class="product-image">
-
-          <img
-            src="Image/gaming-headset.jpg"
-            alt="Gaming Headset"
-            loading="lazy"
-          >
-
-        </div>
-
-
-        <div class="product-info">
-
-          <h3>
-            Gaming Headset
-          </h3>
-
-          <p>
-            Gaming headset for immersive gaming audio.
-          </p>
-
-          <a
-            href="https://link.amazon/B06xwYhf1"
-            class="product-button"
-            target="_blank"
-            rel="nofollow sponsored noopener">
-
-            View Product
-
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- PRODUCT 4 -->
-
-      <div
-        class="product-card"
-        data-category="Gadgets"
-        data-name="Magnetic Power Bank"
-        data-description="Portable magnetic charging power bank for compatible devices.">
-
-        <div class="product-image">
-
-          <img
-            src="Image/magnetic-power-bank-original.jpg"
-            alt="Magnetic Power Bank"
-            loading="lazy"
-          >
-
-        </div>
-
-
-        <div class="product-info">
-
-          <h3>
-            Magnetic Power Bank
-          </h3>
-
-          <p>
-            Portable magnetic charging power bank for compatible devices.
-          </p>
-
-          <a
-            href="https://link.amazon/A0hmsjDmY"
-            class="product-button"
-            target="_blank"
-            rel="nofollow sponsored noopener">
-
-            View Product
-
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- PRODUCT 5 -->
-
-      <div
-        class="product-card"
-        data-category="Fashion"
-        data-name="Sneakers"
-        data-description="Stylish sneakers for everyday wear.">
-
-        <div class="product-image">
-
-          <img
-            src="Image/sneakers.jpg"
-            alt="Stylish Sneakers Shoes"
-            loading="lazy"
-          >
-
-        </div>
-
-
-        <div class="product-info">
-
-          <h3>
-            Sneakers
-          </h3>
-
-          <p>
-            Stylish sneakers for everyday wear.
-          </p>
-
-          <a
-            href="https://link.amazon/B074JduPF"
-            class="product-button"
-            target="_blank"
-            rel="nofollow sponsored noopener">
-
-            View Product
-
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- PRODUCT 6 -->
-
-      <div
-        class="product-card"
-        data-category="Fashion"
-        data-name="Fashion Watch"
-        data-description="Stylish watch for everyday fashion.">
-
-        <div class="product-image">
-
-          <img
-            src="Image/fashion-watch.jpg"
-            alt="Fashion Watch"
-            loading="lazy"
-          >
-
-        </div>
-
-
-        <div class="product-info">
-
-          <h3>
-            Fashion Watch
-          </h3>
-
-          <p>
-            Stylish watch for everyday fashion.
-          </p>
-
-          <a
-            href="https://link.amazon/B04pX1hgj"
-            class="product-button"
-            target="_blank"
-            rel="nofollow sponsored noopener">
-
-            View Product
-
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- PRODUCT 7 -->
-
-      <div
-        class="product-card"
-        data-category="Home & Living"
-        data-name="LED Lights"
-        data-description="LED lighting products for home use.">
-
-        <div class="product-image">
-
-          <img
-            src="Image/led-lights.jpg"
-            alt="LED Lights for Home"
-            loading="lazy"
-          >
-
-        </div>
-
-
-        <div class="product-info">
-
-          <h3>
-            LED Lights
-          </h3>
-
-          <p>
-            LED lighting products for home use.
-          </p>
-
-          <a
-            href="https://link.amazon/B09pTAxuy"
-            class="product-button"
-            target="_blank"
-            rel="nofollow sponsored noopener">
-
-            View Product
-
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- PRODUCT 8 -->
-
-      <div
-        class="product-card"
-        data-category="Gaming"
-        data-name="Gaming Controller"
-        data-description="Gaming controller gamepad for compatible devices.">
-
-        <div class="product-image">
-
-          <img
-            src="Image/gaming-controller.jpg"
-            alt="Gaming Controller Gamepad"
-            loading="lazy"
-          >
-
-        </div>
-
-
-        <div class="product-info">
-
-          <h3>
-            Gaming Controller
-          </h3>
-
-          <p>
-            Gaming controller gamepad for compatible devices.
-          </p>
-
-          <a
-            href="https://link.amazon/B0gt6bIcJ"
-            class="product-button"
-            target="_blank"
-            rel="nofollow sponsored noopener">
-
-            View Product
-
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- PRODUCT 9 -->
-
-      <div
-        class="product-card"
-        data-category="Home & Living"
-        data-name="Electric Egg Boiler"
-        data-description="Electric egg boiler and cooker for convenient kitchen use.">
-
-        <div class="product-image">
-
-          <img
-            src="Image/egg-boiler.jpg"
-            alt="Electric Egg Boiler Egg Cooker"
-            loading="lazy"
-          >
-
-        </div>
-
-
-        <div class="product-info">
-
-          <h3>
-            Electric Egg Boiler
-          </h3>
-
-          <p>
-            Electric egg boiler and cooker for convenient kitchen use.
-          </p>
-
-          <a
-            href="https://link.amazon/B043NNglj"
-            class="product-button"
-            target="_blank"
-            rel="nofollow sponsored noopener">
-
-            View Product
-
-          </a>
-
-        </div>
-
-      </div>
-
+      As an Amazon Associate I earn from qualifying purchases.
 
     </div>
 
 
-    <div id="noResults">
-      No products found. Try another search.
-    </div>
+    <!-- =========================
+         INTRO
+    ========================= -->
 
-  </section>
+    <section class="section">
+
+      <div class="intro-box">
+
+        <h2>
+          Welcome to ProEcommerce UAE
+        </h2>
+
+        <p>
+          ProEcommerce UAE is a product discovery website
+          where you can explore useful products across gadgets,
+          fashion, home & living, and gaming.
+          Select a product to view it through our partner retailer.
+        </p>
+
+      </div>
+
+    </section>
 
 
-  <!-- =========================
-       ABOUT
-  ========================= -->
+    <!-- =========================
+         CATEGORIES
+    ========================= -->
 
-  <section
-    class="section about-section"
-    id="about">
-
-    <div class="about-box">
+    <section class="section" id="categories">
 
       <h2 class="section-title">
-        About ProEcommerce UAE
+        Explore Product Categories
       </h2>
 
-      <p>
-        ProEcommerce UAE is a product discovery website for
-        shoppers looking for useful products across gadgets,
-        fashion, home & living, and gaming.
+      <p class="section-intro">
+        Choose a category to explore featured products.
       </p>
 
-      <p>
-        We feature selected products and provide links to
-        partner retailers where shoppers can view product
-        information and make purchases.
+      <div class="categories-grid">
+
+        <div
+          class="category-card"
+          data-category-filter="Gadgets"
+        >
+
+          <div class="category-icon">
+            📱
+          </div>
+
+          <h3>Gadgets</h3>
+
+          <p>
+            Smart electronics & accessories
+          </p>
+
+        </div>
+
+
+        <div
+          class="category-card"
+          data-category-filter="Fashion"
+        >
+
+          <div class="category-icon">
+            👟
+          </div>
+
+          <h3>Fashion</h3>
+
+          <p>
+            Shoes, watches & accessories
+          </p>
+
+        </div>
+
+
+        <div
+          class="category-card"
+          data-category-filter="Home & Living"
+        >
+
+          <div class="category-icon">
+            🏠
+          </div>
+
+          <h3>Home & Living</h3>
+
+          <p>
+            Useful products for your home
+          </p>
+
+        </div>
+
+
+        <div
+          class="category-card"
+          data-category-filter="Gaming"
+        >
+
+          <div class="category-icon">
+            🎮
+          </div>
+
+          <h3>Gaming</h3>
+
+          <p>
+            Gaming accessories & equipment
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCTS
+    ========================= -->
+
+    <section class="section" id="products">
+
+      <h2 class="section-title">
+        Featured Products
+      </h2>
+
+      <p class="section-intro">
+        Browse our featured product selection, including
+        wireless earbuds, smart watches, gaming accessories,
+        fashion items, lighting products, kitchen appliances,
+        and more.
       </p>
 
-      <p>
-        Our goal is to make it easier to discover interesting
-        products in one place. Product availability, prices,
-        shipping and other details are determined by the
-        retailer at the time of purchase.
-      </p>
 
-    </div>
-
-  </section>
+      <div class="products-grid" id="productsGrid">
 
 
-  <!-- =========================
-       AMAZON DISCLOSURE
-  ========================= -->
+        <!-- PRODUCT 1 -->
 
-  <div class="disclosure">
+        <article
+          class="product-card"
+          data-category="Gadgets"
+          data-name="Wireless Earbuds"
+          data-description="Wireless Bluetooth earbuds"
+        >
 
-    <strong>
-      Amazon Associates Disclosure:
-    </strong>
+          <div class="product-image">
 
-    As an Amazon Associate I earn from qualifying purchases.
+            <img
+              src="Image/wireless-earbuds-18.jpg"
+              alt="Wireless Earbuds"
+              loading="lazy"
+            >
 
-  </div>
+          </div>
+
+          <div class="product-content">
+
+            <span class="product-category">
+              Gadgets
+            </span>
+
+            <h3>
+              Wireless Earbuds
+            </h3>
+
+            <p class="product-description">
+              Explore wireless earbuds and audio accessories.
+            </p>
+
+            <a
+              class="shop-button"
+              href="https://link.amazon/B0hhImmcI"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              Shop on Amazon
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PRODUCT 2 -->
+
+        <article
+          class="product-card"
+          data-category="Gadgets"
+          data-name="Smart Watch"
+          data-description="fitness tracker digital watch"
+        >
+
+          <div class="product-image">
+
+            <img
+              src="Image/smart-watch.jpg"
+              alt="Smart Watch"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-content">
+
+            <span class="product-category">
+              Gadgets
+            </span>
+
+            <h3>
+              Smart Watch
+            </h3>
+
+            <p class="product-description">
+              Smart watch for fitness tracking,
+              notifications and everyday activities.
+            </p>
+
+            <a
+              class="shop-button"
+              href="https://link.amazon/B0cNATNP1"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              Shop on Amazon
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PRODUCT 3 -->
+
+        <article
+          class="product-card"
+          data-category="Gaming"
+          data-name="Gaming Headset"
+          data-description="gaming headset headphones audio"
+        >
+
+          <div class="product-image">
+
+            <img
+              src="Image/gaming-headset.jpg"
+              alt="Gaming Headset"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-content">
+
+            <span class="product-category">
+              Gaming
+            </span>
+
+            <h3>
+              Gaming Headset
+            </h3>
+
+            <p class="product-description">
+              Gaming headset with immersive audio
+              for gaming and entertainment.
+            </p>
+
+            <a
+              class="shop-button"
+              href="https://link.amazon/B06xwYhf1"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              Shop on Amazon
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PRODUCT 4 -->
+
+        <article
+          class="product-card"
+          data-category="Gadgets"
+          data-name="Magnetic Power Bank"
+          data-description="portable magnetic charging power bank"
+        >
+
+          <div class="product-image">
+
+            <img
+              src="Image/magnetic-power-bank-original.jpg"
+              alt="Magnetic Power Bank"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-content">
+
+            <span class="product-category">
+              Gadgets
+            </span>
+
+            <h3>
+              Magnetic Power Bank
+            </h3>
+
+            <p class="product-description">
+              Portable magnetic charging power bank
+              for compatible devices.
+            </p>
+
+            <a
+              class="shop-button"
+              href="https://link.amazon/A0hmsjDmY"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              Shop on Amazon
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PRODUCT 5 -->
+
+        <article
+          class="product-card"
+          data-category="Fashion"
+          data-name="Sneakers"
+          data-description="stylish sneakers shoes casual footwear"
+        >
+
+          <div class="product-image">
+
+            <img
+              src="Image/sneakers.jpg"
+              alt="Stylish Sneakers Shoes"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-content">
+
+            <span class="product-category">
+              Fashion
+            </span>
+
+            <h3>
+              Sneakers
+            </h3>
+
+            <p class="product-description">
+              Stylish sneakers suitable for
+              casual and everyday wear.
+            </p>
+
+            <a
+              class="shop-button"
+              href="https://link.amazon/B074JduPF"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              Shop on Amazon
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PRODUCT 6 -->
+
+        <article
+          class="product-card"
+          data-category="Fashion"
+          data-name="Fashion Watch"
+          data-description="fashion watch wrist watch"
+        >
+
+          <div class="product-image">
+
+            <img
+              src="Image/fashion-watch.jpg"
+              alt="Fashion Watch"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-content">
+
+            <span class="product-category">
+              Fashion
+            </span>
+
+            <h3>
+              Fashion Watch
+            </h3>
+
+            <p class="product-description">
+              Stylish wrist watch designed
+              for everyday fashion.
+            </p>
+
+            <a
+              class="shop-button"
+              href="https://link.amazon/B04pX1hgj"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              Shop on Amazon
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PRODUCT 7 -->
+
+        <article
+          class="product-card"
+          data-category="Home & Living"
+          data-name="LED Lights"
+          data-description="LED lights home decoration room lighting"
+        >
+
+          <div class="product-image">
+
+            <img
+              src="Image/led-lights.jpg"
+              alt="LED Lights for Home"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-content">
+
+            <span class="product-category">
+              Home & Living
+            </span>
+
+            <h3>
+              LED Lights
+            </h3>
+
+            <p class="product-description">
+              LED lighting for home decoration,
+              rooms and entertainment spaces.
+            </p>
+
+            <a
+              class="shop-button"
+              href="https://link.amazon/B09pTAxuy"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              Shop on Amazon
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PRODUCT 8 -->
+
+        <article
+          class="product-card"
+          data-category="Gaming"
+          data-name="Gaming Controller"
+          data-description="gaming controller gamepad console"
+        >
+
+          <div class="product-image">
+
+            <img
+              src="Image/gaming-controller.jpg"
+              alt="Gaming Controller Gamepad"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-content">
+
+            <span class="product-category">
+              Gaming
+            </span>
+
+            <h3>
+              Gaming Controller
+            </h3>
+
+            <p class="product-description">
+              Gaming controller for console
+              and compatible gaming systems.
+            </p>
+
+            <a
+              class="shop-button"
+              href="https://link.amazon/B0gt6bIcJ"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              Shop on Amazon
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PRODUCT 9 -->
+
+        <article
+          class="product-card"
+          data-category="Home & Living"
+          data-name="Electric Egg Boiler"
+          data-description="electric egg boiler egg cooker kitchen appliance"
+        >
+
+          <div class="product-image">
+
+            <img
+              src="Image/egg-boiler.jpg"
+              alt="Electric Egg Boiler Egg Cooker"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-content">
+
+            <span class="product-category">
+              Home & Living
+            </span>
+
+            <h3>
+              Electric Egg Boiler
+            </h3>
+
+            <p class="product-description">
+              Convenient electric egg boiler
+              for quick kitchen preparation.
+            </p>
+
+            <a
+              class="shop-button"
+              href="https://link.amazon/B043NNglj"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              Shop on Amazon
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+      <!-- NO RESULTS -->
+
+      <div id="noResults">
+        <h3>No products found</h3>
+        <p>
+          Try another product name or category.
+        </p>
+      </div>
+
+
+      <!-- COMING SOON -->
+
+      <div class="coming-soon">
+
+        <div class="coming-soon-icon">
+          🛒
+        </div>
+
+        <h3>
+          More Products Coming Soon
+        </h3>
+
+        <p>
+          We are adding more products from Amazon and Noon UAE.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section class="section about-section" id="about">
+
+      <div class="about-box">
+
+        <h2 class="section-title">
+          About ProEcommerce UAE
+        </h2>
+
+        <p>
+          ProEcommerce UAE is a product discovery website
+          for shoppers looking for useful products across
+          gadgets, fashion, home & living, and gaming.
+        </p>
+
+        <p>
+          We feature selected products and provide links
+          to partner retailers where shoppers can view
+          product information and make purchases.
+        </p>
+
+        <p>
+          Our goal is to make it easier to discover
+          interesting products in one place.
+          Product availability, prices, shipping and
+          other details are determined by the retailer
+          at the time of purchase.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
 
 
   <!-- =========================
@@ -1287,13 +1420,26 @@
 
   <footer>
 
+    <h2>
+      ProEcommerce UAE
+    </h2>
+
+    <p>
+      Discover products. Shop smarter.
+    </p>
+
     <p>
       © 2026 ProEcommerce UAE
     </p>
 
-    <p>
-      Discover useful products in one place.
-    </p>
+    <div class="footer-divider"></div>
+
+    <div class="footer-disclosure">
+
+      Amazon Associates Disclosure:
+      As an Amazon Associate I earn from qualifying purchases.
+
+    </div>
 
   </footer>
 
@@ -1308,72 +1454,38 @@
        MOBILE MENU
     ========================= */
 
-    const menuToggle =
-      document.getElementById("menuToggle");
+    const menuButton = document.getElementById("menuButton");
+    const navLinks = document.getElementById("navLinks");
 
-    const navMenu =
-      document.getElementById("navMenu");
+    menuButton.addEventListener("click", function () {
 
+      navLinks.classList.toggle("active");
 
-    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.contains("active");
 
-      navMenu.classList.toggle("active");
+      menuButton.textContent = isOpen ? "✕" : "☰";
 
-      const isOpen =
-        navMenu.classList.contains("active");
-
-
-      menuToggle.setAttribute(
+      menuButton.setAttribute(
         "aria-expanded",
-        isOpen
+        isOpen ? "true" : "false"
       );
-
-
-      if (isOpen) {
-
-        menuToggle.innerHTML = "✕";
-
-        menuToggle.setAttribute(
-          "aria-label",
-          "Close navigation menu"
-        );
-
-      } else {
-
-        menuToggle.innerHTML = "☰";
-
-        menuToggle.setAttribute(
-          "aria-label",
-          "Open navigation menu"
-        );
-
-      }
 
     });
 
 
-    /* Close mobile menu when link is clicked */
+    /* Close mobile menu after clicking a link */
 
-    const navLinks =
-      document.querySelectorAll(".nav-menu a");
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
 
+      link.addEventListener("click", function() {
 
-    navLinks.forEach(function (link) {
+        navLinks.classList.remove("active");
 
-      link.addEventListener("click", function () {
+        menuButton.textContent = "☰";
 
-        navMenu.classList.remove("active");
-
-        menuToggle.innerHTML = "☰";
-
-        menuToggle.setAttribute(
+        menuButton.setAttribute(
           "aria-expanded",
           "false"
-        );
-
-        menuToggle.setAttribute(
-          "aria-label",
-          "Open navigation menu"
         );
 
       });
@@ -1385,74 +1497,72 @@
        PRODUCT SEARCH
     ========================= */
 
-    const searchForm =
-      document.getElementById("searchForm");
+    const searchForm = document.getElementById("searchForm");
 
-    const searchInput =
-      document.getElementById("searchInput");
+    const searchInput = document.getElementById("searchInput");
 
-    const products =
+    const productCards =
       document.querySelectorAll(".product-card");
 
     const noResults =
       document.getElementById("noResults");
 
 
-    searchForm.addEventListener("submit", function (event) {
+    searchForm.addEventListener("submit", function(event) {
 
       event.preventDefault();
-
 
       const searchTerm =
         searchInput.value.trim().toLowerCase();
 
+      let foundProducts = 0;
 
-      let found = false;
 
-
-      products.forEach(function (product) {
+      productCards.forEach(function(card) {
 
         const name =
-          product.dataset.name.toLowerCase();
-
-        const description =
-          product.dataset.description.toLowerCase();
+          (card.dataset.name || "").toLowerCase();
 
         const category =
-          product.dataset.category.toLowerCase();
+          (card.dataset.category || "").toLowerCase();
+
+        const description =
+          (card.dataset.description || "").toLowerCase();
+
+        const productText =
+          card.textContent.toLowerCase();
 
 
         const matches =
+          searchTerm === "" ||
           name.includes(searchTerm) ||
+          category.includes(searchTerm) ||
           description.includes(searchTerm) ||
-          category.includes(searchTerm);
+          productText.includes(searchTerm);
 
 
-        if (searchTerm === "" || matches) {
+        if (matches) {
 
-          product.style.display = "flex";
+          card.style.display = "flex";
 
-          if (searchTerm !== "") {
-            found = true;
-          }
+          foundProducts++;
 
         } else {
 
-          product.style.display = "none";
+          card.style.display = "none";
 
         }
 
       });
 
 
-      if (searchTerm === "") {
+      if (foundProducts === 0) {
 
-        noResults.style.display = "none";
+        noResults.style.display = "block";
 
       } else {
 
-        noResults.style.display =
-          found ? "none" : "block";
+        noResults.style.display = "none";
 
       }
 
@@ -1470,57 +1580,59 @@
        CATEGORY FILTER
     ========================= */
 
-    const categoryCards =
-      document.querySelectorAll(".category-card");
+    document
+      .querySelectorAll(".category-card")
+      .forEach(function(categoryCard) {
+
+        categoryCard.addEventListener("click", function() {
+
+          const selectedCategory =
+            categoryCard.dataset.categoryFilter
+              .toLowerCase();
 
 
-    categoryCards.forEach(function (card) {
-
-      card.addEventListener("click", function () {
-
-        const selectedCategory =
-          card.dataset.category.toLowerCase();
+          let foundProducts = 0;
 
 
-        let found = false;
+          productCards.forEach(function(card) {
+
+            const productCategory =
+              (card.dataset.category || "")
+                .toLowerCase();
 
 
-        products.forEach(function (product) {
+            if (
+              productCategory === selectedCategory
+            ) {
 
-          const productCategory =
-            product.dataset.category.toLowerCase();
+              card.style.display = "flex";
+
+              foundProducts++;
+
+            } else {
+
+              card.style.display = "none";
+
+            }
+
+          });
 
 
-          if (
-            productCategory === selectedCategory
-          ) {
+          noResults.style.display =
+            foundProducts === 0
+              ? "block"
+              : "none";
 
-            product.style.display = "flex";
 
-            found = true;
-
-          } else {
-
-            product.style.display = "none";
-
-          }
+          document
+            .getElementById("products")
+            .scrollIntoView({
+              behavior: "smooth"
+            });
 
         });
 
-
-        noResults.style.display =
-          found ? "none" : "block";
-
-
-        document
-          .getElementById("products")
-          .scrollIntoView({
-            behavior: "smooth"
-          });
-
       });
-
-    });
 
   </script>
 
