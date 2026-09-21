@@ -1,45 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <!-- Google Search Console -->
-  <meta name="google-site-verification" content="C3E04qGEGMtmmr9IHt1gOGgtJL7hpCAds8Fg3YFarFE">
-
   <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO TITLE -->
   <title>ProEcommerce UAE | Shop Gadgets, Fashion & More</title>
 
-  <!-- SEO DESCRIPTION -->
-  <meta
-    name="description"
-    content="Shop and discover gadgets, fashion products, home and living products, and gaming accessories in UAE. Explore wireless earbuds, smart watches, power banks, sneakers, gaming accessories and more at ProEcommerce UAE."
-  >
+  <meta name="description" content="Shop and discover gadgets, fashion products, home and living products, and gaming accessories in UAE. Explore wireless earbuds, smart watches, power banks, sneakers, gaming accessories and more at ProEcommerce UAE.">
 
   <meta name="robots" content="index, follow">
+
   <meta name="author" content="ProEcommerce UAE">
 
-  <!-- CANONICAL URL -->
-  <link
-    rel="canonical"
-    href="https://proecommerce-uae.github.io/ProEcommerceuae/"
-  >
+  <link rel="canonical" href="https://proecommerce-uae.github.io/ProEcommerceuae/">
 
-  <!-- OPEN GRAPH -->
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="C3E04qGEGMtmmr9IHt1gOGgtJL7hpCAds8Fg3YFarFE">
+
+  <!-- Open Graph -->
   <meta property="og:title" content="ProEcommerce UAE | Shop Gadgets, Fashion & More">
-  <meta
-    property="og:description"
-    content="Discover gadgets, fashion products, home and living products, and gaming accessories in UAE at ProEcommerce UAE."
-  >
-  <meta
-    property="og:url"
-    content="https://proecommerce-uae.github.io/ProEcommerceuae/"
-  >
+  <meta property="og:description" content="Discover gadgets, fashion products, home and living products, and gaming accessories in UAE.">
+  <meta property="og:url" content="https://proecommerce-uae.github.io/ProEcommerceuae/">
   <meta property="og:type" content="website">
 
-  <!-- STRUCTURED DATA -->
+  <!-- Structured Data: Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -50,6 +35,7 @@
   }
   </script>
 
+  <!-- Structured Data: Website -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -64,6 +50,7 @@
   }
   </script>
 
+  <!-- Structured Data: WebPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -81,7 +68,6 @@
   }
   </script>
 
-
   <style>
 
     * {
@@ -97,7 +83,7 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: #f5f7fa;
-      color: #222;
+      color: #1f2937;
       line-height: 1.6;
     }
 
@@ -110,22 +96,23 @@
       display: block;
     }
 
-
     /* HEADER */
 
     header {
-      background: #071a33;
-      color: white;
       position: sticky;
       top: 0;
       z-index: 1000;
+      background: #0f172a;
+      color: white;
       box-shadow: 0 2px 10px rgba(0,0,0,0.15);
     }
 
     .navbar {
       max-width: 1200px;
       margin: auto;
-      padding: 15px 20px;
+      min-height: 70px;
+      padding: 0 20px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -135,141 +122,153 @@
       color: white;
       font-size: 23px;
       font-weight: bold;
+      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
+      align-items: center;
       gap: 25px;
-      list-style: none;
     }
 
     .nav-links a {
       color: white;
       font-weight: 600;
+      transition: 0.2s;
     }
 
     .nav-links a:hover {
-      color: #4db8ff;
+      color: #38bdf8;
     }
 
-    .menu-btn {
+    .menu-button {
       display: none;
-      background: transparent;
       border: none;
+      background: transparent;
       color: white;
-      font-size: 28px;
+      font-size: 30px;
       cursor: pointer;
     }
-
 
     /* HERO */
 
     .hero {
-      background: linear-gradient(135deg, #071a33, #0d4d80);
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
       color: white;
       text-align: center;
       padding: 80px 20px;
     }
 
+    .hero-content {
+      max-width: 900px;
+      margin: auto;
+    }
+
     .hero h1 {
       font-size: 46px;
-      line-height: 1.2;
+      line-height: 1.15;
       margin-bottom: 20px;
     }
 
     .hero h1 span {
-      color: #4db8ff;
+      color: #38bdf8;
     }
 
     .hero p {
-      max-width: 760px;
-      margin: auto;
+      max-width: 800px;
+      margin: 0 auto 30px;
       font-size: 18px;
-      color: #e5f4ff;
     }
-
 
     /* SEARCH */
 
-    .search-area {
-      max-width: 800px;
-      margin: -30px auto 40px;
-      padding: 0 20px;
-      position: relative;
-      z-index: 10;
+    .search-box {
+      max-width: 650px;
+      margin: 25px auto 0;
     }
 
     .search-form {
       display: flex;
-      background: white;
-      padding: 8px;
-      border-radius: 12px;
-      box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+      gap: 10px;
     }
 
     .search-form input {
       flex: 1;
-      border: none;
-      outline: none;
       padding: 15px;
+      border: none;
+      border-radius: 8px;
       font-size: 16px;
+      outline: none;
     }
 
     .search-form button {
+      padding: 15px 25px;
       border: none;
-      background: #0d6efd;
-      color: white;
-      padding: 0 25px;
       border-radius: 8px;
+      background: #38bdf8;
+      color: #082f49;
       font-weight: bold;
       cursor: pointer;
     }
 
     .search-form button:hover {
-      background: #084298;
+      background: #7dd3fc;
     }
 
+    /* DISCLOSURE */
 
-    /* GENERAL SECTION */
+    .disclosure {
+      max-width: 900px;
+      margin: 25px auto 0;
+      padding: 15px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .disclosure strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* GENERAL SECTIONS */
 
     .section {
       max-width: 1200px;
       margin: auto;
-      padding: 55px 20px;
+      padding: 65px 20px;
     }
 
     .section-title {
       text-align: center;
       font-size: 32px;
       margin-bottom: 15px;
-      color: #071a33;
+      color: #0f172a;
     }
 
     .section-intro {
-      text-align: center;
       max-width: 800px;
       margin: 0 auto 35px;
-      color: #555;
+      text-align: center;
+      color: #4b5563;
     }
 
+    /* INTRO */
 
-    /* DISCLOSURE */
-
-    .disclosure {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 18px 20px;
-      background: #fff8e1;
-      border-left: 5px solid #f0ad00;
-      border-radius: 8px;
-      color: #444;
+    .intro-section {
+      background: white;
     }
 
-    .disclosure strong {
-      display: block;
-      margin-bottom: 5px;
+    .intro-box {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
     }
 
+    .intro-box p {
+      margin-top: 15px;
+      color: #4b5563;
+    }
 
     /* CATEGORIES */
 
@@ -277,62 +276,61 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
-      margin-top: 30px;
     }
 
     .category-card {
       background: white;
       padding: 30px 20px;
-      text-align: center;
       border-radius: 14px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      text-align: center;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
       cursor: pointer;
-      transition: 0.3s;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .category-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 22px rgba(0,0,0,0.13);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
     }
 
     .category-icon {
-      font-size: 42px;
-      margin-bottom: 12px;
+      font-size: 48px;
+      margin-bottom: 15px;
     }
 
     .category-card h3 {
-      color: #071a33;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      color: #0f172a;
     }
 
     .category-card p {
-      color: #666;
+      color: #64748b;
       font-size: 14px;
     }
 
-
     /* PRODUCTS */
+
+    .products-section {
+      background: #f5f7fa;
+    }
 
     .products-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 25px;
-      margin-top: 35px;
     }
 
     .product-card {
       background: white;
       border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      transition: 0.3s;
-      display: flex;
-      flex-direction: column;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .product-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
     }
 
     .product-image {
@@ -353,134 +351,138 @@
 
     .product-info {
       padding: 20px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
     }
 
     .product-info h3 {
-      color: #071a33;
+      color: #0f172a;
       margin-bottom: 8px;
       font-size: 20px;
     }
 
     .product-info p {
-      color: #666;
+      color: #64748b;
+      font-size: 14px;
       margin-bottom: 18px;
-      flex: 1;
     }
 
-    .product-btn {
+    .product-button {
       display: inline-block;
-      background: #0d6efd;
-      color: white;
-      padding: 12px 18px;
+      width: 100%;
       text-align: center;
-      border-radius: 7px;
+      padding: 12px;
+      border-radius: 8px;
+      background: #2563eb;
+      color: white;
       font-weight: bold;
     }
 
-    .product-btn:hover {
-      background: #084298;
+    .product-button:hover {
+      background: #1d4ed8;
     }
-
 
     /* NO RESULTS */
 
     #noResults {
       display: none;
       text-align: center;
-      padding: 35px;
-      color: #777;
-      font-size: 18px;
+      padding: 30px;
+      color: #64748b;
+      font-weight: bold;
     }
 
+    /* COMING SOON */
+
+    .coming-soon {
+      margin-top: 35px;
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+    }
+
+    .coming-soon h3 {
+      margin-bottom: 8px;
+      color: #0f172a;
+    }
+
+    .coming-soon p {
+      color: #64748b;
+    }
 
     /* ABOUT */
 
     .about-section {
-      padding-top: 20px;
+      background: white;
     }
 
     .about-box {
-      background: white;
-      padding: 35px;
-      border-radius: 14px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      max-width: 950px;
+      max-width: 850px;
       margin: auto;
     }
 
     .about-box p {
       margin-bottom: 15px;
-      color: #555;
+      color: #4b5563;
     }
-
-
-    /* COMING SOON */
-
-    .coming-soon {
-      text-align: center;
-      background: #071a33;
-      color: white;
-      border-radius: 14px;
-      padding: 45px 20px;
-      margin-top: 40px;
-    }
-
-    .coming-soon h2 {
-      margin-bottom: 10px;
-    }
-
-    .coming-soon p {
-      color: #dceeff;
-    }
-
 
     /* FOOTER */
 
     footer {
-      background: #071a33;
+      background: #0f172a;
       color: white;
       text-align: center;
       padding: 35px 20px;
-      margin-top: 50px;
+    }
+
+    footer h3 {
+      margin-bottom: 8px;
     }
 
     footer p {
+      color: #cbd5e1;
       margin-bottom: 8px;
     }
 
     .footer-disclosure {
-      font-size: 13px;
-      color: #c7d7e8;
       max-width: 700px;
       margin: 15px auto 0;
+      font-size: 13px;
+      color: #94a3b8;
     }
-
 
     /* MOBILE */
 
     @media (max-width: 800px) {
+
+      .navbar {
+        min-height: 65px;
+      }
+
+      .menu-button {
+        display: block;
+      }
 
       .nav-links {
         display: none;
         position: absolute;
         top: 65px;
         left: 0;
-        width: 100%;
-        background: #071a33;
+        right: 0;
+        background: #0f172a;
         flex-direction: column;
-        padding: 20px;
-        gap: 18px;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 20px 20px;
       }
 
       .nav-links.active {
         display: flex;
       }
 
-      .menu-btn {
-        display: block;
+      .nav-links a {
+        padding: 14px 5px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
       }
 
       .hero {
@@ -512,15 +514,15 @@
       }
 
       .section {
-        padding: 45px 15px;
+        padding: 50px 18px;
       }
 
-      .about-box {
-        padding: 25px 20px;
+      .section-title {
+        font-size: 28px;
       }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 500px) {
 
       .logo {
         font-size: 19px;
@@ -530,34 +532,27 @@
         font-size: 30px;
       }
 
-      .categories-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-      }
-
-      .category-card {
-        padding: 22px 10px;
-      }
-
-      .category-icon {
-        font-size: 34px;
+      .search-form {
+        flex-direction: column;
       }
 
       .search-form button {
-        padding: 0 17px;
+        width: 100%;
+      }
+
+      .categories-grid {
+        grid-template-columns: 1fr;
       }
     }
 
   </style>
 </head>
 
-
 <body>
 
   <!-- HEADER -->
 
   <header>
-
     <nav class="navbar">
 
       <a href="#home" class="logo">
@@ -565,100 +560,100 @@
       </a>
 
       <button
-        class="menu-btn"
-        id="menuBtn"
+        class="menu-button"
+        id="menuButton"
         aria-label="Open navigation menu"
         aria-expanded="false"
       >
         ☰
       </button>
 
-      <ul class="nav-links" id="navLinks">
-
-        <li>
-          <a href="#home">Home</a>
-        </li>
-
-        <li>
-          <a href="#categories">Categories</a>
-        </li>
-
-        <li>
-          <a href="#products">Products</a>
-        </li>
-
-        <li>
-          <a href="#about">About</a>
-        </li>
-
-      </ul>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+      </div>
 
     </nav>
-
   </header>
 
 
   <!-- HERO -->
 
-  <main id="home">
+  <main>
 
-    <section class="hero">
+    <section class="hero" id="home">
 
-      <h1>
-        Discover <span>Gadgets, Fashion & More</span> in UAE
-      </h1>
+      <div class="hero-content">
 
-      <p>
-        Discover gadgets, fashion products, home & living products, and gaming accessories in UAE. Explore featured products including wireless earbuds, smart watches, power banks, sneakers, gaming accessories and more.
-      </p>
+        <h1>
+          Discover <span>Gadgets, Fashion & More</span> in UAE
+        </h1>
+
+        <p>
+          Discover gadgets, fashion products, home & living products,
+          and gaming accessories in UAE. Explore featured products
+          including wireless earbuds, smart watches, power banks,
+          sneakers, gaming accessories and more.
+        </p>
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+          <form class="search-form" id="searchForm">
+
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="Search products..."
+              aria-label="Search products"
+              autocomplete="off"
+            >
+
+            <button type="submit">
+              Search
+            </button>
+
+          </form>
+
+        </div>
+
+
+        <!-- AMAZON DISCLOSURE -->
+
+        <div class="disclosure">
+
+          <strong>Amazon Associates Disclosure</strong>
+
+          As an Amazon Associate I earn from qualifying purchases.
+
+        </div>
+
+      </div>
 
     </section>
 
 
-    <!-- SEARCH -->
+    <!-- INTRO -->
 
-    <div class="search-area">
+    <section class="section intro-section">
 
-      <form class="search-form" id="searchForm">
+      <div class="intro-box">
 
-        <input
-          type="search"
-          id="searchInput"
-          placeholder="Search for a product..."
-          aria-label="Search for a product"
-        >
+        <h2 class="section-title">
+          Welcome to ProEcommerce UAE
+        </h2>
 
-        <button type="submit">
-          Search
-        </button>
+        <p>
+          ProEcommerce UAE is a product discovery website for shoppers
+          in the UAE looking for useful gadgets, fashion products,
+          home & living products, and gaming accessories.
+          Select a product to view it through our partner retailer.
+        </p>
 
-      </form>
-
-    </div>
-
-
-    <!-- AMAZON DISCLOSURE -->
-
-    <div class="disclosure">
-
-      <strong>Amazon Associates Disclosure</strong>
-
-      As an Amazon Associate I earn from qualifying purchases.
-
-    </div>
-
-
-    <!-- INTRODUCTION -->
-
-    <section class="section">
-
-      <h2 class="section-title">
-        Welcome to ProEcommerce UAE
-      </h2>
-
-      <p class="section-intro">
-        ProEcommerce UAE is a product discovery website for shoppers in the UAE looking for useful gadgets, fashion products, home & living products, and gaming accessories. Select a product to view it through our partner retailer.
-      </p>
+      </div>
 
     </section>
 
@@ -672,33 +667,62 @@
       </h2>
 
       <p class="section-intro">
-        Explore gadgets, fashion products, home & living products, and gaming accessories available through our partner retailers.
+        Explore gadgets, fashion products, home & living products,
+        and gaming accessories available through our partner retailers.
       </p>
+
 
       <div class="categories-grid">
 
         <div class="category-card" data-category="Gadgets">
+
           <div class="category-icon">📱</div>
+
           <h3>Gadgets</h3>
-          <p>Useful tech and electronic products in UAE.</p>
+
+          <p>
+            Useful tech and electronic products in UAE.
+          </p>
+
         </div>
+
 
         <div class="category-card" data-category="Fashion">
+
           <div class="category-icon">👟</div>
+
           <h3>Fashion</h3>
-          <p>Fashion items, shoes and accessories.</p>
+
+          <p>
+            Fashion items, shoes and accessories.
+          </p>
+
         </div>
+
 
         <div class="category-card" data-category="Home & Living">
+
           <div class="category-icon">🏠</div>
+
           <h3>Home & Living</h3>
-          <p>Useful home and living products.</p>
+
+          <p>
+            Useful home and living products.
+          </p>
+
         </div>
 
+
         <div class="category-card" data-category="Gaming">
+
           <div class="category-icon">🎮</div>
+
           <h3>Gaming</h3>
-          <p>Gaming accessories and equipment.</p>
+
+          <p>
+            Gaming accessories and equipment.
+          </p>
+
         </div>
 
       </div>
@@ -708,14 +732,17 @@
 
     <!-- PRODUCTS -->
 
-    <section class="section" id="products">
+    <section class="section products-section" id="products">
 
       <h2 class="section-title">
         Featured Products
       </h2>
 
       <p class="section-intro">
-        Discover featured products including wireless earbuds, smart watches, power banks, sneakers, fashion watches, LED lights, gaming controllers, gaming headsets, and electric egg boilers.
+        Discover featured products including wireless earbuds,
+        smart watches, power banks, sneakers, fashion watches,
+        LED lights, gaming controllers, gaming headsets,
+        and electric egg boilers.
       </p>
 
 
@@ -727,8 +754,8 @@
         <article
           class="product-card"
           data-category="Gadgets"
-          data-name="Wireless Earbuds"
-          data-description="Wireless Bluetooth earbuds"
+          data-name="Wireless Earbuds in UAE"
+          data-description="Explore wireless earbuds and audio accessories for everyday listening."
         >
 
           <div class="product-image">
@@ -743,14 +770,16 @@
 
           <div class="product-info">
 
-            <h3>Wireless Earbuds</h3>
+            <h3>
+              Wireless Earbuds in UAE
+            </h3>
 
             <p>
-              Explore wireless earbuds and audio accessories.
+              Explore wireless earbuds and audio accessories for everyday listening.
             </p>
 
             <a
-              class="product-btn"
+              class="product-button"
               href="https://link.amazon/B0hhImmcI"
               target="_blank"
               rel="nofollow sponsored noopener"
@@ -768,8 +797,8 @@
         <article
           class="product-card"
           data-category="Gadgets"
-          data-name="Smart Watch"
-          data-description="Fitness tracker digital watch"
+          data-name="Smart Watch in UAE"
+          data-description="Discover smart watches and fitness tracking accessories for everyday use."
         >
 
           <div class="product-image">
@@ -784,14 +813,16 @@
 
           <div class="product-info">
 
-            <h3>Smart Watch</h3>
+            <h3>
+              Smart Watch in UAE
+            </h3>
 
             <p>
-              Smart watch and fitness tracking accessories.
+              Discover smart watches and fitness tracking accessories for everyday use.
             </p>
 
             <a
-              class="product-btn"
+              class="product-button"
               href="https://link.amazon/B0cNATNP1"
               target="_blank"
               rel="nofollow sponsored noopener"
@@ -809,8 +840,8 @@
         <article
           class="product-card"
           data-category="Gaming"
-          data-name="Gaming Headset"
-          data-description="Gaming headphones headset"
+          data-name="Gaming Headset in UAE"
+          data-description="Explore gaming headsets and audio accessories for gaming."
         >
 
           <div class="product-image">
@@ -825,14 +856,16 @@
 
           <div class="product-info">
 
-            <h3>Gaming Headset</h3>
+            <h3>
+              Gaming Headset in UAE
+            </h3>
 
             <p>
-              Gaming headset for immersive gaming audio.
+              Explore gaming headsets and audio accessories for gaming.
             </p>
 
             <a
-              class="product-btn"
+              class="product-button"
               href="https://link.amazon/B06xwYhf1"
               target="_blank"
               rel="nofollow sponsored noopener"
@@ -850,8 +883,8 @@
         <article
           class="product-card"
           data-category="Gadgets"
-          data-name="Magnetic Power Bank"
-          data-description="Portable magnetic charging power bank"
+          data-name="Magnetic Power Bank in UAE"
+          data-description="Portable magnetic power bank for compatible devices and everyday charging."
         >
 
           <div class="product-image">
@@ -866,14 +899,16 @@
 
           <div class="product-info">
 
-            <h3>Magnetic Power Bank</h3>
+            <h3>
+              Magnetic Power Bank in UAE
+            </h3>
 
             <p>
-              Portable magnetic charging power bank for compatible devices.
+              Portable magnetic power bank for compatible devices and everyday charging.
             </p>
 
             <a
-              class="product-btn"
+              class="product-button"
               href="https://link.amazon/A0hmsjDmY"
               target="_blank"
               rel="nofollow sponsored noopener"
@@ -891,8 +926,8 @@
         <article
           class="product-card"
           data-category="Fashion"
-          data-name="Sneakers"
-          data-description="Stylish sneakers shoes"
+          data-name="Stylish Sneakers in UAE"
+          data-description="Explore stylish sneakers and everyday footwear in UAE."
         >
 
           <div class="product-image">
@@ -907,14 +942,16 @@
 
           <div class="product-info">
 
-            <h3>Sneakers</h3>
+            <h3>
+              Stylish Sneakers in UAE
+            </h3>
 
             <p>
               Explore stylish sneakers and everyday footwear in UAE.
             </p>
 
             <a
-              class="product-btn"
+              class="product-button"
               href="https://link.amazon/B074JduPF"
               target="_blank"
               rel="nofollow sponsored noopener"
@@ -932,8 +969,8 @@
         <article
           class="product-card"
           data-category="Fashion"
-          data-name="Fashion Watch"
-          data-description="Fashion watch wrist watch"
+          data-name="Fashion Watch in UAE"
+          data-description="Stylish fashion watch for everyday wear and accessories."
         >
 
           <div class="product-image">
@@ -948,14 +985,16 @@
 
           <div class="product-info">
 
-            <h3>Fashion Watch</h3>
+            <h3>
+              Fashion Watch in UAE
+            </h3>
 
             <p>
-              Stylish fashion watch for everyday wear.
+              Stylish fashion watch for everyday wear and accessories.
             </p>
 
             <a
-              class="product-btn"
+              class="product-button"
               href="https://link.amazon/B04pX1hgj"
               target="_blank"
               rel="nofollow sponsored noopener"
@@ -973,8 +1012,8 @@
         <article
           class="product-card"
           data-category="Home & Living"
-          data-name="LED Lights"
-          data-description="LED lights home lighting"
+          data-name="LED Lights for Home in UAE"
+          data-description="Explore LED lighting products for home and living spaces."
         >
 
           <div class="product-image">
@@ -989,14 +1028,16 @@
 
           <div class="product-info">
 
-            <h3>LED Lights</h3>
+            <h3>
+              LED Lights for Home in UAE
+            </h3>
 
             <p>
-              LED lighting products for home and living spaces.
+              Explore LED lighting products for home and living spaces.
             </p>
 
             <a
-              class="product-btn"
+              class="product-button"
               href="https://link.amazon/B09pTAxuy"
               target="_blank"
               rel="nofollow sponsored noopener"
@@ -1014,8 +1055,8 @@
         <article
           class="product-card"
           data-category="Gaming"
-          data-name="Gaming Controller"
-          data-description="Gaming controller gamepad"
+          data-name="Gaming Controller in UAE"
+          data-description="Explore gaming controllers and gamepad accessories."
         >
 
           <div class="product-image">
@@ -1030,14 +1071,16 @@
 
           <div class="product-info">
 
-            <h3>Gaming Controller</h3>
+            <h3>
+              Gaming Controller in UAE
+            </h3>
 
             <p>
-              Gaming controller and gamepad accessories.
+              Explore gaming controllers and gamepad accessories.
             </p>
 
             <a
-              class="product-btn"
+              class="product-button"
               href="https://link.amazon/B0gt6bIcJ"
               target="_blank"
               rel="nofollow sponsored noopener"
@@ -1055,8 +1098,8 @@
         <article
           class="product-card"
           data-category="Home & Living"
-          data-name="Electric Egg Boiler"
-          data-description="Electric egg boiler egg cooker"
+          data-name="Electric Egg Boiler in UAE"
+          data-description="Convenient electric egg cooker for everyday kitchen use."
         >
 
           <div class="product-image">
@@ -1071,14 +1114,16 @@
 
           <div class="product-info">
 
-            <h3>Electric Egg Boiler</h3>
+            <h3>
+              Electric Egg Boiler in UAE
+            </h3>
 
             <p>
               Convenient electric egg cooker for everyday kitchen use.
             </p>
 
             <a
-              class="product-btn"
+              class="product-button"
               href="https://link.amazon/B043NNglj"
               target="_blank"
               rel="nofollow sponsored noopener"
@@ -1090,11 +1135,14 @@
 
         </article>
 
+
       </div>
 
 
+      <!-- NO SEARCH RESULTS -->
+
       <div id="noResults">
-        No products found. Try another search.
+        No matching products found. Try another search.
       </div>
 
 
@@ -1102,9 +1150,9 @@
 
       <div class="coming-soon">
 
-        <h2>
+        <h3>
           More Products Coming Soon
-        </h2>
+        </h3>
 
         <p>
           We are adding more products from Amazon and Noon UAE.
@@ -1126,15 +1174,22 @@
         </h2>
 
         <p>
-          ProEcommerce UAE is a product discovery website for shoppers in the UAE looking for useful gadgets, fashion products, home & living products, and gaming accessories.
+          ProEcommerce UAE is a product discovery website for shoppers
+          in the UAE looking for useful gadgets, fashion products,
+          home & living products, and gaming accessories.
         </p>
 
         <p>
-          We feature selected products and provide links to partner retailers where shoppers can view product information and make purchases.
+          We feature selected products and provide links to partner
+          retailers where shoppers can view product information
+          and make purchases.
         </p>
 
         <p>
-          Our goal is to make it easier to discover interesting products in one place. Product availability, prices, shipping and other details are determined by the retailer at the time of purchase.
+          Our goal is to make it easier to discover interesting
+          products in one place. Product availability, prices,
+          shipping and other details are determined by the retailer
+          at the time of purchase.
         </p>
 
       </div>
@@ -1148,9 +1203,9 @@
 
   <footer>
 
-    <p>
-      <strong>ProEcommerce UAE</strong>
-    </p>
+    <h3>
+      ProEcommerce UAE
+    </h3>
 
     <p>
       Discover products. Shop smarter.
@@ -1160,9 +1215,12 @@
       © 2026 ProEcommerce UAE
     </p>
 
-    <p class="footer-disclosure">
-      Amazon Associates Disclosure: As an Amazon Associate I earn from qualifying purchases.
-    </p>
+    <div class="footer-disclosure">
+
+      Amazon Associates Disclosure:
+      As an Amazon Associate I earn from qualifying purchases.
+
+    </div>
 
   </footer>
 
@@ -1171,31 +1229,30 @@
 
   <script>
 
-    const searchForm = document.getElementById("searchForm");
-    const searchInput = document.getElementById("searchInput");
-    const products = document.querySelectorAll(".product-card");
-    const noResults = document.getElementById("noResults");
-
-    const menuBtn = document.getElementById("menuBtn");
+    const menuButton = document.getElementById("menuButton");
     const navLinks = document.getElementById("navLinks");
-
 
     /* MOBILE MENU */
 
-    menuBtn.addEventListener("click", function () {
+    menuButton.addEventListener("click", function () {
 
       navLinks.classList.toggle("active");
 
       const isOpen = navLinks.classList.contains("active");
 
-      menuBtn.textContent = isOpen ? "✕" : "☰";
+      menuButton.textContent = isOpen ? "✕" : "☰";
 
-      menuBtn.setAttribute("aria-expanded", isOpen);
+      menuButton.setAttribute("aria-expanded", isOpen);
+
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
 
     });
 
 
-    /* CLOSE MOBILE MENU */
+    /* CLOSE MOBILE MENU WHEN NAV LINK IS CLICKED */
 
     document.querySelectorAll(".nav-links a").forEach(function(link) {
 
@@ -1203,9 +1260,14 @@
 
         navLinks.classList.remove("active");
 
-        menuBtn.textContent = "☰";
+        menuButton.textContent = "☰";
 
-        menuBtn.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-expanded", "false");
+
+        menuButton.setAttribute(
+          "aria-label",
+          "Open navigation menu"
+        );
 
       });
 
@@ -1214,59 +1276,73 @@
 
     /* PRODUCT SEARCH */
 
+    const searchForm = document.getElementById("searchForm");
+
+    const searchInput = document.getElementById("searchInput");
+
+    const productCards = document.querySelectorAll(".product-card");
+
+    const noResults = document.getElementById("noResults");
+
     searchForm.addEventListener("submit", function(event) {
 
       event.preventDefault();
 
-      const searchTerm = searchInput.value
-        .trim()
-        .toLowerCase();
+      const searchTerm =
+        searchInput.value.trim().toLowerCase();
 
-      let found = false;
+      let found = 0;
 
+      productCards.forEach(function(card) {
 
-      products.forEach(function(product) {
+        const productName =
+          (card.dataset.name || "").toLowerCase();
 
-        const name =
-          product.dataset.name.toLowerCase();
-
-        const description =
-          product.dataset.description.toLowerCase();
+        const productDescription =
+          (card.dataset.description || "").toLowerCase();
 
         const category =
-          product.dataset.category.toLowerCase();
+          (card.dataset.category || "").toLowerCase();
 
-        const matches =
+        const searchableText =
+          productName +
+          " " +
+          productDescription +
+          " " +
+          category;
+
+        if (
           searchTerm === "" ||
-          name.includes(searchTerm) ||
-          description.includes(searchTerm) ||
-          category.includes(searchTerm);
+          searchableText.includes(searchTerm)
+        ) {
 
+          card.style.display = "";
 
-        if (matches) {
-
-          product.style.display = "flex";
-
-          found = true;
+          found++;
 
         } else {
 
-          product.style.display = "none";
+          card.style.display = "none";
 
         }
 
       });
 
 
-      noResults.style.display =
-        found ? "none" : "block";
+      if (found === 0 && searchTerm !== "") {
+
+        noResults.style.display = "block";
+
+      } else {
+
+        noResults.style.display = "none";
+
+      }
 
 
-      document
-        .getElementById("products")
-        .scrollIntoView({
-          behavior: "smooth"
-        });
+      document.getElementById("products").scrollIntoView({
+        behavior: "smooth"
+      });
 
     });
 
@@ -1278,41 +1354,38 @@
       categoryCard.addEventListener("click", function() {
 
         const selectedCategory =
-          categoryCard.dataset.category.toLowerCase();
+          categoryCard.dataset.category;
 
-        let found = false;
+        let found = 0;
 
+        productCards.forEach(function(card) {
 
-        products.forEach(function(product) {
+          if (
+            card.dataset.category === selectedCategory
+          ) {
 
-          const productCategory =
-            product.dataset.category.toLowerCase();
+            card.style.display = "";
 
-
-          if (productCategory === selectedCategory) {
-
-            product.style.display = "flex";
-
-            found = true;
+            found++;
 
           } else {
 
-            product.style.display = "none";
+            card.style.display = "none";
 
           }
 
         });
 
 
+        searchInput.value = "";
+
         noResults.style.display =
-          found ? "none" : "block";
+          found === 0 ? "block" : "none";
 
 
-        document
-          .getElementById("products")
-          .scrollIntoView({
-            behavior: "smooth"
-          });
+        document.getElementById("products").scrollIntoView({
+          behavior: "smooth"
+        });
 
       });
 
