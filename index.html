@@ -1,1081 +1,1424 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ProEcommerce UAE | Shop Gadgets, Fashion & More</title>
-
-<meta name="description" content="Shop and discover gadgets, fashion products, home and living products, and gaming accessories in UAE. Explore wireless earbuds, smart watches, power banks, sneakers, gaming accessories and more at ProEcommerce UAE.">
-
-<meta name="robots" content="index, follow">
-<meta name="author" content="ProEcommerce UAE">
-
-<link rel="canonical" href="https://proecommerce-uae.github.io/ProEcommerceuae/">
-
-<meta name="google-site-verification" content="C3E04qGEGMtmmr9IHt1gOGgtJL7hpCAds8Fg3YFarFE">
-
-<!-- Open Graph -->
-<meta property="og:title" content="ProEcommerce UAE | Shop Gadgets, Fashion & More">
-<meta property="og:description" content="Discover gadgets, fashion, home & living products, and gaming accessories in UAE.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://proecommerce-uae.github.io/ProEcommerceuae/">
-
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "ProEcommerce UAE",
-  "url": "https://proecommerce-uae.github.io/ProEcommerceuae/"
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "ProEcommerce UAE",
-  "url": "https://proecommerce-uae.github.io/ProEcommerceuae/"
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "ProEcommerce UAE",
-  "url": "https://proecommerce-uae.github.io/ProEcommerceuae/",
-  "description": "Discover gadgets, fashion, home and living products, and gaming accessories in UAE."
-}
-</script>
-
-<style>
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f5f7fa;
-    color: #222;
-    line-height: 1.6;
-}
-
-/* HEADER */
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: #071a33;
-    color: white;
-    padding: 15px 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.logo span {
-    color: #00c2ff;
-}
-
-nav {
-    display: flex;
-    gap: 25px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #00c2ff;
-}
-
-.menu-btn {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* HERO */
-
-.hero {
-    background: linear-gradient(135deg, #071a33, #0b4f8a);
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 20px;
-}
-
-.hero h1 span {
-    color: #00c2ff;
-}
-
-.hero p {
-    max-width: 800px;
-    margin: auto;
-    font-size: 18px;
-}
-
-/* SEARCH */
-
-.search-section {
-    padding: 30px 20px;
-    text-align: center;
-    background: white;
-}
-
-.search-box {
-    max-width: 600px;
-    margin: auto;
-    display: flex;
-    gap: 10px;
-}
-
-.search-box input {
-    flex: 1;
-    padding: 14px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-}
-
-.search-box button {
-    padding: 14px 22px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.search-box button:hover {
-    background: #005ecb;
-}
-
-/* DISCLOSURE */
-
-.disclosure {
-    background: #fff3cd;
-    padding: 15px 20px;
-    text-align: center;
-    font-size: 14px;
-}
-
-/* GENERAL */
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 50px 20px;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.section-title h2 {
-    font-size: 32px;
-    color: #071a33;
-}
-
-.section-title p {
-    margin-top: 8px;
-    color: #666;
-}
-
-/* CATEGORIES */
-
-.categories {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.category-card {
-    background: white;
-    padding: 30px 20px;
-    border-radius: 12px;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
-.category-card:hover {
-    transform: translateY(-5px);
-}
-
-.category-card .icon {
-    font-size: 45px;
-    margin-bottom: 12px;
-}
-
-.category-card h3 {
-    color: #071a33;
-}
-
-/* PRODUCTS */
-
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.product-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-}
-
-.product-image {
-    width: 100%;
-    height: 300px;
-    object-fit: contain;
-    background: #fff;
-    padding: 10px;
-}
-
-.product-content {
-    padding: 20px;
-}
-
-.product-content h3 {
-    color: #071a33;
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-
-.product-content p {
-    color: #666;
-    margin-bottom: 15px;
-}
-
-.product-button {
-    display: inline-block;
-    background: #ff9900;
-    color: #111;
-    padding: 12px 18px;
-    border-radius: 7px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.product-button:hover {
-    background: #ffad32;
-}
-
-/* NO RESULTS */
-
-#noResults {
-    display: none;
-    text-align: center;
-    padding: 30px;
-    color: #777;
-    font-size: 18px;
-}
-
-/* COMING SOON */
-
-.coming-soon {
-    background: #071a33;
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-    margin-top: 20px;
-}
-
-.coming-soon h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.coming-soon p {
-    max-width: 700px;
-    margin: auto;
-}
-
-/* ABOUT */
-
-.about {
-    background: white;
-}
-
-.about-content {
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
-}
-
-.about-content p {
-    margin-bottom: 15px;
-    color: #555;
-}
-
-/* FOOTER */
-
-footer {
-    background: #071a33;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-}
-
-footer a {
-    color: #00c2ff;
-    text-decoration: none;
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-
-    nav {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ProEcommerce UAE | Shop Gadgets, Fashion & More</title>
+
+  <meta name="description" content="Shop and discover gadgets, fashion products, home and living products, and gaming accessories in UAE. Explore wireless earbuds, smart watches, power banks, sneakers, gaming accessories and more at ProEcommerce UAE.">
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="ProEcommerce UAE">
+
+  <link rel="canonical" href="https://proecommerce-uae.github.io/ProEcommerceuae/">
+
+  <meta name="google-site-verification" content="C3E04qGEGMtmmr9IHt1gOGgtJL7hpCAds8Fg3YFarFE">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ProEcommerce UAE | Shop Gadgets, Fashion & More">
+  <meta property="og:description" content="Discover gadgets, fashion products, home and living products, and gaming accessories in UAE.">
+  <meta property="og:url" content="https://proecommerce-uae.github.io/ProEcommerceuae/">
+  <meta property="og:type" content="website">
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://proecommerce-uae.github.io/ProEcommerceuae/#organization",
+    "name": "ProEcommerce UAE",
+    "url": "https://proecommerce-uae.github.io/ProEcommerceuae/"
+  }
+  </script>
+
+  <!-- Structured Data: Website -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://proecommerce-uae.github.io/ProEcommerceuae/#website",
+    "url": "https://proecommerce-uae.github.io/ProEcommerceuae/",
+    "name": "ProEcommerce UAE",
+    "description": "Discover gadgets, fashion products, home and living products, and gaming accessories in UAE.",
+    "publisher": {
+      "@id": "https://proecommerce-uae.github.io/ProEcommerceuae/#organization"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: WebPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://proecommerce-uae.github.io/ProEcommerceuae/#webpage",
+    "url": "https://proecommerce-uae.github.io/ProEcommerceuae/",
+    "name": "ProEcommerce UAE | Shop Gadgets, Fashion & More",
+    "description": "Explore gadgets, fashion products, home and living products, and gaming accessories in UAE at ProEcommerce UAE.",
+    "isPartOf": {
+      "@id": "https://proecommerce-uae.github.io/ProEcommerceuae/#website"
+    },
+    "about": {
+      "@id": "https://proecommerce-uae.github.io/ProEcommerceuae/#organization"
+    }
+  }
+  </script>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fa;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #0f172a;
+      color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 70px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      color: white;
+      font-size: 23px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: white;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #38bdf8;
+    }
+
+    .menu-button {
+      display: none;
+      border: none;
+      background: transparent;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #38bdf8;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      font-size: 18px;
+    }
+
+    /* SEARCH */
+
+    .search-box {
+      max-width: 650px;
+      margin: 25px auto 0;
+    }
+
+    .search-form {
+      display: flex;
+      gap: 10px;
+    }
+
+    .search-form input {
+      flex: 1;
+      padding: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .search-form button {
+      padding: 15px 25px;
+      border: none;
+      border-radius: 8px;
+      background: #38bdf8;
+      color: #082f49;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .search-form button:hover {
+      background: #7dd3fc;
+    }
+
+    /* DISCLOSURE */
+
+    .disclosure {
+      max-width: 900px;
+      margin: 25px auto 0;
+      padding: 15px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .disclosure strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* GENERAL SECTIONS */
+
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 65px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 15px;
+      color: #0f172a;
+    }
+
+    .section-intro {
+      max-width: 800px;
+      margin: 0 auto 35px;
+      text-align: center;
+      color: #4b5563;
+    }
+
+    /* INTRO */
+
+    .intro-section {
+      background: white;
+    }
+
+    .intro-box {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .intro-box p {
+      margin-top: 15px;
+      color: #4b5563;
+    }
+
+    /* CATEGORIES */
+
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .category-card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .category-icon {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .category-card h3 {
+      margin-bottom: 8px;
+      color: #0f172a;
+    }
+
+    .category-card p {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    /* PRODUCTS */
+
+    .products-section {
+      background: #f5f7fa;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .product-image {
+      height: 300px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 8px;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h3 {
+      color: #0f172a;
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+
+    .product-info p {
+      color: #64748b;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .product-button {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+      border-radius: 8px;
+      background: #2563eb;
+      color: white;
+      font-weight: bold;
+    }
+
+    .product-button:hover {
+      background: #1d4ed8;
+    }
+
+    /* NO RESULTS */
+
+    #noResults {
+      display: none;
+      text-align: center;
+      padding: 30px;
+      color: #64748b;
+      font-weight: bold;
+    }
+
+    /* COMING SOON */
+
+    .coming-soon {
+      margin-top: 35px;
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+    }
+
+    .coming-soon h3 {
+      margin-bottom: 8px;
+      color: #0f172a;
+    }
+
+    .coming-soon p {
+      color: #64748b;
+    }
+
+    /* ABOUT */
+
+    .about-section {
+      background: white;
+    }
+
+    .about-box {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .about-box p {
+      margin-bottom: 15px;
+      color: #4b5563;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    footer h3 {
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      color: #cbd5e1;
+      margin-bottom: 8px;
+    }
+
+    .footer-disclosure {
+      max-width: 700px;
+      margin: 15px auto 0;
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .navbar {
+        min-height: 65px;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .nav-links {
         display: none;
         position: absolute;
         top: 65px;
         left: 0;
-        width: 100%;
-        background: #071a33;
+        right: 0;
+        background: #0f172a;
         flex-direction: column;
-        padding: 20px;
-        gap: 15px;
-    }
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 20px 20px;
+      }
 
-    nav.active {
+      .nav-links.active {
         display: flex;
-    }
+      }
 
-    .menu-btn {
-        display: block;
-    }
+      .nav-links a {
+        padding: 14px 5px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
 
-    .hero h1 {
-        font-size: 32px;
-    }
+      .hero {
+        padding: 60px 18px;
+      }
 
-    .categories {
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .categories-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
+      }
 
-    .products-grid {
+      .products-grid {
         grid-template-columns: 1fr;
-    }
+      }
 
-    .product-image {
+      .product-image {
         height: 250px;
+      }
+
+      .product-image img {
+        padding: 5px;
+      }
+
+      .section {
+        padding: 50px 18px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
     }
 
-    .search-box {
+    @media (max-width: 500px) {
+
+      .logo {
+        font-size: 19px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .search-form {
         flex-direction: column;
-    }
+      }
 
-    .search-box button {
+      .search-form button {
         width: 100%;
-    }
-}
+      }
 
-</style>
+      .categories-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+  <!-- HEADER -->
 
-<header>
+  <header>
 
-    <div class="logo">
-        Pro<span>Ecommerce UAE</span>
-    </div>
+    <nav class="navbar">
 
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+      <a href="#home" class="logo">
+        ProEcommerce UAE
+      </a>
 
-    <nav id="navMenu">
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <div class="nav-links" id="navLinks">
+
         <a href="#home">Home</a>
+
         <a href="#categories">Categories</a>
+
         <a href="#products">Products</a>
+
         <a href="#about">About</a>
+
+      </div>
+
     </nav>
 
-</header>
+  </header>
 
 
-<!-- HERO -->
+  <!-- HERO -->
 
-<section class="hero" id="home">
+  <main>
 
-    <h1>
-        Discover <span>Gadgets, Fashion & More</span> in UAE
-    </h1>
+    <section class="hero" id="home">
 
-    <p>
-        Discover gadgets, fashion products, home & living products,
-        and gaming accessories in UAE. Explore featured products
-        including wireless earbuds, smart watches, power banks,
-        sneakers, gaming accessories and more.
-    </p>
+      <div class="hero-content">
 
-</section>
-
-
-<!-- SEARCH -->
-
-<section class="search-section">
-
-    <form class="search-box" id="searchForm">
-
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Search for a product..."
-            autocomplete="off"
-        >
-
-        <button type="submit">
-            Search
-        </button>
-
-    </form>
-
-</section>
-
-
-<!-- AMAZON DISCLOSURE -->
-
-<div class="disclosure">
-
-    As an Amazon Associate I earn from qualifying purchases.
-
-</div>
-
-
-<!-- INTRO -->
-
-<section class="container">
-
-    <div class="section-title">
-
-        <h2>Shop & Discover Products in UAE</h2>
+        <h1>
+          Discover <span>Gadgets, Fashion & More</span> in UAE
+        </h1>
 
         <p>
-            Explore our selected products across different categories.
-            Click a product to view it on Amazon.
+          Discover gadgets, fashion products, home & living products,
+          and gaming accessories in UAE. Explore featured products
+          including wireless earbuds, smart watches, power banks,
+          sneakers, gaming accessories and more.
         </p>
 
-    </div>
 
-</section>
+        <!-- SEARCH -->
 
+        <div class="search-box">
 
-<!-- CATEGORIES -->
+          <form class="search-form" id="searchForm">
 
-<section class="container" id="categories">
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="Search products..."
+              aria-label="Search products"
+              autocomplete="off"
+            >
 
-    <div class="section-title">
+            <button type="submit">
+              Search
+            </button>
 
-        <h2>Explore Categories</h2>
+          </form>
 
-        <p>Find products by category.</p>
-
-    </div>
-
-    <div class="categories">
-
-        <div class="category-card" onclick="filterCategory('Gadgets')">
-            <div class="icon">📱</div>
-            <h3>Gadgets</h3>
         </div>
 
-        <div class="category-card" onclick="filterCategory('Fashion')">
-            <div class="icon">👟</div>
-            <h3>Fashion</h3>
+
+        <!-- AMAZON DISCLOSURE -->
+
+        <div class="disclosure">
+
+          <strong>Amazon Associates Disclosure</strong>
+
+          As an Amazon Associate I earn from qualifying purchases.
+
         </div>
 
-        <div class="category-card" onclick="filterCategory('Home & Living')">
-            <div class="icon">🏠</div>
-            <h3>Home & Living</h3>
-        </div>
+      </div>
 
-        <div class="category-card" onclick="filterCategory('Gaming')">
-            <div class="icon">🎮</div>
-            <h3>Gaming</h3>
-        </div>
-
-    </div>
-
-</section>
+    </section>
 
 
-<!-- PRODUCTS -->
+    <!-- INTRO -->
 
-<section class="container" id="products">
+    <section class="section intro-section">
 
-    <div class="section-title">
+      <div class="intro-box">
 
-        <h2>Featured Products</h2>
+        <h2 class="section-title">
+          Welcome to ProEcommerce UAE
+        </h2>
 
         <p>
-            Discover popular products available through Amazon.
+          ProEcommerce UAE is a product discovery website for shoppers
+          in the UAE looking for useful gadgets, fashion products,
+          home & living products, and gaming accessories.
+          Select a product to view it through our partner retailer.
         </p>
 
-    </div>
+      </div>
+
+    </section>
 
 
-    <div class="products-grid" id="productsGrid">
+    <!-- CATEGORIES -->
+
+    <section class="section" id="categories">
+
+      <h2 class="section-title">
+        Shop by Category
+      </h2>
+
+      <p class="section-intro">
+        Explore gadgets, fashion products, home & living products,
+        and gaming accessories available through our partner retailers.
+      </p>
+
+      <div class="categories-grid">
 
 
-        <!-- 1. WIRELESS EARBUDS -->
+        <div class="category-card" data-category="Gadgets">
 
-        <div
-            class="product-card"
-            data-category="Gadgets"
-            data-name="Wireless Earbuds"
+          <div class="category-icon">📱</div>
+
+          <h3>Gadgets</h3>
+
+          <p>
+            Useful tech and electronic products in UAE.
+          </p>
+
+        </div>
+
+
+        <div class="category-card" data-category="Fashion">
+
+          <div class="category-icon">👟</div>
+
+          <h3>Fashion</h3>
+
+          <p>
+            Fashion items, shoes and accessories.
+          </p>
+
+        </div>
+
+
+        <div class="category-card" data-category="Home & Living">
+
+          <div class="category-icon">🏠</div>
+
+          <h3>Home & Living</h3>
+
+          <p>
+            Useful home and living products.
+          </p>
+
+        </div>
+
+
+        <div class="category-card" data-category="Gaming">
+
+          <div class="category-icon">🎮</div>
+
+          <h3>Gaming</h3>
+
+          <p>
+            Gaming accessories and equipment.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <section class="section products-section" id="products">
+
+      <h2 class="section-title">
+        Featured Products
+      </h2>
+
+      <p class="section-intro">
+        Discover featured products including wireless earbuds,
+        smart watches, power banks, sneakers, fashion watches,
+        LED lights, gaming controllers, gaming headsets,
+        and electric egg boilers.
+      </p>
+
+
+      <div class="products-grid" id="productsGrid">
+
+
+        <!-- PRODUCT 1: WIRELESS EARBUDS -->
+
+        <article
+          class="product-card"
+          data-category="Gadgets"
+          data-name="Wireless Earbuds"
+          data-description="Explore wireless earbuds and audio accessories for everyday listening."
         >
 
-            <img
-                src="Image/wireless-earbuds-18.jpg"
-                alt="Wireless Earbuds"
-                class="product-image"
-            >
-
-            <div class="product-content">
-
-                <h3>Wireless Earbuds</h3>
-
-                <p>
-                    Wireless Bluetooth earbuds for everyday listening
-                    and entertainment.
-                </p>
-
-                <a
-                    href="https://link.amazon/B0hhImmcI"
-                    target="_blank"
-                    rel="nofollow sponsored noopener"
-                    class="product-button"
-                >
-                    View Product
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- 2. SMART WATCH -->
-
-        <div
-            class="product-card"
-            data-category="Gadgets"
-            data-name="Smart Watch"
-        >
+          <div class="product-image">
 
             <img
-                src="Image/smart_watch.jpg"
-                alt="Smart Watch"
-                class="product-image"
+              src="Image/wireless-earbuds-18.jpg"
+              alt="Wireless Earbuds"
+              loading="lazy"
             >
 
-            <div class="product-content">
+          </div>
 
-                <h3>Smart Watch</h3>
+          <div class="product-info">
 
-                <p>
-                    Smart watch and fitness tracker for everyday use.
-                </p>
-
-                <a
-                    href="https://link.amazon/B0cNATNP1"
-                    target="_blank"
-                    rel="nofollow sponsored noopener"
-                    class="product-button"
-                >
-                    View Product
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- 3. GAMING HEADSET -->
-
-        <div
-            class="product-card"
-            data-category="Gaming"
-            data-name="Gaming Headset"
-        >
-
-            <img
-                src="Image/gaming_headset.jpg"
-                alt="Gaming Headset"
-                class="product-image"
-            >
-
-            <div class="product-content">
-
-                <h3>Gaming Headset</h3>
-
-                <p>
-                    Gaming headset designed for immersive gaming
-                    and entertainment.
-                </p>
-
-                <a
-                    href="https://link.amazon/B06xwYhf1"
-                    target="_blank"
-                    rel="nofollow sponsored noopener"
-                    class="product-button"
-                >
-                    View Product
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- 4. MAGNETIC POWER BANK -->
-
-        <div
-            class="product-card"
-            data-category="Gadgets"
-            data-name="Magnetic Power Bank"
-        >
-
-            <img
-                src="Image/magnetic-power-bank-original.jpg"
-                alt="Magnetic Power Bank"
-                class="product-image"
-            >
-
-            <div class="product-content">
-
-                <h3>Magnetic Power Bank</h3>
-
-                <p>
-                    Portable magnetic power bank for convenient
-                    charging on the go.
-                </p>
-
-                <a
-                    href="https://link.amazon/A0hmsjDmY"
-                    target="_blank"
-                    rel="nofollow sponsored noopener"
-                    class="product-button"
-                >
-                    View Product
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- 5. STYLISH SNEAKERS -->
-
-        <div
-            class="product-card"
-            data-category="Fashion"
-            data-name="Stylish Sneakers"
-        >
-
-            <img
-                src="Image/stylish_sneakers.jpg"
-                alt="Stylish Sneakers"
-                class="product-image"
-            >
-
-            <div class="product-content">
-
-                <h3>Stylish Sneakers</h3>
-
-                <p>
-                    Stylish sneakers suitable for casual everyday wear.
-                </p>
-
-                <a
-                    href="https://link.amazon/B074JduPF"
-                    target="_blank"
-                    rel="nofollow sponsored noopener"
-                    class="product-button"
-                >
-                    View Product
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- 6. FASHION WATCH -->
-
-        <div
-            class="product-card"
-            data-category="Fashion"
-            data-name="Fashion Watch"
-        >
-
-            <img
-                src="Image/fashion-watch.jpg"
-                alt="Fashion Watch"
-                class="product-image"
-            >
-
-            <div class="product-content">
-
-                <h3>Fashion Watch</h3>
-
-                <p>
-                    Stylish watch designed to complement everyday outfits.
-                </p>
-
-                <a
-                    href="https://link.amazon/B04pX1hgj"
-                    target="_blank"
-                    rel="nofollow sponsored noopener"
-                    class="product-button"
-                >
-                    View Product
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- 7. LED LIGHTS -->
-
-        <div
-            class="product-card"
-            data-category="Home & Living"
-            data-name="LED Lights"
-        >
-
-            <img
-                src="Image/led-lights.jpg"
-                alt="LED Lights for Home"
-                class="product-image"
-            >
-
-            <div class="product-content">
-
-                <h3>LED Lights</h3>
-
-                <p>
-                    LED lighting for home decoration and everyday use.
-                </p>
-
-                <a
-                    href="https://link.amazon/B09pTAxuy"
-                    target="_blank"
-                    rel="nofollow sponsored noopener"
-                    class="product-button"
-                >
-                    View Product
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- 8. GAMING CONTROLLER -->
-
-        <div
-            class="product-card"
-            data-category="Gaming"
-            data-name="Gaming Controller"
-        >
-
-            <img
-                src="Image/gaming-controller.jpg"
-                alt="Gaming Controller"
-                class="product-image"
-            >
-
-            <div class="product-content">
-
-                <h3>Gaming Controller</h3>
-
-                <p>
-                    Gaming controller for console and gaming entertainment.
-                </p>
-
-                <a
-                    href="https://link.amazon/B0gt6bIcJ"
-                    target="_blank"
-                    rel="nofollow sponsored noopener"
-                    class="product-button"
-                >
-                    View Product
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- 9. ELECTRIC EGG BOILER -->
-
-        <div
-            class="product-card"
-            data-category="Home & Living"
-            data-name="Electric Egg Boiler"
-        >
-
-            <img
-                src="Image/electric-egg-cooker.jpg"
-                alt="Electric Egg Boiler"
-                class="product-image"
-            >
-
-            <div class="product-content">
-
-                <h3>Electric Egg Boiler</h3>
-
-                <p>
-                    Convenient electric egg cooker for quick
-                    and easy egg preparation.
-                </p>
-
-                <a
-                    href="https://link.amazon/B043NNglj"
-                    target="_blank"
-                    rel="nofollow sponsored noopener"
-                    class="product-button"
-                >
-                    View Product
-                </a>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-
-    <div id="noResults">
-        No products found. Try another search.
-    </div>
-
-</section>
-
-
-<!-- COMING SOON -->
-
-<section class="coming-soon">
-
-    <h2>More Products Coming Soon</h2>
-
-    <p>
-        We are bringing more products and shopping options
-        to ProEcommerce UAE. Check back soon for new gadgets,
-        fashion, home & living products and gaming accessories.
-    </p>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>About ProEcommerce UAE</h2>
-
-        </div>
-
-        <div class="about-content">
+            <h3>Wireless Earbuds</h3>
 
             <p>
-                ProEcommerce UAE helps shoppers discover interesting
-                products across gadgets, fashion, home & living,
-                and gaming categories.
+              Explore wireless earbuds and audio accessories for everyday listening.
             </p>
+
+            <a
+              class="product-button"
+              href="https://link.amazon/B0hhImmcI"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              View Product
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PRODUCT 2: SMART WATCH -->
+
+        <article
+          class="product-card"
+          data-category="Gadgets"
+          data-name="Smart Watch"
+          data-description="Discover smart watches and fitness tracking accessories for everyday use."
+        >
+
+          <div class="product-image">
+
+            <img
+              src="Image/smart_watch.jpg"
+              alt="Smart Watch"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <h3>Smart Watch</h3>
 
             <p>
-                When you select a product, you may be redirected
-                to Amazon to view the product and complete your purchase.
+              Discover smart watches and fitness tracking accessories for everyday use.
             </p>
 
-        </div>
+            <a
+              class="product-button"
+              href="https://link.amazon/B0cNATNP1"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              View Product
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PRODUCT 3: GAMING HEADSET -->
+
+        <article
+          class="product-card"
+          data-category="Gaming"
+          data-name="Gaming Headset"
+          data-description="Explore gaming headsets and audio accessories for gaming."
+        >
+
+          <div class="product-image">
+
+            <img
+              src="Image/gaming_headset.jpg"
+              alt="Gaming Headset"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <h3>Gaming Headset</h3>
+
+            <p>
+              Explore gaming headsets and audio accessories for gaming.
+            </p>
+
+            <a
+              class="product-button"
+              href="https://link.amazon/B06xwYhf1"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              View Product
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PRODUCT 4: MAGNETIC POWER BANK -->
+
+        <article
+          class="product-card"
+          data-category="Gadgets"
+          data-name="Magnetic Power Bank"
+          data-description="Portable magnetic power bank for compatible devices and everyday charging."
+        >
+
+          <div class="product-image">
+
+            <img
+              src="Image/magnetic-power-bank-original.jpg"
+              alt="Magnetic Power Bank"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <h3>Magnetic Power Bank</h3>
+
+            <p>
+              Portable magnetic power bank for compatible devices and everyday charging.
+            </p>
+
+            <a
+              class="product-button"
+              href="https://link.amazon/A0hmsjDmY"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              View Product
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PRODUCT 5: STYLISH SNEAKERS -->
+
+        <article
+          class="product-card"
+          data-category="Fashion"
+          data-name="Stylish Sneakers"
+          data-description="Explore stylish sneakers and everyday footwear in UAE."
+        >
+
+          <div class="product-image">
+
+            <img
+              src="Image/stylish_sneakers.jpg"
+              alt="Stylish Sneakers Shoes"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <h3>Stylish Sneakers</h3>
+
+            <p>
+              Explore stylish sneakers and everyday footwear in UAE.
+            </p>
+
+            <a
+              class="product-button"
+              href="https://link.amazon/B074JduPF"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              View Product
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PRODUCT 6: FASHION WATCH -->
+
+        <article
+          class="product-card"
+          data-category="Fashion"
+          data-name="Fashion Watch"
+          data-description="Stylish fashion watch for everyday wear and accessories."
+        >
+
+          <div class="product-image">
+
+            <img
+              src="Image/fashion-watch.jpg"
+              alt="Fashion Watch"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <h3>Fashion Watch</h3>
+
+            <p>
+              Stylish fashion watch for everyday wear and accessories.
+            </p>
+
+            <a
+              class="product-button"
+              href="https://link.amazon/B04pX1hgj"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              View Product
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PRODUCT 7: LED LIGHTS -->
+
+        <article
+          class="product-card"
+          data-category="Home & Living"
+          data-name="LED Lights"
+          data-description="Explore LED lighting products for home and living spaces."
+        >
+
+          <div class="product-image">
+
+            <img
+              src="Image/led-lights.jpg"
+              alt="LED Lights for Home"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <h3>LED Lights</h3>
+
+            <p>
+              Explore LED lighting products for home and living spaces.
+            </p>
+
+            <a
+              class="product-button"
+              href="https://link.amazon/B09pTAxuy"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              View Product
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PRODUCT 8: GAMING CONTROLLER -->
+
+        <article
+          class="product-card"
+          data-category="Gaming"
+          data-name="Gaming Controller"
+          data-description="Explore gaming controllers and gamepad accessories."
+        >
+
+          <div class="product-image">
+
+            <img
+              src="Image/gaming-controller.jpg"
+              alt="Gaming Controller Gamepad"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <h3>Gaming Controller</h3>
+
+            <p>
+              Explore gaming controllers and gamepad accessories.
+            </p>
+
+            <a
+              class="product-button"
+              href="https://link.amazon/B0gt6bIcJ"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              View Product
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PRODUCT 9: ELECTRIC EGG BOILER -->
+
+        <article
+          class="product-card"
+          data-category="Home & Living"
+          data-name="Electric Egg Boiler"
+          data-description="Convenient electric egg cooker for everyday kitchen use."
+        >
+
+          <div class="product-image">
+
+            <img
+              src="Image/electric-egg-cooker.jpg"
+              alt="Electric Egg Boiler Egg Cooker"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <h3>Electric Egg Boiler</h3>
+
+            <p>
+              Convenient electric egg cooker for everyday kitchen use.
+            </p>
+
+            <a
+              class="product-button"
+              href="https://link.amazon/B043NNglj"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              View Product
+            </a>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+
+      <!-- NO SEARCH RESULTS -->
+
+      <div id="noResults">
+        No matching products found. Try another search.
+      </div>
+
+
+      <!-- COMING SOON -->
+
+      <div class="coming-soon">
+
+        <h3>More Products Coming Soon</h3>
+
+        <p>
+          We are adding more products from Amazon and Noon UAE.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="section about-section" id="about">
+
+      <div class="about-box">
+
+        <h2 class="section-title">
+          About ProEcommerce UAE
+        </h2>
+
+        <p>
+          ProEcommerce UAE is a product discovery website for shoppers
+          in the UAE looking for useful gadgets, fashion products,
+          home & living products, and gaming accessories.
+        </p>
+
+        <p>
+          We feature selected products and provide links to partner
+          retailers where shoppers can view product information
+          and make purchases.
+        </p>
+
+        <p>
+          Our goal is to make it easier to discover interesting
+          products in one place. Product availability, prices,
+          shipping and other details are determined by the retailer
+          at the time of purchase.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h3>ProEcommerce UAE</h3>
+
+    <p>
+      Discover products. Shop smarter.
+    </p>
+
+    <p>
+      © 2026 ProEcommerce UAE
+    </p>
+
+    <div class="footer-disclosure">
+
+      Amazon Associates Disclosure:
+      As an Amazon Associate I earn from qualifying purchases.
 
     </div>
 
-</section>
+  </footer>
 
 
-<!-- FOOTER -->
+  <!-- JAVASCRIPT -->
 
-<footer>
+  <script>
 
-    <p>
-        © 2026 ProEcommerce UAE. All rights reserved.
-    </p>
+    /* MOBILE MENU */
 
-    <p>
-        <a href="#home">Back to top</a>
-    </p>
+    const menuButton =
+      document.getElementById("menuButton");
 
-</footer>
+    const navLinks =
+      document.getElementById("navLinks");
 
 
-<!-- JAVASCRIPT -->
+    menuButton.addEventListener("click", function () {
 
-<script>
+      navLinks.classList.toggle("active");
 
-function toggleMenu() {
+      const isOpen =
+        navLinks.classList.contains("active");
 
-    const nav = document.getElementById("navMenu");
+      menuButton.textContent =
+        isOpen ? "✕" : "☰";
 
-    nav.classList.toggle("active");
+      menuButton.setAttribute(
+        "aria-expanded",
+        isOpen
+      );
 
-}
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen
+          ? "Close navigation menu"
+          : "Open navigation menu"
+      );
 
-
-const searchForm = document.getElementById("searchForm");
-
-const searchInput = document.getElementById("searchInput");
-
-const productCards = document.querySelectorAll(".product-card");
-
-const noResults = document.getElementById("noResults");
-
-
-searchForm.addEventListener("submit", function(event) {
-
-    event.preventDefault();
-
-    const searchTerm =
-        searchInput.value.trim().toLowerCase();
-
-    let found = false;
+    });
 
 
-    productCards.forEach(function(card) {
+    /* CLOSE MOBILE MENU */
 
-        const productName =
-            card.getAttribute("data-name").toLowerCase();
+    document.querySelectorAll(".nav-links a")
+      .forEach(function(link) {
 
-        const productDescription =
-            card.querySelector("p").textContent.toLowerCase();
+        link.addEventListener("click", function() {
 
-        const productCategory =
-            card.getAttribute("data-category").toLowerCase();
+          navLinks.classList.remove("active");
+
+          menuButton.textContent = "☰";
+
+          menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          menuButton.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+          );
+
+        });
+
+      });
+
+
+    /* PRODUCT SEARCH */
+
+    const searchForm =
+      document.getElementById("searchForm");
+
+    const searchInput =
+      document.getElementById("searchInput");
+
+    const productCards =
+      document.querySelectorAll(".product-card");
+
+    const noResults =
+      document.getElementById("noResults");
+
+
+    searchForm.addEventListener(
+      "submit",
+      function(event) {
+
+        event.preventDefault();
+
+        const searchTerm =
+          searchInput.value.trim().toLowerCase();
+
+        let found = 0;
+
+
+        productCards.forEach(function(card) {
+
+          const productName =
+            (card.dataset.name || "")
+            .toLowerCase();
+
+          const productDescription =
+            (card.dataset.description || "")
+            .toLowerCase();
+
+          const category =
+            (card.dataset.category || "")
+            .toLowerCase();
+
+
+          const searchableText =
+            productName +
+            " " +
+            productDescription +
+            " " +
+            category;
+
+
+          if (
+            searchTerm === "" ||
+            searchableText.includes(searchTerm)
+          ) {
+
+            card.style.display = "";
+
+            found++;
+
+          } else {
+
+            card.style.display = "none";
+
+          }
+
+        });
 
 
         if (
-            searchTerm === "" ||
-            productName.includes(searchTerm) ||
-            productDescription.includes(searchTerm) ||
-            productCategory.includes(searchTerm)
+          found === 0 &&
+          searchTerm !== ""
         ) {
 
-            card.style.display = "block";
-
-            found = true;
+          noResults.style.display = "block";
 
         } else {
 
-            card.style.display = "none";
+          noResults.style.display = "none";
 
         }
 
-    });
 
-
-    if (found) {
-
-        noResults.style.display = "none";
-
-        document.getElementById("products").scrollIntoView({
+        document
+          .getElementById("products")
+          .scrollIntoView({
             behavior: "smooth"
-        });
+          });
 
-    } else {
-
-        noResults.style.display = "block";
-
-        document.getElementById("products").scrollIntoView({
-            behavior: "smooth"
-        });
-
-    }
-
-});
+      }
+    );
 
 
-function filterCategory(category) {
+    /* CATEGORY FILTER */
 
-    let found = false;
+    document
+      .querySelectorAll(".category-card")
+      .forEach(function(categoryCard) {
 
+        categoryCard.addEventListener(
+          "click",
+          function() {
 
-    productCards.forEach(function(card) {
+            const selectedCategory =
+              categoryCard.dataset.category;
 
-        const cardCategory =
-            card.getAttribute("data-category");
-
-
-        if (cardCategory === category) {
-
-            card.style.display = "block";
-
-            found = true;
-
-        } else {
-
-            card.style.display = "none";
-
-        }
-
-    });
+            let found = 0;
 
 
-    noResults.style.display =
-        found ? "none" : "block";
+            productCards.forEach(function(card) {
+
+              if (
+                card.dataset.category ===
+                selectedCategory
+              ) {
+
+                card.style.display = "";
+
+                found++;
+
+              } else {
+
+                card.style.display = "none";
+
+              }
+
+            });
 
 
-    document.getElementById("products").scrollIntoView({
-        behavior: "smooth"
-    });
+            searchInput.value = "";
 
-}
+            noResults.style.display =
+              found === 0
+                ? "block"
+                : "none";
 
-</script>
+
+            document
+              .getElementById("products")
+              .scrollIntoView({
+                behavior: "smooth"
+              });
+
+          }
+        );
+
+      });
+
+  </script>
 
 </body>
 </html>
