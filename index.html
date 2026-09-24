@@ -316,11 +316,15 @@ justify-content:center;
 overflow:hidden;
 }
 
+/* UPDATED PRODUCT IMAGE SIZE */
+
 .product-image img{
 width:100%;
 height:100%;
 object-fit:contain;
-padding:8px;
+padding:0;
+display:block;
+transform:scale(1.15);
 }
 
 .photo-coming{
@@ -627,6 +631,13 @@ grid-template-columns:1fr;
 height:250px;
 }
 
+/* UPDATED MOBILE IMAGE SIZE */
+
+.product-image img{
+transform:scale(1.15);
+padding:0;
+}
+
 .section{
 padding:50px 18px;
 }
@@ -713,8 +724,6 @@ aria-expanded="false">
 
 <main>
 
-<!-- HERO -->
-
 <section class="hero" id="home">
 
 <div class="hero-content">
@@ -761,9 +770,6 @@ As an Amazon Associate I earn from qualifying purchases.
 
 </section>
 
-
-<!-- INTRO -->
-
 <section class="section intro-section">
 
 <div class="intro-box">
@@ -782,9 +788,6 @@ through our partner retailer.
 </div>
 
 </section>
-
-
-<!-- CATEGORIES -->
 
 <section class="section" id="categories">
 
@@ -833,9 +836,6 @@ and gaming accessories available through our partner retailers.
 
 </section>
 
-
-<!-- PRODUCTS -->
-
 <section class="section products-section" id="products">
 
 <h2 class="section-title">
@@ -847,7 +847,6 @@ Discover gadgets, fashion, home & living, fitness and gaming products.
 </p>
 
 <div class="products-grid" id="productsGrid">
-
 
 <!-- 1 WIRELESS EARBUDS -->
 
@@ -895,7 +894,6 @@ Buying Guide
 </div>
 </article>
 
-
 <!-- 2 SMART WATCH -->
 
 <article
@@ -941,7 +939,6 @@ Buying Guide
 </div>
 </div>
 </article>
-
 
 <!-- 3 GAMING HEADSET -->
 
@@ -989,7 +986,6 @@ Buying Guide
 </div>
 </article>
 
-
 <!-- 4 POWER BANK -->
 
 <article
@@ -1035,7 +1031,6 @@ Buying Guide
 </div>
 </div>
 </article>
-
 
 <!-- 5 SNEAKERS -->
 
@@ -1083,7 +1078,6 @@ Buying Guide
 </div>
 </article>
 
-
 <!-- 6 FASHION WATCH -->
 
 <article
@@ -1129,7 +1123,6 @@ Buying Guide
 </div>
 </div>
 </article>
-
 
 <!-- 7 LED LIGHTS -->
 
@@ -1177,7 +1170,6 @@ Buying Guide
 </div>
 </article>
 
-
 <!-- 8 GAMING CONTROLLER -->
 
 <article
@@ -1223,7 +1215,6 @@ Buying Guide
 </div>
 </div>
 </article>
-
 
 <!-- 9 EGG BOILER -->
 
@@ -1271,7 +1262,6 @@ Buying Guide
 </div>
 </article>
 
-
 <!-- 10 ADJUSTABLE DUMBBELL -->
 
 <article
@@ -1317,7 +1307,6 @@ Buying Guide
 </div>
 </div>
 </article>
-
 
 <!-- 11 ELECTRIC INDUCTION COOKER -->
 
@@ -1365,7 +1354,6 @@ Buying Guide
 </div>
 </article>
 
-
 <!-- 12 CORDLESS VACUUM -->
 
 <article
@@ -1410,7 +1398,6 @@ Buying Guide
 </div>
 </div>
 </article>
-
 
 <!-- 13 HP ELITEBOOK -->
 
@@ -1458,7 +1445,6 @@ Buying Guide
 </div>
 </article>
 
-
 <!-- 14 BED SHEET SET -->
 
 <article
@@ -1504,7 +1490,6 @@ Buying Guide
 </div>
 </div>
 </article>
-
 
 <!-- 15 CERAMIC PLANT POTS -->
 
@@ -1554,11 +1539,9 @@ Buying Guide
 
 </div>
 
-
 <div id="noResults">
 No matching products found. Try another search.
 </div>
-
 
 <div class="coming-soon">
 
@@ -1573,9 +1556,6 @@ We are adding more products from Amazon and Noon UAE.
 </div>
 
 </section>
-
-
-<!-- ABOUT -->
 
 <section class="section about-section" id="about">
 
@@ -1607,12 +1587,6 @@ by the retailer at the time of purchase.
 </section>
 
 </main>
-
-
-<!-- ========================================================= -->
-<!-- EXISTING BUYING GUIDE MODALS -->
-<!-- ========================================================= -->
-
 
 <!-- WIRELESS EARBUDS -->
 
@@ -1686,7 +1660,6 @@ As an Amazon Associate I earn from qualifying purchases.
 </div>
 </div>
 
-
 <!-- SMART WATCH -->
 
 <div class="guide-modal" id="smartWatchGuide">
@@ -1756,7 +1729,6 @@ As an Amazon Associate I earn from qualifying purchases.
 </div>
 </div>
 
-
 <!-- GAMING HEADSET -->
 
 <div class="guide-modal" id="gamingHeadsetGuide">
@@ -1815,7 +1787,6 @@ As an Amazon Associate I earn from qualifying purchases.
 
 </div>
 </div>
-
 
 <!-- POWER BANK -->
 
@@ -1876,7 +1847,6 @@ As an Amazon Associate I earn from qualifying purchases.
 </div>
 </div>
 
-
 <!-- SNEAKERS -->
 
 <div class="guide-modal" id="sneakersGuide">
@@ -1935,7 +1905,6 @@ As an Amazon Associate I earn from qualifying purchases.
 
 </div>
 </div>
-
 
 <!-- FASHION WATCH -->
 
@@ -1996,7 +1965,6 @@ As an Amazon Associate I earn from qualifying purchases.
 </div>
 </div>
 
-
 <!-- LED LIGHTS -->
 
 <div class="guide-modal" id="ledLightsGuide">
@@ -2055,7 +2023,6 @@ As an Amazon Associate I earn from qualifying purchases.
 
 </div>
 </div>
-
 
 <!-- GAMING CONTROLLER -->
 
@@ -2116,7 +2083,6 @@ As an Amazon Associate I earn from qualifying purchases.
 </div>
 </div>
 
-
 <!-- EGG BOILER -->
 
 <div class="guide-modal" id="eggBoilerGuide">
@@ -2175,7 +2141,6 @@ As an Amazon Associate I earn from qualifying purchases.
 
 </div>
 </div>
-
 
 <!-- DUMBBELL -->
 
@@ -2250,7 +2215,6 @@ As an Amazon Associate I earn from qualifying purchases.
 </div>
 </div>
 
-
 <!-- INDUCTION COOKER -->
 
 <div class="guide-modal" id="inductionGuide">
@@ -2321,7 +2285,6 @@ As an Amazon Associate I earn from qualifying purchases.
 </div>
 </div>
 
-
 <!-- VACUUM -->
 
 <div class="guide-modal" id="vacuumGuide">
@@ -2391,7 +2354,6 @@ As an Amazon Associate I earn from qualifying purchases.
 
 </div>
 </div>
-
 
 <!-- LAPTOP -->
 
@@ -2471,7 +2433,6 @@ As an Amazon Associate I earn from qualifying purchases.
 </div>
 </div>
 
-
 <!-- BED SHEETS -->
 
 <div class="guide-modal" id="bedSheetGuide">
@@ -2541,7 +2502,6 @@ As an Amazon Associate I earn from qualifying purchases.
 
 </div>
 </div>
-
 
 <!-- PLANT POTS -->
 
@@ -2613,9 +2573,6 @@ As an Amazon Associate I earn from qualifying purchases.
 </div>
 </div>
 
-
-<!-- FOOTER -->
-
 <footer>
 
 <h3>ProEcommerce UAE</h3>
@@ -2634,7 +2591,6 @@ As an Amazon Associate I earn from qualifying purchases.
 </div>
 
 </footer>
-
 
 <script>
 
@@ -2655,7 +2611,6 @@ menuButton.setAttribute("aria-expanded",open);
 
 });
 
-
 document.querySelectorAll(".nav-links a").forEach(link=>{
 
 link.addEventListener("click",()=>{
@@ -2669,7 +2624,6 @@ menuButton.setAttribute("aria-expanded","false");
 });
 
 });
-
 
 /* PRODUCT SEARCH */
 
@@ -2713,7 +2667,6 @@ behavior:"smooth"
 
 });
 
-
 /* CATEGORY FILTER */
 
 document.querySelectorAll(".category-card").forEach(category=>{
@@ -2750,7 +2703,6 @@ behavior:"smooth"
 
 });
 
-
 /* BUYING GUIDE OPEN */
 
 document.querySelectorAll(".guide-open-button").forEach(button=>{
@@ -2772,7 +2724,6 @@ document.body.style.overflow="hidden";
 
 });
 
-
 /* CLOSE BUTTON */
 
 document.querySelectorAll(".guide-close").forEach(button=>{
@@ -2788,7 +2739,6 @@ document.body.style.overflow="";
 });
 
 });
-
 
 /* BACK BUTTON */
 
@@ -2810,7 +2760,6 @@ behavior:"smooth"
 
 });
 
-
 /* CLICK OUTSIDE */
 
 document.querySelectorAll(".guide-modal").forEach(modal=>{
@@ -2828,7 +2777,6 @@ document.body.style.overflow="";
 });
 
 });
-
 
 /* ESCAPE KEY */
 
